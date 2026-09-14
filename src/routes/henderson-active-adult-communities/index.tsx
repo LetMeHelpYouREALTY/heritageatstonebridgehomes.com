@@ -177,7 +177,7 @@ export default component$(() => {
             Discover premier 55+ communities in Henderson with parks, golf courses, and Lake Mead access
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Explore Henderson Communities
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">
@@ -299,7 +299,7 @@ export default component$(() => {
                 <li>• Energy-efficient homes</li>
               </ul>
               <div class="text-lg font-bold text-blue-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/inspirada-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Inspirada →</a>
+              <a href="/henderson-active-adult-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Inspirada →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -398,7 +398,7 @@ export default component$(() => {
             As Las Vegas's premier 55+ community specialist, I'll help you discover the ideal Henderson community that matches your lifestyle, budget, and preferences.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Start Your Search
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">

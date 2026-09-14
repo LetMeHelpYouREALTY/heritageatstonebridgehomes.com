@@ -7,11 +7,14 @@ export const LocationHeroImage = component$(() => {
   const media = getPageMedia(loc.url.pathname);
   const src = cfImage(media.hero, "hero");
   const fallback = gitBackupPath(media.hero);
+  const srcSet = `${cfImage(media.hero, "card")} 800w, ${cfImage(media.hero, "hero")} 1280w`;
 
   return (
     <>
       <img
         src={src}
+        srcset={srcSet}
+        sizes="100vw"
         alt={media.heroAlt}
         width={1280}
         height={720}

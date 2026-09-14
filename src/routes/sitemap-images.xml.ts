@@ -1,32 +1,7 @@
 import { type RequestHandler } from "@builder.io/qwik-city";
-import { SITE_IMAGES, getPageMedia } from "~/config/images";
+import { SITE_IMAGES, getAllPagePaths, getPageMedia } from "~/config/images";
 
 const ORIGIN = "https://heritagestonebridge.com";
-
-const PAGE_PATHS = [
-  "/",
-  "/contact/",
-  "/about/",
-  "/55-plus-communities/",
-  "/homes-for-sale-stonebridge-summerlin/",
-  "/heritage-at-stonebridge-homes-for-sale/",
-  "/summerlin-homes/",
-  "/las-vegas-real-estate/",
-  "/henderson-real-estate/",
-  "/henderson-active-adult-communities/",
-  "/red-rock-canyon-communities/",
-  "/gated-communities/",
-  "/golf-course-homes/",
-  "/luxury-homes/",
-  "/mountain-view-homes/",
-  "/boulder-city-homes/",
-  "/northwest-las-vegas/",
-  "/55-plus-condos-las-vegas/",
-  "/first-time-buyers/",
-  "/home-selling-guide/",
-  "/market-analysis/",
-  "/blog/",
-];
 
 function imageUrl(id: string): string {
   const file = SITE_IMAGES[id]?.file ?? `${id}.jpg`;
@@ -37,7 +12,8 @@ export const onGet: RequestHandler = async (requestEvent) => {
   const currentDate = new Date().toISOString();
   const urls: string[] = [];
 
-  for (const path of PAGE_PATHS) {
+  for (const rawPath of getAllPagePaths()) {
+    const path = rawPath === "/" ? "/" : `${rawPath.replace(/\/+$/, "")}/`;
     const media = getPageMedia(path);
     const images = [media.hero, ...media.sections.map((s) => s.id)];
     const seen = new Set<string>();

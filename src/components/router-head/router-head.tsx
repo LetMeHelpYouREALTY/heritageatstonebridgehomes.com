@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { useDocumentHead, useLocation } from "@builder.io/qwik-city";
 import { business } from "~/config/business";
-import { DEFAULT_OG_IMAGE } from "~/config/images";
+import { pageOgImage } from "~/config/images";
 
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
@@ -9,6 +9,7 @@ import { DEFAULT_OG_IMAGE } from "~/config/images";
 export const RouterHead = component$(() => {
   const head = useDocumentHead();
   const loc = useLocation();
+  const ogImage = pageOgImage(loc.url.pathname);
 
   return (
     <>
@@ -24,10 +25,10 @@ export const RouterHead = component$(() => {
       <meta name="geo.position" content={`${business.geo.latitude};${business.geo.longitude}`} />
       <meta name="ICBM" content={`${business.geo.latitude}, ${business.geo.longitude}`} />
       {!head.meta.some((m) => "property" in m && m.property === "og:image") && (
-        <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+        <meta property="og:image" content={ogImage} />
       )}
       {!head.meta.some((m) => m.name === "twitter:image") && (
-        <meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
+        <meta name="twitter:image" content={ogImage} />
       )}
 
       {/* RealScout Script - Load globally for all pages */}

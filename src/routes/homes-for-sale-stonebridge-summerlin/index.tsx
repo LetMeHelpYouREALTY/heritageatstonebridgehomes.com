@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { CfImage } from "~/components/media/CfImage";
 
 export const head: DocumentHead = {
   title: "Homes for Sale in Stonebridge, Summerlin, Las Vegas NV | Dr. Jan Duffy",
@@ -32,7 +33,7 @@ export const head: DocumentHead = {
     },
     {
       property: "og:image",
-      content: "https://heritagestonebridge.com/images/stonebridge-homes-hero.webp",
+      content: "https://heritagestonebridge.com/images/stonebridge-homes-hero.jpg",
     },
     {
       name: "twitter:card",
@@ -80,7 +81,7 @@ export default component$(() => {
         description:
           "Discover luxury homes for sale in Stonebridge, Summerlin, Las Vegas NV. Gated community with resort amenities, mountain views, and active adult living.",
         url: "https://heritagestonebridge.com/homes-for-sale-stonebridge-summerlin",
-        image: "https://heritagestonebridge.com/images/stonebridge-homes-hero.webp",
+        image: "https://heritagestonebridge.com/images/stonebridge-homes-hero.jpg",
         mainEntity: {
           "@type": "ItemList",
           itemListElement: [
@@ -202,7 +203,7 @@ export default component$(() => {
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
@@ -295,14 +296,17 @@ export default component$(() => {
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Property 1 */}
             <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-              <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <h3 class="text-2xl font-bold mb-2">Cromwell Collection</h3>
-                  <p class="text-blue-100">1,232 - 1,456 sq ft</p>
-                </div>
-              </div>
+              <CfImage
+                id="cromwell-home"
+                alt="Cromwell collection single-story home at Heritage at Stonebridge, 1,232 to 1,456 square feet"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
-                <h4 class="text-xl font-semibold mb-3">Luxury Single-Story Living</h4>
+                <h3 class="text-2xl font-bold mb-1">Cromwell Collection</h3>
+                <p class="text-gray-500 mb-3">1,232 - 1,456 sq ft</p>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• 2-3 Bedrooms, 2-2.5 Bathrooms</li>
                   <li>• Open concept living spaces</li>
@@ -311,7 +315,7 @@ export default component$(() => {
                 </ul>
                 <div class="text-2xl font-bold text-blue-600 mb-4">Starting from $464,990</div>
                 <a
-                  href="http://drjanduffy.realscout.com/onboarding"
+                  href="https://drjanduffy.realscout.com/onboarding"
                   target="_blank"
                   rel="noopener"
                   class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-block"
@@ -323,23 +327,27 @@ export default component$(() => {
 
             {/* Property 2 */}
             <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-              <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <h3 class="text-2xl font-bold mb-2">Stirling Collection</h3>
-                  <p class="text-green-100">1,456 - 2,100 sq ft</p>
-                </div>
-              </div>
+              <CfImage
+                id="stirling-home"
+                alt="Stirling collection single-story home at Heritage at Stonebridge, 1,747 to 2,236 square feet"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
-                <h4 class="text-xl font-semibold mb-3">Spacious Family Homes</h4>
+                <h3 class="text-2xl font-bold mb-1">Stirling Collection</h3>
+                <p class="text-gray-500 mb-3">1,747 - 2,236 sq ft</p>
+                <h4 class="text-xl font-semibold mb-3">Spacious single-story homes</h4>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• 3-4 Bedrooms, 2.5-3 Bathrooms</li>
                   <li>• Great rooms with fireplaces</li>
-                  <li>• Master suites with walk-in closets</li>
+                  <li>• Primary suites with walk-in closets</li>
                   <li>• Covered patios</li>
                 </ul>
                 <div class="text-2xl font-bold text-green-600 mb-4">Starting from $675,990</div>
                 <a
-                  href="http://drjanduffy.realscout.com/onboarding"
+                  href="https://drjanduffy.realscout.com/onboarding"
                   target="_blank"
                   rel="noopener"
                   class="w-full bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center inline-block"
@@ -351,13 +359,17 @@ export default component$(() => {
 
             {/* Property 3 */}
             <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-              <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <h3 class="text-2xl font-bold mb-2">Evander Collection</h3>
-                  <p class="text-purple-100">2,100 - 2,873 sq ft</p>
-                </div>
-              </div>
+              <CfImage
+                id="evander-home"
+                alt="Evander collection luxury single-story home at Heritage at Stonebridge, 2,515 to 2,873 square feet"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
+                <h3 class="text-2xl font-bold mb-1">Evander Collection</h3>
+                <p class="text-gray-500 mb-3">2,515 - 2,873 sq ft</p>
                 <h4 class="text-xl font-semibold mb-3">Estate-Style Living</h4>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• 4-5 Bedrooms, 3-4 Bathrooms</li>
@@ -367,7 +379,7 @@ export default component$(() => {
                 </ul>
                 <div class="text-2xl font-bold text-purple-600 mb-4">Starting from $861,990</div>
                 <a
-                  href="http://drjanduffy.realscout.com/onboarding"
+                  href="https://drjanduffy.realscout.com/onboarding"
                   target="_blank"
                   rel="noopener"
                   class="w-full bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center inline-block"
@@ -556,7 +568,7 @@ export default component$(() => {
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"

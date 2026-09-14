@@ -4,6 +4,7 @@ import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Las Vegas Neighborhood Insights | AI-Powered Market Analysis - Dr. Jan Duffy",
@@ -173,7 +174,7 @@ Format as JSON with sections: market_overview, neighborhood_analysis, price_tren
               <p class="text-gray-600">Generating AI-powered neighborhood insights...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={insightsContent.value}></div>
+            <HeadingRichHtml html={insightsContent.value} />
           )}
         </div>
       </section>

@@ -4,6 +4,7 @@ import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "First Time Buyers Guide Las Vegas | Home Buying Tips - Dr. Jan Duffy",
@@ -198,7 +199,7 @@ Format as JSON with sections: pre_approval_process, down_payment_assistance, buy
               <p class="text-gray-600">Generating first-time buyer guide...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={buyerContent.value}></div>
+            <HeadingRichHtml html={buyerContent.value} />
           )}
         </div>
       </section>

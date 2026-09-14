@@ -79,7 +79,7 @@ export default component$(() => {
             Discover luxury living in Summerlin, Las Vegas's premier master-planned community featuring golf courses, resort amenities, and world-class shopping
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-100 transition-colors shadow-lg inline-block text-center">
               Schedule Summerlin Tour
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-800 transition-colors shadow-lg inline-block text-center">
@@ -166,7 +166,7 @@ export default component$(() => {
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
                   <div>
-                    <strong>Top-Rated Schools:</strong> Excellent public and private schools serving families
+                    <strong>Downtown Summerlin access:</strong> Shopping, dining, and medical offices along the 215 Beltway
                   </div>
                 </li>
                 <li class="flex items-start">
@@ -402,7 +402,7 @@ export default component$(() => {
             Let Dr. Jan Duffy help you discover the perfect home in Summerlin's premier master-planned community.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-100 transition-colors shadow-lg inline-block text-center">
               Schedule Summerlin Tour
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-800 transition-colors shadow-lg inline-block text-center">

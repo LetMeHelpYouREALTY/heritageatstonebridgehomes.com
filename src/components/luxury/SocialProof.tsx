@@ -42,7 +42,7 @@ export const SocialProof = component$(() => {
         </div>
         <h3 class="text-2xl font-bold text-gray-900 mb-2">What Our Residents Say</h3>
         <p class="text-gray-600">
-          Join over 200 happy families who call Heritage at Stonebridge home
+          Join more than 200 homeowners who call Heritage at Stonebridge home
         </p>
       </div>
 
@@ -109,7 +109,7 @@ export const SocialProof = component$(() => {
             place to call home.
           </p>
           <a
-            href="http://drjanduffy.realscout.com/onboarding"
+            href="https://drjanduffy.realscout.com/onboarding"
             target="_blank"
             rel="noopener"
             class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transform hover:scale-105 transition-all duration-200 shadow-lg inline-block text-center"

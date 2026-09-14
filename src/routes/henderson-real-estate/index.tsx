@@ -26,7 +26,7 @@ export const head: DocumentHead = {
     },
     {
       name: "audience",
-      content: "families, luxury-home-buyers",
+      content: "homebuyers, luxury-home-buyers, 55-plus-communities",
     },
     {
       name: "location",
@@ -79,7 +79,7 @@ export default component$(() => {
             Henderson, Nevada's second-largest city, with parks, recreation centers, and a wide range of housing types
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Schedule Henderson Tour
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">
@@ -254,7 +254,7 @@ export default component$(() => {
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Inspirada</h3>
               <p class="text-gray-600 mb-4">Modern master-planned community with contemporary homes and amenities.</p>
-              <a href="/inspirada-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Inspirada Homes →</a>
+              <a href="/henderson-active-adult-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Inspirada Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -396,7 +396,7 @@ export default component$(() => {
             Let Dr. Jan Duffy help you compare Henderson homes by square footage, amenities, and commute times.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Schedule Henderson Tour
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">

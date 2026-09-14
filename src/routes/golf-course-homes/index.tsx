@@ -5,6 +5,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Golf Course Homes Las Vegas | Luxury Golf Living - Dr. Jan Duffy",
@@ -199,7 +200,7 @@ Format as JSON with sections: golf_home_definition, property_types, golf_ameniti
               <p class="text-gray-600">Generating golf course home insights...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={golfContent.value}></div>
+            <HeadingRichHtml html={golfContent.value} />
           )}
         </div>
       </section>

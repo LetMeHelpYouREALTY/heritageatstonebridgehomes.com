@@ -4,6 +4,7 @@ import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Las Vegas 55+ Community Comparison | Active Adult Living Guide - Dr. Jan Duffy",
@@ -181,7 +182,7 @@ Format as JSON with sections: heritage_stonebridge, del_webb_communities, sun_ci
               <p class="text-gray-600">Generating community comparison...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={comparisonContent.value}></div>
+            <HeadingRichHtml html={comparisonContent.value} />
           )}
         </div>
       </section>

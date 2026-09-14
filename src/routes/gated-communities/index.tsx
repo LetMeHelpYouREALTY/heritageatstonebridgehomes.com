@@ -5,6 +5,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Gated Communities Las Vegas | Secure Luxury Living - Dr. Jan Duffy",
@@ -199,7 +200,7 @@ Format as JSON with sections: community_definition, security_types, security_ben
               <p class="text-gray-600">Generating gated community insights...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={gatedContent.value}></div>
+            <HeadingRichHtml html={gatedContent.value} />
           )}
         </div>
       </section>

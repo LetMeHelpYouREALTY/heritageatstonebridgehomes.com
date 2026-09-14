@@ -77,7 +77,7 @@ export default component$(() => {
             Comprehensive market insights, trends, and investment opportunities across Las Vegas Valley's premier communities
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Get Personal Market Report
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">
@@ -326,7 +326,7 @@ export default component$(() => {
               </div>
               <ul class="space-y-2 text-gray-600">
                 <li>• Northwest Las Vegas new construction</li>
-                <li>• Henderson family communities</li>
+                <li>• Henderson master-planned communities</li>
                 <li>• Red Rock Canyon luxury properties</li>
                 <li>• 55+ community developments</li>
               </ul>
@@ -401,15 +401,15 @@ export default component$(() => {
                   Our AI analyzes your specific criteria and provides personalized market insights and recommendations.
                 </p>
                 <div class="space-y-3">
-                  <button class="w-full bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors">
+                  <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener noreferrer" class="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors text-center">
                     Get AI Market Analysis
-                  </button>
-                  <button class="w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors">
+                  </a>
+                  <a href="/contact" class="block w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors text-center">
                     Investment Opportunity Report
-                  </button>
-                  <button class="w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors">
+                  </a>
+                  <a href="/community-comparison" class="block w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors text-center">
                     Community Comparison Tool
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -425,7 +425,7 @@ export default component$(() => {
             Let Dr. Jan Duffy provide you with personalized market analysis and expert guidance for your Las Vegas real estate investment.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Get Personal Market Report
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">

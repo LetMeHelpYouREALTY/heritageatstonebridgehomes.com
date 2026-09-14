@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { CfImage } from "~/components/media/CfImage";
 
 export default component$(() => {
   // Inject 55+ Communities Schema for SEO
@@ -93,7 +94,7 @@ export default component$(() => {
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 target="_blank"
                 rel="noopener"
                 class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
@@ -135,13 +136,17 @@ export default component$(() => {
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Heritage at Stonebridge */}
             <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <h3 class="text-2xl font-bold mb-2">Heritage at Stonebridge</h3>
-                  <p class="text-blue-100">Summerlin West</p>
-                </div>
-              </div>
+              <CfImage
+                id="heritage-stonebridge-hero"
+                alt="Guard-gated entrance to Heritage at Stonebridge in Summerlin West, Las Vegas NV 89138"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
+                <h3 class="text-2xl font-bold mb-1">Heritage at Stonebridge</h3>
+                <p class="text-gray-500 mb-3">Summerlin West</p>
                 <h4 class="text-xl font-semibold mb-3">Luxury 55+ Living</h4>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• Three home collections (Cromwell, Stirling, Evander)</li>
@@ -153,7 +158,7 @@ export default component$(() => {
                 </ul>
                 <div class="text-lg font-bold text-blue-600 mb-4">Starting from $464,990</div>
                 <a
-                  href="http://drjanduffy.realscout.com/onboarding"
+                  href="https://drjanduffy.realscout.com/onboarding"
                   target="_blank"
                   rel="noopener"
                   class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors inline-block text-center"
@@ -165,13 +170,17 @@ export default component$(() => {
 
             {/* Del Webb Communities */}
             <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <h3 class="text-2xl font-bold mb-2">Del Webb</h3>
-                  <p class="text-green-100">Multiple Locations</p>
-                </div>
-              </div>
+              <CfImage
+                id="golf-course"
+                alt="Golf course homes in Summerlin and Henderson Del Webb 55+ communities"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
+                <h3 class="text-2xl font-bold mb-1">Del Webb</h3>
+                <p class="text-gray-500 mb-3">Multiple Locations</p>
                 <h4 class="text-xl font-semibold mb-3">Active Adult Lifestyle</h4>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• Golf course communities</li>
@@ -192,13 +201,17 @@ export default component$(() => {
 
             {/* Sun City Communities */}
             <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <h3 class="text-2xl font-bold mb-2">Sun City</h3>
-                  <p class="text-purple-100">Henderson & Summerlin</p>
-                </div>
-              </div>
+              <CfImage
+                id="henderson-community"
+                alt="Sun City active adult communities in Henderson and Summerlin, Nevada"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
+                <h3 class="text-2xl font-bold mb-1">Sun City</h3>
+                <p class="text-gray-500 mb-3">Henderson & Summerlin</p>
                 <h4 class="text-xl font-semibold mb-3">Established Communities</h4>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• Mature landscaping</li>
@@ -209,7 +222,7 @@ export default component$(() => {
                 </ul>
                 <div class="text-lg font-bold text-purple-600 mb-4">Resale Opportunities</div>
                 <a
-                  href="tel:+17022221964"
+                  href="tel:+17027896561"
                   class="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors inline-block text-center"
                 >
                   Schedule Tour
@@ -442,7 +455,7 @@ export default component$(() => {
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
@@ -450,7 +463,7 @@ export default component$(() => {
               Schedule Community Tour
             </a>
             <a
-              href="tel:+17022221964"
+              href="tel:+17027896561"
               class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center"
             >
               Call (702) 789-6561

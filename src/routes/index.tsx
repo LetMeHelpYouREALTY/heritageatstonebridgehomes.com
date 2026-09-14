@@ -400,7 +400,7 @@ export default component$(() => {
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg inline-block text-center text-lg"
@@ -520,7 +520,7 @@ export default component$(() => {
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center"

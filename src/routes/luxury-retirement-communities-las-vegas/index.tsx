@@ -177,7 +177,7 @@ export default component$(() => {
             Experience the pinnacle of active adult living with premium amenities, concierge services, and unparalleled luxury
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-gold-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-gold-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-100 transition-colors shadow-lg inline-block text-center">
               Explore Luxury Communities
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gold-800 transition-colors shadow-lg inline-block text-center">
@@ -398,7 +398,7 @@ export default component$(() => {
             Let Dr. Jan Duffy help you discover Las Vegas's most exclusive luxury retirement communities with premium amenities and concierge services.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-gold-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-gold-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-100 transition-colors shadow-lg inline-block text-center">
               Start Your Search
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gold-800 transition-colors shadow-lg inline-block text-center">

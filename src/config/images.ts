@@ -367,6 +367,78 @@ export const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/images/heritage-stonebridge-hero
 export const DEFAULT_LOGO_IMAGE = `${SITE_ORIGIN}/images/heritage-stonebridge-logo.jpg`;
 export const DEFAULT_AGENT_IMAGE = `${SITE_ORIGIN}/images/contact-office.jpg`;
 
+const HEADING_RULES: Array<{ test: RegExp; id: string }> = [
+  { test: /pickleball|bocce|court|sport/i, id: "pickleball-bocce" },
+  { test: /pool|spa|water/i, id: "pool-spa" },
+  { test: /fitness|workout/i, id: "fitness-center" },
+  { test: /clubhouse|social/i, id: "clubhouse" },
+  { test: /golf|fairway/i, id: "golf-course" },
+  { test: /kitchen|included|interior|staging/i, id: "luxury-kitchen" },
+  { test: /cromwell/i, id: "cromwell-home" },
+  { test: /stirling/i, id: "stirling-home" },
+  { test: /evander/i, id: "evander-home" },
+  { test: /gated|security|gate/i, id: "gated-entrance" },
+  { test: /red rock|mountain|view/i, id: "red-rock-canyon" },
+  { test: /summerlin/i, id: "summerlin-homes" },
+  { test: /henderson/i, id: "henderson-community" },
+  { test: /boulder/i, id: "boulder-city-homes" },
+  { test: /northwest/i, id: "northwest-las-vegas" },
+  { test: /condo/i, id: "55-plus-condos" },
+  { test: /sell|pricing|market|value|trend|inventory/i, id: "las-vegas-market" },
+  { test: /buyer|tour|first-time|pre-approval/i, id: "homebuyer-entry" },
+  { test: /trail|walk/i, id: "walking-trails" },
+  { test: /office|contact|agent/i, id: "contact-office" },
+  { test: /collection|home|property|listing/i, id: "home-collections" },
+];
+
+export function imageIdForHeading(heading: string): string {
+  for (const rule of HEADING_RULES) {
+    if (rule.test.test(heading)) {
+      return rule.id;
+    }
+  }
+  return "heritage-stonebridge-hero";
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+export function headingFigureHtml(heading: string): string {
+  const id = imageIdForHeading(heading);
+  const img = SITE_IMAGES[id] ?? SITE_IMAGES["heritage-stonebridge-hero"];
+  const src = cfImage(id, "hero");
+  const alt = escapeHtml(img.alt);
+  const caption = escapeHtml(heading.replace(/<[^>]+>/g, "").trim());
+  return `<figure class="mb-4 overflow-hidden rounded-lg"><img src="${src}" alt="${alt}" width="1280" height="720" class="w-full h-48 object-cover" loading="lazy" decoding="async" /><figcaption class="sr-only">${caption} at Heritage at Stonebridge, Summerlin West, Las Vegas</figcaption></figure>`;
+}
+
+export function decorateHeadingsWithImages(html: string): string {
+  return html.replace(/<(h[23])([^>]*)>([\s\S]*?)<\/\1>/gi, (_match, tag, attrs, inner) => {
+    const text = String(inner)
+      .replace(/<[^>]+>/g, "")
+      .replace(/&nbsp;/g, " ")
+      .trim();
+    if (!text) {
+      return `<${tag}${attrs}>${inner}</${tag}>`;
+    }
+    return `${headingFigureHtml(text)}<${tag}${attrs}>${inner}</${tag}>`;
+  });
+}
+
+export function getAllPagePaths(): string[] {
+  return Object.keys(PAGE_MEDIA);
+}
+
+export function pageOgImage(pathname: string): string {
+  const media = getPageMedia(pathname);
+  return cfImageAbsolute(media.hero, "hero");
+}
+
 export const GBP_FAQS = [
   {
     question: "Where is Heritage Stonebridge | Homes By Dr. Jan Duffy located?",

@@ -422,15 +422,19 @@ export const Footer = component$(() => {
             </div>
           </div>
 
-          {/* SEO Keywords Footer */}
-          <div class="mt-6 text-xs text-gray-500 leading-relaxed">
+          <div class="mt-6 text-xs text-gray-500 leading-relaxed space-y-3">
+            <p>
+              Housing for older persons (55+) under the federal Housing for Older Persons Act.
+              Occupancy is limited to households with at least one person 55 years of age or older,
+              as permitted by law. Equal Housing Opportunity.
+            </p>
             <p>
               Dr. Jan Duffy is a Las Vegas real estate expert specializing in 55+ communities,
               active adult living, luxury homes, and gated communities in Summerlin, Red Rock
               Canyon, Henderson, and Northwest Las Vegas. Serving clients in Del Webb communities,
-              Sun City, Siena, The Ridges, and all premier Nevada retirement communities. 
-              Features AI-powered market analysis, neighborhood insights, luxury living guides, 
-              and community comparisons for enhanced real estate intelligence.
+              Sun City, Siena, The Ridges, and all premier Nevada retirement communities.
+              Features MLS-backed market analysis, neighborhood insights, luxury living guides,
+              and community comparisons.
             </p>
           </div>
         </div>

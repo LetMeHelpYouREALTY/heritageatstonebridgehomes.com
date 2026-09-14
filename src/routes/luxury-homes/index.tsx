@@ -5,6 +5,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Luxury Homes Las Vegas | Premium Real Estate - Dr. Jan Duffy",
@@ -199,7 +200,7 @@ Format as JSON with sections: luxury_definition, premium_amenities, high_end_fin
               <p class="text-gray-600">Generating luxury home insights...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={luxuryContent.value}></div>
+            <HeadingRichHtml html={luxuryContent.value} />
           )}
         </div>
       </section>

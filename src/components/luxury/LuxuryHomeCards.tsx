@@ -185,7 +185,7 @@ export const LuxuryHomeCards = component$(() => {
 
             {/* CTA Button */}
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl group-hover:shadow-2xl inline-block text-center"

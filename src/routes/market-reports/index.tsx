@@ -4,6 +4,7 @@ import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Las Vegas Market Reports | Real Estate Market Analysis - Dr. Jan Duffy",
@@ -198,7 +199,7 @@ Format as JSON with sections: market_overview, price_trends, inventory_data, mar
               <p class="text-gray-600">Generating market reports...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={marketContent.value}></div>
+            <HeadingRichHtml html={marketContent.value} />
           )}
         </div>
       </section>

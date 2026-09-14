@@ -5,6 +5,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Mountain View Homes Las Vegas | Scenic Luxury Living - Dr. Jan Duffy",
@@ -199,7 +200,7 @@ Format as JSON with sections: mountain_home_definition, view_types, scenic_benef
               <p class="text-gray-600">Generating mountain view home insights...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={mountainContent.value}></div>
+            <HeadingRichHtml html={mountainContent.value} />
           )}
         </div>
       </section>

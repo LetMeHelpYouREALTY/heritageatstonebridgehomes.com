@@ -5,6 +5,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Active Adult Communities Las Vegas | 55+ Living Guide - Dr. Jan Duffy",
@@ -187,7 +188,7 @@ Format as JSON with sections: community_overview, lifestyle_amenities, social_ac
               <p class="text-gray-600">Generating active adult community insights...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={communityContent.value}></div>
+            <HeadingRichHtml html={communityContent.value} />
           )}
         </div>
       </section>

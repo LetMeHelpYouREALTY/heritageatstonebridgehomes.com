@@ -1,5 +1,5 @@
 # Robots.txt for Heritage at Stonebridge
-# Updated: 2025-01-27
+# Updated: 2026-09-14
 
 User-agent: *
 Allow: /
@@ -60,6 +60,7 @@ Crawl-delay: 1
 Sitemap: https://heritagestonebridge.com/sitemap.xml
 Sitemap: https://heritagestonebridge.com/sitemap-pages.xml
 Sitemap: https://heritagestonebridge.com/sitemap-images.xml
+Sitemap: https://heritagestonebridge.com/sitemap-properties.xml
 
 # Host directive
 Host: https://heritagestonebridge.com

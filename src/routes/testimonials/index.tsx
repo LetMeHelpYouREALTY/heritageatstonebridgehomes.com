@@ -4,6 +4,7 @@ import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Heritage at Stonebridge Reviews | Client Testimonials - Dr. Jan Duffy",
@@ -198,7 +199,7 @@ Format as JSON with sections: first_time_buyers, luxury_homes, 55_plus_communiti
               <p class="text-gray-600">Generating client testimonials...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={testimonialContent.value}></div>
+            <HeadingRichHtml html={testimonialContent.value} />
           )}
         </div>
       </section>

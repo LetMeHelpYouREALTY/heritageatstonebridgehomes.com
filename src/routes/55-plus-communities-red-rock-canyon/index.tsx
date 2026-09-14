@@ -16,7 +16,7 @@ export default component$(() => {
         description:
           "Premier 55+ active adult community in Summerlin West, Las Vegas, featuring luxury homes and resort-style amenities near Red Rock Canyon.",
         url: "https://heritagestonebridge.com/55-plus-communities-red-rock-canyon",
-        image: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.webp",
+        image: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.jpg",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Crossbridge Dr",
@@ -95,7 +95,7 @@ export default component$(() => {
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 target="_blank"
                 rel="noopener"
                 class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
@@ -103,7 +103,7 @@ export default component$(() => {
                 Schedule Your Private Tour Today
               </a>
               <a
-                href="tel:+17022221964"
+                href="tel:+17027896561"
                 class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center"
               >
                 Call (702) 789-6561
@@ -204,7 +204,7 @@ export default component$(() => {
             </div>
             <div class="relative">
               <img
-                src="/images/heritage-stonebridge-community-overview.webp"
+                src="/images/heritage-stonebridge-hero.jpg"
                 alt="Heritage at Stonebridge 55+ community overview showing luxury homes and amenities"
                 class="w-full h-96 object-cover rounded-xl shadow-2xl"
                 loading="lazy"
@@ -359,7 +359,7 @@ export default component$(() => {
             {/* Cromwell Collection */}
             <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
               <img
-                src="/images/cromwell-collection-heritage-stonebridge.webp"
+                src="/images/cromwell-home.jpg"
                 alt="Cromwell Collection Heritage at Stonebridge floor plans"
                 class="w-full h-48 object-cover rounded-lg mb-6"
                 loading="lazy"
@@ -403,7 +403,7 @@ export default component$(() => {
                 </span>
               </div>
               <img
-                src="/images/stirling-collection-heritage-stonebridge.webp"
+                src="/images/stirling-home.jpg"
                 alt="Stirling Collection Heritage at Stonebridge luxury homes"
                 class="w-full h-48 object-cover rounded-lg mb-6"
                 loading="lazy"
@@ -442,7 +442,7 @@ export default component$(() => {
             {/* Evander Collection */}
             <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
               <img
-                src="/images/evander-collection-heritage-stonebridge.webp"
+                src="/images/evander-home.jpg"
                 alt="Evander Collection Heritage at Stonebridge luxury estates"
                 class="w-full h-48 object-cover rounded-lg mb-6"
                 loading="lazy"
@@ -1061,7 +1061,7 @@ export default component$(() => {
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
@@ -1069,7 +1069,7 @@ export default component$(() => {
               Schedule Your Private Tour Today
             </a>
             <a
-              href="tel:+17022221964"
+              href="tel:+17027896561"
               class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center"
             >
               Call (702) 789-6561
@@ -1160,7 +1160,7 @@ export const head: DocumentHead = {
     },
     {
       property: "og:image",
-      content: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.webp",
+      content: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.jpg",
     },
     {
       name: "twitter:card",
