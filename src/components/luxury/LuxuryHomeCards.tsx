@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { cfImage } from "~/config/images";
 
 interface HomeCard {
   name: string;
@@ -28,10 +29,8 @@ const homeCards: HomeCard[] = [
       "Hardwood Floors",
       "Energy Efficient",
     ],
-    floorPlan:
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    floorPlan: cfImage("luxury-kitchen", "card"),
+    image: cfImage("cromwell-home", "card"),
   },
   {
     name: "The Stonebridge",
@@ -42,10 +41,8 @@ const homeCards: HomeCard[] = [
     garage: "3-Car Garage",
     description: "Spacious luxury design with premium amenities",
     features: ["Quartz Countertops", "Smart Home Features", "Custom Cabinetry", "Solar Ready"],
-    floorPlan:
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    floorPlan: cfImage("great-room", "card"),
+    image: cfImage("stirling-home", "card"),
   },
   {
     name: "The Signature",
@@ -56,10 +53,8 @@ const homeCards: HomeCard[] = [
     garage: "3-Car Garage",
     description: "Premium custom features and luxury finishes",
     features: ["Marble Countertops", "Wine Cellar", "Home Theater", "Smart Security"],
-    floorPlan:
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    floorPlan: cfImage("luxury-kitchen", "card"),
+    image: cfImage("evander-home", "card"),
   },
 ];
 

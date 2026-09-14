@@ -24,7 +24,7 @@
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
     "qwik": "qwik",
-    "perf": "npm run build"
+    "upload.images": "node scripts/upload-cloudflare-images.mjs"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",

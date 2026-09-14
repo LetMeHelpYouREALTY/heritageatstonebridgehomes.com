@@ -3,6 +3,8 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 
 export const head: DocumentHead = {
   title: "Mountain View Homes Las Vegas | Scenic Luxury Living - Dr. Jan Duffy",
@@ -159,9 +161,10 @@ Format as JSON with sections: mountain_home_definition, view_types, scenic_benef
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-slate-900 via-gray-800 to-slate-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-800 to-slate-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Mountain View Homes
           </h1>
@@ -184,6 +187,8 @@ Format as JSON with sections: mountain_home_definition, view_types, scenic_benef
           </div>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* AI Mountain Content */}
       <section class="py-16 bg-gray-50">

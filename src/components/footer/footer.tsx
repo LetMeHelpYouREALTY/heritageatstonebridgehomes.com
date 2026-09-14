@@ -8,7 +8,7 @@ export const Footer = component$(() => {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
-            <h3 class="text-xl font-bold mb-4">{business.name}</h3>
+            <p class="text-xl font-bold mb-4">{business.name}</p>
             <p class="text-gray-300 mb-4">
               Your local guide to Heritage at Stonebridge — Lennar's guard-gated 55+ community in
               Summerlin West (89138).
@@ -34,7 +34,25 @@ export const Footer = component$(() => {
               </p>
               <p class="flex items-center">
                 <span class="mr-2">📍</span>
-                {business.addressDisplay}
+                <a
+                  href={business.mapsUrl}
+                  class="hover:text-blue-400 underline-offset-2 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {business.addressDisplay}
+                </a>
+              </p>
+              <p class="flex items-center">
+                <span class="mr-2">⭐</span>
+                <a
+                  href={business.reviewsUrl}
+                  class="hover:text-blue-400 underline-offset-2 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Google Reviews
+                </a>
               </p>
               <p class="flex items-start">
                 <span class="mr-2">🕒</span>
@@ -45,7 +63,7 @@ export const Footer = component$(() => {
 
           {/* Service Areas */}
           <div>
-            <h3 class="text-xl font-bold mb-4">Service Areas</h3>
+            <p class="text-xl font-bold mb-4">Service Areas</p>
             <ul class="space-y-2 text-gray-300">
               <li>
                 <a
@@ -118,7 +136,7 @@ export const Footer = component$(() => {
 
           {/* Property Types */}
           <div>
-            <h3 class="text-xl font-bold mb-4">Property Types</h3>
+            <p class="text-xl font-bold mb-4">Property Types</p>
             <ul class="space-y-2 text-gray-300">
               <li>
                 <a
@@ -191,7 +209,7 @@ export const Footer = component$(() => {
 
           {/* 55+ Community Services */}
           <div>
-            <h3 class="text-xl font-bold mb-4">55+ Community Services</h3>
+            <p class="text-xl font-bold mb-4">55+ Community Services</p>
             <ul class="space-y-2 text-gray-300">
               <li>
                 <a
@@ -286,7 +304,7 @@ export const Footer = component$(() => {
 
           {/* Resources */}
           <div>
-            <h3 class="text-xl font-bold mb-4">Resources</h3>
+            <p class="text-xl font-bold mb-4">Resources</p>
             <ul class="space-y-2 text-gray-300 mb-6">
               <li>
                 <a href="/about" class="hover:text-blue-400">

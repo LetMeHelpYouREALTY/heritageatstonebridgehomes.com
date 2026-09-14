@@ -2,6 +2,8 @@ import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 
 export const head: DocumentHead = {
   title: "Community Guides Las Vegas | Neighborhood Information - Dr. Jan Duffy",
@@ -158,9 +160,10 @@ Format as JSON with sections: summerlin_guide, henderson_guide, red_rock_guide, 
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-emerald-900 via-green-800 to-teal-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-green-800 to-teal-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Community Guides
           </h1>
@@ -183,6 +186,8 @@ Format as JSON with sections: summerlin_guide, henderson_guide, red_rock_guide, 
           </div>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* AI Community Content */}
       <section class="py-16 bg-gray-50">

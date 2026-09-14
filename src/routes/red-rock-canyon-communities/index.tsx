@@ -2,6 +2,8 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 
 export const head: DocumentHead = {
   title: "Red Rock Canyon Communities | Dr. Jan Duffy - Mountain View Homes",
@@ -66,9 +68,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-30"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Red Rock Canyon Communities
           </h1>
@@ -85,6 +88,8 @@ export default component$(() => {
           </div>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* Red Rock Canyon Overview */}
       <section class="py-16 bg-white">
@@ -242,7 +247,7 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Mountain's Edge</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with mountain views and family-friendly amenities.</p>
+              <p class="text-gray-600 mb-4">Master-planned community with mountain views, parks, and recreation amenities.</p>
               <a href="/mountains-edge-homes" class="text-red-600 hover:text-red-800 font-semibold">View Mountain's Edge Homes →</a>
             </div>
             
@@ -385,7 +390,7 @@ export default component$(() => {
 
       {/* CTA Section */}
       <section class="bg-gradient-to-br from-red-600 to-red-800 py-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-4">Ready to Find Your Mountain View Home?</h2>
           <p class="text-lg text-red-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you discover the perfect home with stunning Red Rock Canyon views.

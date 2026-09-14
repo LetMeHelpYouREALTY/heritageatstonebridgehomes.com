@@ -25,8 +25,8 @@ export const AdvancedSEO = component$(() => {
             },
             geo: {
               "@type": "GeoCoordinates",
-              latitude: 36.1699,
-              longitude: -115.1398,
+              latitude: 36.1716,
+              longitude: -115.3384,
             },
             areaServed: [
               {
@@ -92,8 +92,8 @@ export const AdvancedSEO = component$(() => {
             },
             geo: {
               "@type": "GeoCoordinates",
-              latitude: 36.1699,
-              longitude: -115.1398,
+              latitude: 36.1716,
+              longitude: -115.3384,
             },
             amenityFeature: [
               {
@@ -178,8 +178,8 @@ export const AdvancedSEO = component$(() => {
         // Advanced geo tags
         { name: "geo.region", content: "US-NV" },
         { name: "geo.placename", content: "Las Vegas" },
-        { name: "geo.position", content: "36.1699;-115.1398" },
-        { name: "ICBM", content: "36.1699, -115.1398" },
+        { name: "geo.position", content: "36.1716;-115.3384" },
+        { name: "ICBM", content: "36.1716, -115.3384" },
 
         // Advanced language and locale
         { name: "language", content: "en-US" },
@@ -229,8 +229,8 @@ export const AdvancedSEO = component$(() => {
           name: "Las Vegas, Nevada",
           geo: {
             "@type": "GeoCoordinates",
-            latitude: 36.1699,
-            longitude: -115.1398,
+            latitude: 36.1716,
+            longitude: -115.3384,
           },
         },
         temporalCoverage: "2025-01-01/2025-12-31",

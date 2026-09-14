@@ -1,7 +1,10 @@
 import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { PhotoCard } from "~/components/media/PhotoCard";
+import { CfImage } from "~/components/media/CfImage";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutHeroWidget } from "~/components/real-estate/RealScoutHeroWidget";
+import { business } from "~/config/business";
 
 export default component$(() => {
   // Inject JSON-LD structured data
@@ -309,7 +312,7 @@ export default component$(() => {
         "name": "Heritage at Stonebridge",
         "description": "Luxury 55+ active adult community in Summerlin, Las Vegas featuring resort-style amenities and stunning mountain views.",
         "url": "https://heritagestonebridge.com",
-        "image": "https://heritagestonebridge.com/images/heritage-stonebridge.jpg",
+        "image": "https://heritagestonebridge.com/images/heritage-stonebridge-hero.jpg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Crossbridge Dr",
@@ -320,8 +323,8 @@ export default component$(() => {
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "36.1699",
-          "longitude": "-115.1398"
+          "latitude": "36.1716",
+          "longitude": "-115.3384"
         },
         "amenityFeature": [
           {
@@ -371,58 +374,64 @@ export default component$(() => {
 
   return (
     <>
-      {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 py-16 overflow-hidden">
-        {/* Background Pattern */}
-        <div class="absolute inset-0 opacity-5">
-          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-100 to-transparent"></div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 py-8 relative z-10">
-          <div class="text-center mb-8">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 drop-shadow-sm">
-              Heritage at Stonebridge
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-8 font-medium">
-              Luxury 55+ Active Adult Living in the Heart of Summerlin, Las Vegas
-            </p>
-            <p class="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
-              Experience resort-style amenities, stunning Red Rock Canyon views, and gated security in Las Vegas's premier active adult community. 
-              Heritage at Stonebridge offers three distinct home collections from Lennar, featuring modern single-story designs with prices starting from $464,990. Currently 15 homes available for sale. 
-              Dr. Jan Duffy specializes in helping you find the perfect 55+ home in Heritage at Stonebridge and surrounding Summerlin areas.
-            </p>
-            <div class="text-center mb-8">
-              <p class="text-base text-gray-500 max-w-3xl mx-auto">
-                <strong>Popular Searches:</strong> Heritage at Stonebridge reviews • Homes for sale in Heritage at Stonebridge • 
-                New Construction 55+ communities in Summerlin, NV • Stonebridge Summerlin • Stonebridge Las Vegas • 
-                Heritage Las Vegas NV • Heritage 55+ community • Lennar Summerlin
-              </p>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="http://drjanduffy.realscout.com/onboarding"
-                target="_blank"
-                rel="noopener"
-                class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center text-lg"
-              >
-                Schedule Private Tour
-              </a>
-              <button
-                type="button"
-                class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all transform hover:scale-105 text-lg shadow-md hover:shadow-lg"
-              >
-                View Virtual Tour
-              </button>
-            </div>
+      <section class="relative min-h-[32rem] md:min-h-[40rem] overflow-hidden">
+        <CfImage
+          id="heritage-stonebridge-hero"
+          alt="Guard-gated entrance to Heritage at Stonebridge in Summerlin West, Las Vegas NV 89138 with Red Rock Canyon beyond"
+          width={1920}
+          height={1080}
+          variant="hero"
+          priority
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-slate-900/55"></div>
+        <div class="max-w-7xl mx-auto px-4 py-20 relative z-10 text-center text-white">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-sm">
+            Heritage at Stonebridge
+          </h1>
+          <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-6 font-medium">
+            Luxury 55+ Active Adult Homes in Summerlin West, Las Vegas NV 89138
+          </p>
+          <p class="text-lg text-slate-100 max-w-4xl mx-auto mb-8">
+            Lennar's guard-gated 55+ community on Crossbridge Dr, with resort amenities and Red Rock
+            Canyon views. Three single-story collections from $464,990. Dr. Jan Duffy, REALTOR® with
+            Berkshire Hathaway HomeServices Nevada Properties (NV License S.0197614.LLC), helps
+            buyers tour resale and new-build homes. Call {business.telephoneDisplay}.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="http://drjanduffy.realscout.com/onboarding"
+              target="_blank"
+              rel="noopener"
+              class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg inline-block text-center text-lg"
+            >
+              Schedule Private Tour
+            </a>
+            <a
+              href={business.telephoneHref}
+              class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-800 transition-all text-lg shadow-md inline-block text-center"
+            >
+              Call {business.telephoneDisplay}
+            </a>
+            <a
+              href={business.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-800 transition-all text-lg shadow-md inline-block text-center"
+            >
+              Directions
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Community Amenities Section */}
       <section class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Luxury Amenities & Lifestyle</h2>
-            <p class="text-lg text-gray-600 mb-8">Experience the finest in 55+ active adult living with resort-style amenities</p>
+            <p class="text-lg text-gray-600 mb-8">
+              8,000 sq ft clubhouse, resort pool, pickleball, bocce, and trails in Summerlin West
+            </p>
             <div class="flex flex-wrap justify-center gap-4 mb-8">
               <a href="/55-plus-communities/" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Explore 55+ Communities
@@ -430,63 +439,84 @@ export default component$(() => {
               <a href="/summerlin-homes/" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
                 Summerlin Homes
               </a>
-              <a href="/real-estate/" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
-                Real Estate Tools
+              <a href="/homes-for-sale-stonebridge-summerlin/" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                Stonebridge Homes for Sale
               </a>
             </div>
           </div>
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold mb-2">8,000 Sq Ft Clubhouse</h3>
-              <p class="text-gray-600">State-of-the-art facility with fitness center, multi-purpose rooms, and social spaces</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold mb-2">Resort-Style Pool & Spa</h3>
-              <p class="text-gray-600">Outdoor pool, heated lap pool, and spa for relaxation and water aerobics</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold mb-2">Pickleball & Bocce Courts</h3>
-              <p class="text-gray-600">Multiple courts for friendly games and organized tournaments</p>
-            </div>
+            <PhotoCard
+              imageId="clubhouse"
+              title="8,000 Sq Ft Clubhouse"
+              alt="8,000 square foot clubhouse at Heritage at Stonebridge in Summerlin, Las Vegas"
+              description="Fitness center, multi-purpose rooms, and social spaces in the community clubhouse."
+            />
+            <PhotoCard
+              imageId="pool-spa"
+              title="Resort-Style Pool & Spa"
+              alt="Resort-style pool and spa at Heritage at Stonebridge 55+ community in Summerlin"
+              description="Outdoor pool, heated lap pool, and spa for water aerobics and afternoon swims."
+            />
+            <PhotoCard
+              imageId="pickleball-bocce"
+              title="Pickleball & Bocce Courts"
+              alt="Pickleball and bocce courts at Heritage at Stonebridge in Summerlin West"
+              description="Multiple courts for drop-in games and organized community tournaments."
+            />
           </div>
         </div>
       </section>
 
-      {/* Why Choose Heritage Section */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Heritage at Stonebridge?</h2>
-            <p class="text-lg text-gray-600 mb-8">Discover what makes our community the premier choice for 55+ living in Las Vegas</p>
+            <p class="text-lg text-gray-600 mb-8">
+              Single-story Lennar homes, Red Rock views, and 89138 Summerlin West location
+            </p>
           </div>
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Three Home Collections</h3>
-              <p class="text-gray-600">Cromwell (1,232-1,422 sq ft), Stirling (1,747-2,236 sq ft), and Evander (2,515-2,873 sq ft)</p>
-            </div>
-            <div class="text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Lennar Everything's Included</h3>
-              <p class="text-gray-600">Popular features and upgrades included at no extra cost</p>
-            </div>
-            <div class="text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Canyon Views</h3>
-              <p class="text-gray-600">Stunning mountain backdrop with easy access to outdoor recreation</p>
-            </div>
-            <div class="text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Current Pricing</h3>
-              <p class="text-gray-600">Cromwell: $464,990-$512,990 | Stirling: $675,990-$736,990 | Evander: $861,990-$910,990</p>
-            </div>
+            <PhotoCard
+              imageId="home-collections"
+              title="Three Home Collections"
+              alt="Lennar single-story home collections at Heritage at Stonebridge, Summerlin West 89138"
+              description="Cromwell (1,232-1,456 sq ft), Stirling (1,747-2,236 sq ft), and Evander (2,515-2,873 sq ft)."
+            />
+            <PhotoCard
+              imageId="luxury-kitchen"
+              title="Lennar Everything's Included"
+              alt="Lennar Everything's Included kitchen with quartz island in a Heritage at Stonebridge home"
+              description="Quartz counters, stainless appliances, and smart-home features included in the price."
+            />
+            <PhotoCard
+              imageId="red-rock-canyon"
+              title="Red Rock Canyon Views"
+              alt="Red Rock Canyon sandstone cliffs viewed from Summerlin West near Heritage at Stonebridge"
+              description="12 miles to Red Rock Canyon National Conservation Area for hiking and scenic drives."
+            />
+            <PhotoCard
+              imageId="cromwell-home"
+              title="Current Pricing"
+              alt="Cromwell collection single-story home at Heritage at Stonebridge"
+              description="Cromwell $464,990–$512,990 · Stirling $675,990–$736,990 · Evander $861,990–$910,990. Confirm on MLS."
+            />
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section class="bg-gradient-to-br from-blue-600 to-blue-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-          <h2 class="text-3xl font-bold text-white mb-4">Ready to Experience Luxury Living?</h2>
+      <section class="relative overflow-hidden py-16">
+        <CfImage
+          id="luxury-home-exterior"
+          alt="Twilight exterior of a luxury single-story home in Summerlin West, Las Vegas"
+          width={1920}
+          height={1080}
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-blue-900/75"></div>
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+          <h2 class="text-3xl font-bold text-white mb-4">Ready to Tour Heritage at Stonebridge?</h2>
           <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-            Schedule a private tour of Heritage at Stonebridge and discover why this is the perfect
-            place for your next chapter.
+            Call {business.telephoneDisplay} or get directions to Crossbridge Dr, Las Vegas, NV 89138.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -497,12 +527,12 @@ export default component$(() => {
             >
               Schedule Private Tour
             </a>
-            <button
-              type="button"
-              class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg"
+            <a
+              href={business.telephoneHref}
+              class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center"
             >
-              Call (702) 789-6561
-            </button>
+              Call {business.telephoneDisplay}
+            </a>
           </div>
         </div>
       </section>
@@ -590,6 +620,14 @@ export const head: DocumentHead = {
       content: "https://heritagestonebridge.com",
     },
     {
+      property: "og:image",
+      content: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.jpg",
+    },
+    {
+      name: "twitter:image",
+      content: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.jpg",
+    },
+    {
       property: "og:site_name",
       content: "Heritage at Stonebridge",
     },
@@ -608,7 +646,7 @@ export const head: DocumentHead = {
     },
     {
       name: "geo.position",
-      content: "36.1699;-115.1398",
+      content: "36.1716;-115.3384",
     },
     {
       name: "twitter:card",

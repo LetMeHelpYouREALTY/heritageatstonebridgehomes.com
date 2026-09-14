@@ -5,13 +5,17 @@ import { RealScoutSimpleSearch } from "~/components/real-estate/RealScoutSimpleS
 import { RealScoutHomeValue } from "~/components/real-estate/RealScoutHomeValue";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 
 export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+      <section class="relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
+        <LocationHeroImage />
+        <div class="absolute inset-0 bg-slate-900/40" aria-hidden="true"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-5xl font-bold mb-6">Real Estate Tools & Widgets</h1>
           <p class="text-xl text-blue-100 max-w-3xl mx-auto">
             Explore our comprehensive suite of RealScout widgets and property search tools designed
@@ -19,6 +23,8 @@ export default component$(() => {
           </p>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* Dynamic RealScout Content Blocks */}
       <main>
@@ -162,7 +168,7 @@ export const head: DocumentHead = {
     },
     {
       name: "geo.position",
-      content: "36.1699;-115.1398",
+      content: "36.1716;-115.3384",
     },
     {
       property: "og:title",

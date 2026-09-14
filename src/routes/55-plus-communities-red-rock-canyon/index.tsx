@@ -2,6 +2,8 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 
 export default component$(() => {
   // Inject structured data as JSON-LD script
@@ -25,7 +27,7 @@ export default component$(() => {
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: "36.1699",
+          latitude: "36.1716",
           longitude: "-115.3338",
         },
         amenityFeature: [
@@ -78,9 +80,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative max-w-7xl mx-auto px-4">
+        <div class="relative z-10 max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Premier 55+ Communities Near Red Rock Canyon Las Vegas
@@ -129,6 +132,8 @@ export default component$(() => {
           </div>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* Community Overview Section */}
       <section class="py-16 bg-white">
@@ -313,7 +318,7 @@ export default component$(() => {
               </h3>
               <div class="relative h-96 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.1234567890!2d-115.3338!3d36.1699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c1234567890%3A0x1234567890abcdef!2sHeritage%20at%20Stonebridge%2C%20Las%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.1234567890!2d-115.3338!3d36.1716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c1234567890%3A0x1234567890abcdef!2sHeritage%20at%20Stonebridge%2C%20Las%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -1045,7 +1050,7 @@ export default component$(() => {
 
       {/* Final CTA Section */}
       <section class="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
             Ready to Experience Luxury 55+ Living Near Red Rock Canyon?
           </h2>

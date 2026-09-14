@@ -1,4 +1,5 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { cfImage } from "~/config/images";
 
 interface HeroImage {
   src: string;
@@ -9,32 +10,32 @@ interface HeroImage {
 
 const luxuryImages: HeroImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    alt: "Luxury Heritage at Stonebridge Home Exterior",
+    src: cfImage("heritage-stonebridge-hero", "hero"),
+    alt: "Guard-gated Heritage at Stonebridge entrance in Summerlin West, Las Vegas NV 89138",
     title: "The Heritage Collection",
     description: "Starting from $650,000",
   },
   {
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80",
-    alt: "Modern Kitchen with Premium Finishes",
+    src: cfImage("luxury-kitchen", "hero"),
+    alt: "Lennar Everything's Included kitchen at Heritage at Stonebridge",
     title: "The Stonebridge Collection",
     description: "Starting from $750,000",
   },
   {
-    src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    alt: "Elegant Living Room with High Ceilings",
+    src: cfImage("great-room", "hero"),
+    alt: "Open great room in a Heritage at Stonebridge home",
     title: "The Signature Collection",
     description: "Starting from $850,000",
   },
   {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    alt: "Master Suite with Luxury Bathroom",
+    src: cfImage("evander-home", "hero"),
+    alt: "Evander collection luxury home exterior at Heritage at Stonebridge",
     title: "Master Retreat",
     description: "Premium finishes throughout",
   },
   {
-    src: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    alt: "Outdoor Living Space with Pool",
+    src: cfImage("pool-spa", "hero"),
+    alt: "Resort-style pool and spa at Heritage at Stonebridge",
     title: "Resort-Style Living",
     description: "Private outdoor entertainment areas",
   },

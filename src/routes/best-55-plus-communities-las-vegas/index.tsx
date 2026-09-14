@@ -2,6 +2,8 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 
 export const head: DocumentHead = {
   title: "Best 55+ Communities in Las Vegas | Top-Rated Active Adult Living - Dr. Jan Duffy",
@@ -164,9 +166,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Best 55+ Communities in Las Vegas
           </h1>
@@ -183,6 +186,8 @@ export default component$(() => {
           </div>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* Ranking Criteria */}
       <section class="py-16 bg-white">
@@ -403,7 +408,7 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-purple-600 to-purple-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Perfect 55+ Community?</h2>
           <p class="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you choose from the best 55+ communities in Las Vegas based on your lifestyle, budget, and preferences.

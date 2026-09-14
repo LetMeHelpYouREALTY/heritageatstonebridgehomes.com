@@ -2,6 +2,8 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 
 export const head: DocumentHead = {
   title: "Las Vegas Real Estate | Dr. Jan Duffy - 55+ Communities Specialist",
@@ -92,8 +94,8 @@ export default component$(() => {
         },
         "geo": {
           "@type": "GeoCoordinates", 
-          "latitude": "36.1699",
-          "longitude": "-115.1398"
+          "latitude": "36.1716",
+          "longitude": "-115.3384"
         },
         "openingHoursSpecification": [
           {
@@ -114,8 +116,8 @@ export default component$(() => {
           "@type": "GeoCircle",
           "geoMidpoint": {
             "@type": "GeoCoordinates",
-            "latitude": "36.1699",
-            "longitude": "-115.1398"
+            "latitude": "36.1716",
+            "longitude": "-115.3384"
           },
           "geoRadius": "50000"
         },
@@ -273,9 +275,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Las Vegas Real Estate
           </h1>
@@ -292,6 +295,8 @@ export default component$(() => {
           </div>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* Service Areas Overview */}
       <section class="py-16 bg-gray-50">
@@ -312,7 +317,7 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Henderson</h3>
-              <p class="text-gray-600 mb-4">Family-friendly community with excellent schools, parks, and diverse housing options.</p>
+              <p class="text-gray-600 mb-4">Parks, recreation centers, and a wide range of housing types in Henderson.</p>
               <a href="/henderson-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Henderson Homes →</a>
             </div>
             
@@ -494,7 +499,7 @@ export default component$(() => {
 
       {/* CTA Section */}
       <section class="bg-gradient-to-br from-blue-600 to-blue-800 py-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-4">Ready to Find Your Las Vegas Dream Home?</h2>
           <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you navigate the Las Vegas real estate market and find the perfect home in your ideal community.

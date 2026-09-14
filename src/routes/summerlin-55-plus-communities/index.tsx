@@ -2,6 +2,8 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 
 export const head: DocumentHead = {
   title: "Summerlin 55+ Communities | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -164,9 +166,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Summerlin 55+ Communities
           </h1>
@@ -183,6 +186,8 @@ export default component$(() => {
           </div>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* Summerlin Advantage */}
       <section class="py-16 bg-white">
@@ -299,11 +304,11 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">The Arbors</h3>
-              <p class="text-gray-600 mb-4">Family-friendly community with parks, trails, and excellent schools</p>
+              <p class="text-gray-600 mb-4">Parks, trails, and recreation centers in a master-planned Summerlin village</p>
               <ul class="space-y-2 text-gray-600 mb-4">
                 <li>• Parks and trails</li>
                 <li>• Excellent schools</li>
-                <li>• Family amenities</li>
+                <li>• Parks and trails</li>
                 <li>• Community events</li>
                 <li>• Safe environment</li>
                 <li>• Convenient location</li>
@@ -387,7 +392,7 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-green-600 to-green-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Perfect Summerlin 55+ Community?</h2>
           <p class="text-lg text-green-100 mb-8 max-w-2xl mx-auto">
             As Las Vegas's premier 55+ community specialist, I'll help you discover the ideal Summerlin community that matches your lifestyle, budget, and preferences.

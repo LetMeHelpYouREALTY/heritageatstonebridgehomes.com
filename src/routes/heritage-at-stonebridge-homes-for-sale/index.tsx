@@ -2,6 +2,8 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 
 export const head: DocumentHead = {
   title: "Heritage at Stonebridge Homes for Sale | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -84,8 +86,8 @@ export default component$(() => {
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "36.1699",
-          "longitude": "-115.1398"
+          "latitude": "36.1716",
+          "longitude": "-115.3384"
         },
         "amenityFeature": [
           {
@@ -235,9 +237,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Heritage at Stonebridge Homes for Sale
           </h1>
@@ -254,6 +257,8 @@ export default component$(() => {
           </div>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* Current Market Insight */}
       <section class="py-16 bg-white">
@@ -514,7 +519,7 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-red-600 to-red-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Heritage at Stonebridge Home?</h2>
           <p class="text-lg text-red-100 mb-8 max-w-2xl mx-auto">
             As Las Vegas's premier 55+ community specialist, I'll help you find the perfect Heritage at Stonebridge home with Lennar's Everything's Included® features.

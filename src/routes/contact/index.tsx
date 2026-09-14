@@ -1,5 +1,7 @@
 import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import {
   business,
@@ -280,7 +282,9 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
+        <LocationHeroImage />
+        <div class="absolute inset-0 bg-slate-900/40" aria-hidden="true"></div>
         <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
@@ -295,6 +299,8 @@ export default component$(() => {
           </p>
         </div>
       </section>
+
+      <PagePhotoRail />
 
       {/* Contact Information */}
       <section class="py-16 bg-white">
@@ -347,8 +353,16 @@ export default component$(() => {
               <h3 class="text-xl font-semibold text-gray-900 mb-2">Office</h3>
               <p class="text-gray-600 mb-4">Visit our location</p>
               <p class="text-purple-600 font-semibold text-sm">
-                Crossbridge Dr<br />
-                Las Vegas, NV 89138
+                <a
+                  href={business.mapsUrl}
+                  class="hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Crossbridge Dr
+                  <br />
+                  Las Vegas, NV 89138
+                </a>
               </p>
             </div>
 

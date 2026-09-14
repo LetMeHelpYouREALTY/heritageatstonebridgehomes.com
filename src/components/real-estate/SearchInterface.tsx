@@ -56,7 +56,7 @@ export const SearchInterface = component$<SearchInterfaceProps>(({ initialFilter
             beds: 3,
             baths: 2,
             sqft: 2500,
-            photos: ["/api/placeholder/400/300"],
+            photos: ["/images/home-collections.jpg"],
             address: {
               street: "123 Heritage Way",
               city: "Las Vegas",
@@ -66,7 +66,7 @@ export const SearchInterface = component$<SearchInterfaceProps>(({ initialFilter
             },
             agent: {
               id: "agent-123",
-              name: "Sarah Johnson",
+              name: "Dr. Jan Duffy",
               phone: "(702) 555-0123",
               email: "DrDuffySells@HeritageStonebridge.com",
             },
