@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Affordable 55+ Communities in Las Vegas | Budget-Friendly Active Adult Living - Dr. Jan Duffy",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Budget-Friendly 55+ Living Options" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Budget-Friendly 55+ Living Options</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Las Vegas offers several affordable 55+ communities that provide quality amenities and active adult lifestyle without breaking the budget.
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Featured Affordable 55+ Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Affordable 55+ Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Las Vegas's most affordable active adult communities offering quality amenities at budget-friendly prices.
@@ -270,6 +273,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Tips for Finding Affordable 55+ Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Tips for Finding Affordable 55+ Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Expert advice for finding quality 55+ communities that fit your budget without compromising on lifestyle.

@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "About Dr. Jan Duffy - Las Vegas Real Estate Expert | Heritage at Stonebridge",
@@ -307,6 +308,7 @@ export default component$(() => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
+              <HeadingPhoto heading="Professional Excellence & Expertise" />
               <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Professional Excellence & Expertise
               </h2>
@@ -378,6 +380,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Areas of Expertise" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Areas of Expertise
             </h2>
@@ -479,6 +482,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Service Areas" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Service Areas
             </h2>

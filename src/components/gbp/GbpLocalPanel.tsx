@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { business } from "~/config/business";
 import { GBP_FAQS } from "~/config/images";
 
@@ -21,6 +22,7 @@ export const GbpLocalPanel = component$(() => {
       <script type="application/ld+json" dangerouslySetInnerHTML={FAQ_JSON_LD} />
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-10">
+          <HeadingPhoto heading={`Visit ${business.name} at Crossbridge Dr, Las Vegas NV 89138`} />
           <h2 id="gbp-local-heading" class="text-3xl font-bold text-gray-900 mb-3">
             Visit {business.name}
           </h2>

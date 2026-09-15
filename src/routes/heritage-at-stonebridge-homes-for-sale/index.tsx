@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Heritage at Stonebridge Homes for Sale | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -264,6 +265,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Current Heritage at Stonebridge Market Update" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Heritage at Stonebridge Market Update</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's premier 55+ community specialist, I'm seeing unprecedented demand for Heritage at Stonebridge homes. Here's what you need to know about today's market.
@@ -291,6 +293,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Heritage at Stonebridge Home Collections" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Heritage at Stonebridge Home Collections</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Choose from three distinct home collections, each designed with active adult living in mind and featuring Lennar's Everything's Included® package.
@@ -347,6 +350,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Lennar's Everything's Included® Package" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Lennar's Everything's Included® Package</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Heritage at Stonebridge homes come with Lennar's Everything's Included® package, providing premium features at no additional cost.
@@ -405,6 +409,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Heritage at Stonebridge Amenities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Heritage at Stonebridge Amenities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience resort-style living with world-class amenities designed for active adults in the heart of Summerlin West.
@@ -451,6 +456,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Heritage at Stonebridge?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Heritage at Stonebridge?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults find their perfect home. Here's why Heritage at Stonebridge stands out.

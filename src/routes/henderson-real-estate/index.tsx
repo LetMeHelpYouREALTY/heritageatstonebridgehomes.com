@@ -4,6 +4,9 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { CfImage } from "~/components/media/CfImage";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Henderson Real Estate | Dr. Jan Duffy - Henderson Homes and Parks",
@@ -95,6 +98,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Henderson?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Henderson?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Henderson offers suburban streets, parks, recreation centers, and a short drive to Las Vegas employment and medical centers.
@@ -103,33 +107,53 @@ export default component$(() => {
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🎓</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Excellent Schools</h3>
-              <p class="text-gray-600">Top-rated public and private schools with strong academic programs</p>
+              <CfImage
+                id="henderson-parks"
+                alt="Public park and walking paths in Henderson, Nevada"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-32 object-cover rounded-lg mb-4"
+              />
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Parks & Trails</h3>
+              <p class="text-gray-600">Parks, recreation centers, and paved trails across Henderson</p>
             </div>
             
             <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🌳</span>
-              </div>
+              <CfImage
+                id="henderson-parks"
+                alt="Henderson, Nevada parks and recreation landscape"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-32 object-cover rounded-lg mb-4"
+              />
               <h3 class="text-xl font-bold text-gray-900 mb-3">Beautiful Parks</h3>
               <p class="text-gray-600">Numerous parks, trails, and recreational facilities throughout the city</p>
             </div>
             
             <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏪</span>
-              </div>
+              <CfImage
+                id="shopping-dining"
+                alt="Outdoor dining and retail plaza in the Las Vegas valley"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-32 object-cover rounded-lg mb-4"
+              />
               <h3 class="text-xl font-bold text-gray-900 mb-3">Shopping & Dining</h3>
               <p class="text-gray-600">Galleria at Sunset, The District, and diverse dining options</p>
             </div>
             
             <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏥</span>
-              </div>
+              <CfImage
+                id="medical-campus"
+                alt="Medical campus exterior in Henderson, Nevada"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-32 object-cover rounded-lg mb-4"
+              />
               <h3 class="text-xl font-bold text-gray-900 mb-3">Healthcare</h3>
               <p class="text-gray-600">St. Rose Dominican Hospital and Henderson Hospital for quality care</p>
             </div>
@@ -141,6 +165,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Henderson Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Henderson Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Henderson offers suburban streets, parks, and convenient access to Las Vegas amenities for 55+ buyers comparing square footage and HOA amenities.
@@ -154,7 +179,7 @@ export default component$(() => {
                 <li class="flex items-start">
                   <span class="text-blue-500 mr-3 mt-1">✓</span>
                   <div>
-                    <strong>Family-Friendly:</strong> Parks, recreation centers, and established residential streets
+                    <strong>Parks and recreation:</strong> Parks, recreation centers, and established residential streets
                   </div>
                 </li>
                 <li class="flex items-start">
@@ -220,6 +245,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Henderson Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Henderson Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Henderson's diverse neighborhoods, from master-planned communities to established areas with unique character and amenities.
@@ -227,41 +253,42 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Green Valley</h3>
-              <p class="text-gray-600 mb-4">Mature trees, parks, and recreation centers along Henderson residential streets.</p>
-              <a href="/green-valley-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Green Valley Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Anthem</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with golf courses, parks, and resort amenities.</p>
-              <a href="/anthem-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Anthem Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">MacDonald Ranch</h3>
-              <p class="text-gray-600 mb-4">Luxury community with custom homes and golf course access.</p>
-              <a href="/macdonald-ranch-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View MacDonald Ranch Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Seven Hills</h3>
-              <p class="text-gray-600 mb-4">Gated community with luxury homes and mountain views.</p>
-              <a href="/seven-hills-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Seven Hills Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Inspirada</h3>
-              <p class="text-gray-600 mb-4">Modern master-planned community with contemporary homes and amenities.</p>
-              <a href="/henderson-active-adult-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Inspirada Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Anthem</h3>
-              <p class="text-gray-600 mb-4">Premier 55+ community with golf courses and resort-style amenities.</p>
-              <a href="/sun-city-anthem" class="text-blue-600 hover:text-blue-800 font-semibold">View Sun City Anthem Homes →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Green Valley"
+              description="Mature trees, parks, and recreation centers along Henderson residential streets."
+              href="/henderson-real-estate"
+              linkLabel="View Green Valley Homes →"
+            />
+            <PhotoThumbCard
+              heading="Anthem"
+              description="Master-planned community with golf courses, parks, and resort amenities."
+              href="/henderson-active-adult-communities"
+              linkLabel="View Anthem Homes →"
+            />
+            <PhotoThumbCard
+              heading="MacDonald Ranch"
+              description="Luxury community with custom homes and golf course access."
+              href="/henderson-real-estate"
+              linkLabel="View MacDonald Ranch Homes →"
+            />
+            <PhotoThumbCard
+              heading="Seven Hills"
+              description="Gated community with luxury homes and mountain views."
+              href="/gated-communities"
+              linkLabel="View Seven Hills Homes →"
+            />
+            <PhotoThumbCard
+              heading="Inspirada"
+              description="Modern master-planned community with contemporary homes and amenities."
+              href="/henderson-active-adult-communities"
+              linkLabel="View Inspirada Homes →"
+            />
+            <PhotoThumbCard
+              heading="Sun City Anthem"
+              description="Premier 55+ community with golf courses and resort-style amenities."
+              href="/sun-city-del-webb-real-estate"
+              linkLabel="View Sun City Anthem Homes →"
+            />
           </div>
         </div>
       </section>
@@ -270,6 +297,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="55+ Active Adult Communities in Henderson" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">55+ Active Adult Communities in Henderson</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Henderson offers several premier active adult communities designed for the 55+ lifestyle, featuring resort-style amenities and vibrant social scenes.
@@ -336,6 +364,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Henderson Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Henderson Listings</h2>
             <p class="text-lg text-gray-600">Explore available homes in Henderson's diverse communities</p>
           </div>
@@ -354,6 +383,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Dr. Jan Duffy for Henderson Real Estate?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Dr. Jan Duffy for Henderson Real Estate?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               With comprehensive knowledge of Henderson's communities and specialized expertise in 55+ active adult living, Dr. Jan Duffy provides expert guidance for your home purchase.

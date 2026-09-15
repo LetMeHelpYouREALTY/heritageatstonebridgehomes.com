@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Red Rock Canyon Communities | Dr. Jan Duffy - Mountain View Homes",
@@ -95,6 +96,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Living Near Red Rock Canyon" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Living Near Red Rock Canyon</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience the natural beauty of Red Rock Canyon while enjoying luxury amenities and stunning mountain views. These premier communities offer the perfect blend of outdoor recreation and sophisticated living.
@@ -141,6 +143,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Red Rock Canyon Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Red Rock Canyon Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Living near Red Rock Canyon offers the ultimate combination of natural beauty, outdoor adventure, and luxury amenities in Las Vegas's most scenic area.
@@ -220,6 +223,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier Red Rock Canyon Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier Red Rock Canyon Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Discover luxury communities that offer the perfect combination of natural beauty, outdoor recreation, and sophisticated amenities.
@@ -236,7 +240,7 @@ export default component$(() => {
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
               <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates and exclusive golf course access.</p>
-              <a href="/the-ridges-summerlin" class="text-red-600 hover:text-red-800 font-semibold">View Ridges Homes →</a>
+              <a href="/luxury-homes" class="text-red-600 hover:text-red-800 font-semibold">View Ridges Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -270,6 +274,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Outdoor Recreation Opportunities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Outdoor Recreation Opportunities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Living near Red Rock Canyon means having access to world-class outdoor recreation right in your backyard.
@@ -336,6 +341,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Red Rock Canyon Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Red Rock Canyon Listings</h2>
             <p class="text-lg text-gray-600">Explore available homes with stunning mountain views</p>
           </div>
@@ -354,6 +360,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Dr. Jan Duffy for Red Rock Canyon Real Estate?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Dr. Jan Duffy for Red Rock Canyon Real Estate?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               With deep knowledge of Red Rock Canyon communities and their unique mountain lifestyle, Dr. Jan Duffy provides expert guidance for your luxury home purchase.

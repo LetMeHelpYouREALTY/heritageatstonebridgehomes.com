@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Las Vegas Real Estate | Dr. Jan Duffy - 55+ Communities Specialist",
@@ -302,6 +303,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Las Vegas Service Areas" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Las Vegas Service Areas</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Dr. Jan Duffy provides comprehensive real estate services across the Las Vegas Valley, with specialized expertise in 55+ communities and luxury properties.
@@ -352,6 +354,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Las Vegas Real Estate Market Overview" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Las Vegas Real Estate Market Overview</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               The Las Vegas real estate market continues to show strong growth with increasing property values, low inventory, and high demand across all price ranges and neighborhoods.
@@ -379,6 +382,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="55+ Communities in Las Vegas" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">55+ Communities in Las Vegas</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Las Vegas offers some of the finest active adult communities in the Southwest, featuring resort-style amenities, golf courses, and vibrant social scenes.
@@ -445,6 +449,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Las Vegas Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Las Vegas Listings</h2>
             <p class="text-lg text-gray-600">Explore available properties across the Las Vegas Valley</p>
           </div>
@@ -463,6 +468,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Dr. Jan Duffy for Las Vegas Real Estate?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Dr. Jan Duffy for Las Vegas Real Estate?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               With deep local knowledge and specialized expertise in 55+ communities, Dr. Jan Duffy provides unmatched service throughout the Las Vegas Valley.

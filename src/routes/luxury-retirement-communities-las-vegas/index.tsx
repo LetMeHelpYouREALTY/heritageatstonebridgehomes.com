@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Luxury Retirement Communities in Las Vegas | Premium Active Adult Living - Dr. Jan Duffy",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="What Defines Luxury Retirement Living?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">What Defines Luxury Retirement Living?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Luxury retirement communities offer the highest level of amenities, services, and lifestyle options for discerning active adults.
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier Luxury Retirement Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier Luxury Retirement Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Discover Las Vegas's most exclusive active adult communities offering unparalleled luxury and service.
@@ -239,7 +242,7 @@ export default component$(() => {
                 <li>• Highest-end finishes</li>
               </ul>
               <div class="text-lg font-bold text-gold-600 mb-4">$1,000,000 - $5,000,000+</div>
-              <a href="/the-ridges-summerlin" class="text-gold-600 hover:text-gold-800 font-semibold">View The Ridges Homes →</a>
+              <a href="/luxury-homes" class="text-gold-600 hover:text-gold-800 font-semibold">View The Ridges Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -299,7 +302,7 @@ export default component$(() => {
                 <li>• High-end finishes</li>
               </ul>
               <div class="text-lg font-bold text-gold-600 mb-4">$700,000 - $2,500,000+</div>
-              <a href="/macdonald-ranch-henderson" class="text-gold-600 hover:text-gold-800 font-semibold">View MacDonald Ranch Homes →</a>
+              <a href="/henderson-real-estate" class="text-gold-600 hover:text-gold-800 font-semibold">View MacDonald Ranch Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -314,7 +317,7 @@ export default component$(() => {
                 <li>• Luxury finishes</li>
               </ul>
               <div class="text-lg font-bold text-gold-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/seven-hills-henderson" class="text-gold-600 hover:text-gold-800 font-semibold">View Seven Hills Homes →</a>
+              <a href="/gated-communities" class="text-gold-600 hover:text-gold-800 font-semibold">View Seven Hills Homes →</a>
             </div>
           </div>
         </div>
@@ -324,6 +327,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Luxury Lifestyle Services" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Luxury Lifestyle Services</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience the highest level of service and convenience with personalized amenities designed for discerning residents.

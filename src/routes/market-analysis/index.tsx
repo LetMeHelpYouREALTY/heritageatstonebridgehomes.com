@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Las Vegas Real Estate Market Analysis 2025 | Dr. Jan Duffy",
@@ -93,6 +94,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="2025 Market Overview" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">2025 Market Overview</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Las Vegas real estate continues to show strong fundamentals with particular strength in 55+ communities and luxury segments
@@ -131,6 +133,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Community Market Analysis" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Community Market Analysis</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Detailed analysis of Las Vegas's most sought-after communities and their market performance
@@ -178,7 +181,7 @@ export default component$(() => {
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gray-900">Henderson</h3>
-                  <div class="text-sm text-gray-500">Family-Friendly City</div>
+                  <div class="text-sm text-gray-500">Master-planned city</div>
                 </div>
               </div>
               <div class="space-y-3 mb-6">
@@ -244,6 +247,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="55+ Communities Market Analysis" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">55+ Communities Market Analysis</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Specialized analysis of active adult communities and their unique market dynamics
@@ -310,6 +314,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Investment Opportunities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Investment Opportunities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Strategic investment insights for Las Vegas real estate in 2025
@@ -369,6 +374,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="AI-Powered Market Predictions" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">AI-Powered Market Predictions</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Advanced AI analysis of market trends and future opportunities

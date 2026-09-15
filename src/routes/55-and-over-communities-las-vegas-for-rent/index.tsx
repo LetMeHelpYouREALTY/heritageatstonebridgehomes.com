@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "55+ Communities in Las Vegas for Rent | Active Adult Rental Homes - Dr. Jan Duffy",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="55+ Community Rental Market" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">55+ Community Rental Market</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Las Vegas offers rental opportunities in various 55+ communities, allowing you to experience active adult living before committing to purchase.
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Communities with Rental Options" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Communities with Rental Options</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore 55+ communities in Las Vegas that offer rental opportunities for active adults.
@@ -299,7 +302,7 @@ export default component$(() => {
                 <li>• High-end finishes</li>
               </ul>
               <div class="text-lg font-bold text-teal-600 mb-4">$3,000 - $7,000/month</div>
-              <a href="/macdonald-ranch-rentals" class="text-teal-600 hover:text-teal-800 font-semibold">View MacDonald Ranch Rentals →</a>
+              <a href="/55-and-over-communities-las-vegas-for-rent" class="text-teal-600 hover:text-teal-800 font-semibold">View MacDonald Ranch Rentals →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -314,7 +317,7 @@ export default component$(() => {
                 <li>• Luxury finishes</li>
               </ul>
               <div class="text-lg font-bold text-teal-600 mb-4">$3,500 - $8,000/month</div>
-              <a href="/seven-hills-rentals" class="text-teal-600 hover:text-teal-800 font-semibold">View Seven Hills Rentals →</a>
+              <a href="/55-and-over-communities-las-vegas-for-rent" class="text-teal-600 hover:text-teal-800 font-semibold">View Seven Hills Rentals →</a>
             </div>
           </div>
         </div>
@@ -324,6 +327,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Important Rental Considerations" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Important Rental Considerations</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Understanding rental policies, costs, and requirements helps ensure a successful rental experience in 55+ communities.

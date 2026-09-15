@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Boulder City Homes for Sale | Dr. Jan Duffy - Historic Community Near Lake Mead",
@@ -95,6 +96,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Boulder City?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Boulder City?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Boulder City offers a unique blend of historic charm, outdoor recreation, and small-town community feel, all while being just 30 minutes from Las Vegas.
@@ -141,6 +143,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Boulder City Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Boulder City Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Boulder City offers a unique small-town atmosphere with historic charm, outdoor recreation, and convenient access to Las Vegas amenities.
@@ -220,6 +223,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Boulder City Neighborhoods" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Boulder City Neighborhoods</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Boulder City's diverse neighborhoods, from historic downtown to newer developments with mountain views.
@@ -270,6 +274,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Outdoor Recreation in Boulder City" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Outdoor Recreation in Boulder City</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Boulder City is a paradise for outdoor enthusiasts, with easy access to Lake Mead, hiking trails, and recreational activities.
@@ -336,6 +341,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Boulder City Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Boulder City Listings</h2>
             <p class="text-lg text-gray-600">Explore available homes in Boulder City's charming communities</p>
           </div>
@@ -354,6 +360,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Dr. Jan Duffy for Boulder City Real Estate?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Dr. Jan Duffy for Boulder City Real Estate?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               With deep knowledge of Boulder City's unique character, historic properties, and outdoor recreation opportunities, Dr. Jan Duffy provides expert guidance for your home purchase.

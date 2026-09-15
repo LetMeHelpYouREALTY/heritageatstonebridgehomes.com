@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { NapBlock } from "~/components/nap/NapBlock";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Sitemap - Heritage at Stonebridge",
@@ -59,6 +60,7 @@ export default component$(() => {
 
       <div class="grid md:grid-cols-2 gap-8">
         <div>
+          <HeadingPhoto heading="Core Pages" />
           <h2 class="text-2xl font-bold text-gray-900 mb-4">Core Pages</h2>
           <ul class="space-y-2">
             <li><a href="/" class="text-blue-600 hover:text-blue-800">Homepage</a></li>
@@ -71,6 +73,7 @@ export default component$(() => {
         </div>
 
         <div>
+          <HeadingPhoto heading="Service Areas" />
           <h2 class="text-2xl font-bold text-gray-900 mb-4">Service Areas</h2>
           <ul class="space-y-2">
             <li><a href="/las-vegas-real-estate/" class="text-blue-600 hover:text-blue-800">Las Vegas Real Estate</a></li>
@@ -83,6 +86,7 @@ export default component$(() => {
         </div>
 
         <div>
+          <HeadingPhoto heading="Property Types" />
           <h2 class="text-2xl font-bold text-gray-900 mb-4">Property Types</h2>
           <ul class="space-y-2">
             <li><a href="/55-plus-communities-red-rock-canyon/" class="text-blue-600 hover:text-blue-800">55+ Communities Red Rock Canyon</a></li>
@@ -95,6 +99,7 @@ export default component$(() => {
         </div>
 
         <div>
+          <HeadingPhoto heading="Resources" />
           <h2 class="text-2xl font-bold text-gray-900 mb-4">Resources</h2>
           <ul class="space-y-2">
             <li><a href="/blog/" class="text-blue-600 hover:text-blue-800">AI-Powered Blog</a></li>

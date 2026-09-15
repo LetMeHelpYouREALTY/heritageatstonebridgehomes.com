@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { CfImage } from "~/components/media/CfImage";
 
 export const head: DocumentHead = {
@@ -226,6 +227,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Stonebridge, Summerlin?" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Stonebridge, Summerlin?
             </h2>
@@ -284,6 +286,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Featured Stonebridge Homes" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Featured Stonebridge Homes
             </h2>
@@ -397,6 +400,7 @@ export default component$(() => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
+              <HeadingPhoto heading="Prime Summerlin Location" />
               <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Prime Summerlin Location
               </h2>
@@ -464,6 +468,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Stonebridge Market Insights" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Stonebridge Market Insights
             </h2>
@@ -494,6 +499,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Frequently Asked Questions" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -598,6 +604,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Stonebridge Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Stonebridge Listings</h2>
             <p class="text-lg text-gray-600">Explore available homes in Heritage at Stonebridge community</p>
           </div>

@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "55+ Communities in Las Vegas for Sale | Active Adult Homes Available - Dr. Jan Duffy",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Current 55+ Community Market" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current 55+ Community Market</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Las Vegas offers a diverse selection of 55+ communities with homes currently available for sale across various price ranges and locations.
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Communities with Homes Currently Available" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Communities with Homes Currently Available</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore 55+ communities in Las Vegas that currently have homes for sale, from new construction to resale options.
@@ -269,7 +272,7 @@ export default component$(() => {
                 <li>• Highest-end finishes</li>
               </ul>
               <div class="text-lg font-bold text-indigo-600 mb-4">Luxury Estates Available</div>
-              <a href="/the-ridges-summerlin" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Luxury Homes →</a>
+              <a href="/luxury-homes" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Luxury Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -324,6 +327,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="How to Buy in a 55+ Community" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">How to Buy in a 55+ Community</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Understanding the buying process for 55+ communities helps ensure a smooth transaction and successful purchase.

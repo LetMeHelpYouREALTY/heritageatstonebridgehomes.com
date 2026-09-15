@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export default component$(() => {
   // Inject structured data as JSON-LD script
@@ -140,6 +141,7 @@ export default component$(() => {
         <div class="max-w-7xl mx-auto px-4">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
+              <HeadingPhoto heading="Why Heritage at Stonebridge is Las Vegas's Top-Rated 55+ Community" />
               <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why Heritage at Stonebridge is Las Vegas's Top-Rated 55+ Community
               </h2>
@@ -223,6 +225,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Unmatched Location: Minutes from Red Rock Canyon & Downtown Summerlin" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Unmatched Location: Minutes from Red Rock Canyon & Downtown Summerlin
             </h2>
@@ -345,6 +348,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Three Distinct Home Collections: Cromwell, Stirling & Evander" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Three Distinct Home Collections: Cromwell, Stirling & Evander
             </h2>
@@ -485,6 +489,7 @@ export default component$(() => {
       <section class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Resort-Style Amenities & Active Adult Lifestyle" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Resort-Style Amenities & Active Adult Lifestyle
             </h2>
@@ -682,6 +687,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Smart Investment: Summerlin Property Values & Market Trends" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Smart Investment: Summerlin Property Values & Market Trends
             </h2>
@@ -799,6 +805,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Your New Neighborhood: Stonebridge Village & Summerlin West" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Your New Neighborhood: Stonebridge Village & Summerlin West
             </h2>
@@ -918,6 +925,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Frequently Asked Questions About Heritage at Stonebridge" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions About Heritage at Stonebridge
             </h2>
@@ -1107,6 +1115,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Red Rock Canyon 55+ Community Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Red Rock Canyon 55+ Community Listings</h2>
             <p class="text-lg text-gray-600">Explore available properties in Las Vegas's premier Red Rock Canyon active adult communities</p>
           </div>

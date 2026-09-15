@@ -5,6 +5,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
@@ -240,6 +241,7 @@ Format as JSON with sections: community_definition, security_types, security_ben
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Gated Community Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Gated Community Listings</h2>
             <p class="text-lg text-gray-600">Explore available properties in Las Vegas's most secure gated communities</p>
           </div>

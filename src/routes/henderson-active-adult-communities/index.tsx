@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Henderson Active Adult Communities | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Henderson is Ideal for Active Adult Living" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Henderson is Ideal for Active Adult Living</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults discover why Henderson offers the perfect blend of suburban charm and urban convenience.
@@ -201,7 +203,7 @@ export default component$(() => {
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Family-Friendly Environment</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Parks, trails, and recreation centers</h3>
               <p class="text-gray-600">Residential streets with parks, recreation centers, and a short drive to Lake Mead</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-center">
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier Active Adult Communities in Henderson" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier Active Adult Communities in Henderson</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Henderson's finest active adult communities, each offering unique amenities and lifestyle options for discerning 55+ buyers.
@@ -239,7 +242,7 @@ export default component$(() => {
                 <li>• Strong resale market</li>
               </ul>
               <div class="text-lg font-bold text-blue-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-anthem" class="text-blue-600 hover:text-blue-800 font-semibold">View Sun City Anthem →</a>
+              <a href="/sun-city-del-webb-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">View Sun City Anthem →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -254,7 +257,7 @@ export default component$(() => {
                 <li>• High-end finishes</li>
               </ul>
               <div class="text-lg font-bold text-blue-600 mb-4">$700,000 - $2,500,000+</div>
-              <a href="/macdonald-ranch-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View MacDonald Ranch →</a>
+              <a href="/henderson-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">View MacDonald Ranch →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -269,7 +272,7 @@ export default component$(() => {
                 <li>• Luxury finishes</li>
               </ul>
               <div class="text-lg font-bold text-blue-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/seven-hills-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Seven Hills →</a>
+              <a href="/gated-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Seven Hills →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -284,7 +287,7 @@ export default component$(() => {
                 <li>• Strong resale market</li>
               </ul>
               <div class="text-lg font-bold text-blue-600 mb-4">$400,000 - $1,200,000</div>
-              <a href="/green-valley-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Green Valley →</a>
+              <a href="/henderson-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">View Green Valley →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -314,7 +317,7 @@ export default component$(() => {
                 <li>• Established community</li>
               </ul>
               <div class="text-lg font-bold text-blue-600 mb-4">$600,000 - $2,000,000</div>
-              <a href="/anthem-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Anthem →</a>
+              <a href="/henderson-active-adult-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Anthem →</a>
             </div>
           </div>
         </div>
@@ -324,6 +327,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Henderson Active Adult Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Henderson Active Adult Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience the perfect blend of suburban charm, outdoor recreation, and urban convenience in Henderson's premier active adult communities.

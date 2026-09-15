@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "55+ Condos Las Vegas | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose 55+ Condos in Las Vegas?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose 55+ Condos in Las Vegas?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults discover the benefits of maintenance-free condo living with resort amenities.
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier 55+ Condo Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier 55+ Condo Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Las Vegas's finest 55+ condo communities, each offering unique amenities and lifestyle options for discerning active adults.
@@ -324,6 +327,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The 55+ Condo Lifestyle Advantage" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The 55+ Condo Lifestyle Advantage</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience the perfect blend of luxury, convenience, and active adult living in Las Vegas's premier 55+ condo communities.

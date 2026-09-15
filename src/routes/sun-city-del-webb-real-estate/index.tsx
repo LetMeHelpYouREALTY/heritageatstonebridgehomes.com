@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Sun City Del Webb Real Estate | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Established Sun City & Del Webb Communities?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Established Sun City & Del Webb Communities?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults discover the benefits of established communities with proven amenities and strong resale markets.
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier Sun City & Del Webb Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier Sun City & Del Webb Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Las Vegas's finest established 55+ communities, each offering unique amenities and lifestyle options for discerning active adults.
@@ -254,7 +257,7 @@ export default component$(() => {
                 <li>• Strong resale market</li>
               </ul>
               <div class="text-lg font-bold text-purple-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-anthem" class="text-purple-600 hover:text-purple-800 font-semibold">View Sun City Anthem →</a>
+              <a href="/sun-city-del-webb-real-estate" class="text-purple-600 hover:text-purple-800 font-semibold">View Sun City Anthem →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -284,7 +287,7 @@ export default component$(() => {
                 <li>• High-end finishes</li>
               </ul>
               <div class="text-lg font-bold text-purple-600 mb-4">$700,000 - $2,500,000+</div>
-              <a href="/macdonald-ranch-henderson" class="text-purple-600 hover:text-purple-800 font-semibold">View MacDonald Ranch →</a>
+              <a href="/henderson-real-estate" class="text-purple-600 hover:text-purple-800 font-semibold">View MacDonald Ranch →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -299,7 +302,7 @@ export default component$(() => {
                 <li>• Luxury finishes</li>
               </ul>
               <div class="text-lg font-bold text-purple-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/seven-hills-henderson" class="text-purple-600 hover:text-purple-800 font-semibold">View Seven Hills →</a>
+              <a href="/gated-communities" class="text-purple-600 hover:text-purple-800 font-semibold">View Seven Hills →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -324,6 +327,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Sun City vs Del Webb: Which is Right for You?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Sun City vs Del Webb: Which is Right for You?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Understanding the differences between Sun City and Del Webb communities helps you make the best choice for your active adult lifestyle.

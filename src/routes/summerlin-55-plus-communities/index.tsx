@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Summerlin 55+ Communities | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Summerlin is Perfect for 55+ Living" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Summerlin is Perfect for 55+ Living</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults discover why Summerlin offers the ultimate active adult lifestyle.
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier 55+ Communities in Summerlin" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier 55+ Communities in Summerlin</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Summerlin's finest active adult communities, each offering unique amenities and lifestyle options for discerning 55+ buyers.
@@ -269,7 +272,7 @@ export default component$(() => {
                 <li>• Highest-end finishes</li>
               </ul>
               <div class="text-lg font-bold text-green-600 mb-4">$1,000,000 - $5,000,000+</div>
-              <a href="/the-ridges-summerlin" class="text-green-600 hover:text-green-800 font-semibold">View The Ridges →</a>
+              <a href="/luxury-homes" class="text-green-600 hover:text-green-800 font-semibold">View The Ridges →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -324,6 +327,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Summerlin 55+ Lifestyle Advantage" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Summerlin 55+ Lifestyle Advantage</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Living in Summerlin's 55+ communities means enjoying the perfect blend of luxury amenities, natural beauty, and active adult living.

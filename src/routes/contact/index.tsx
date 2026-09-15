@@ -2,6 +2,7 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import {
   business,
@@ -306,6 +307,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Get In Touch" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get In Touch
             </h2>
@@ -431,6 +433,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Service Areas" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Service Areas
             </h2>
@@ -473,6 +476,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Specializations" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Specializations
             </h2>

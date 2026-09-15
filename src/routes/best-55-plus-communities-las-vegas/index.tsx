@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Best 55+ Communities in Las Vegas | Top-Rated Active Adult Living - Dr. Jan Duffy",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="How We Rank the Best 55+ Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">How We Rank the Best 55+ Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Our comprehensive evaluation considers amenities, location, value, lifestyle, and resident satisfaction to identify Las Vegas's premier active adult communities.
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Top-Rated 55+ Communities in Las Vegas" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Top-Rated 55+ Communities in Las Vegas</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Based on comprehensive analysis of amenities, location, value, and resident satisfaction.
@@ -332,7 +335,7 @@ export default component$(() => {
                   </ul>
                 </div>
               </div>
-              <a href="/the-ridges-summerlin" class="text-purple-600 hover:text-purple-800 font-semibold">View The Ridges Homes →</a>
+              <a href="/luxury-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View The Ridges Homes →</a>
             </div>
           </div>
         </div>
@@ -342,6 +345,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Community Comparison Guide" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Community Comparison Guide</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Compare the top 55+ communities based on key factors to find the perfect match for your lifestyle and budget.

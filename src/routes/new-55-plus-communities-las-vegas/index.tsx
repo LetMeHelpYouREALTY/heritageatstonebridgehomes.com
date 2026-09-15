@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "New 55+ Communities in Las Vegas | Latest Active Adult Developments - Dr. Jan Duffy",
@@ -193,6 +194,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose New Construction 55+ Communities?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose New Construction 55+ Communities?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               New construction offers the latest in design, technology, and amenities specifically designed for active adult living.
@@ -220,6 +222,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Latest 55+ Community Developments" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Latest 55+ Community Developments</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Las Vegas's newest active adult communities featuring contemporary designs and modern amenities.
@@ -274,6 +277,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The New Construction Process" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The New Construction Process</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Understanding the new construction process helps you make informed decisions and get the most value from your investment.

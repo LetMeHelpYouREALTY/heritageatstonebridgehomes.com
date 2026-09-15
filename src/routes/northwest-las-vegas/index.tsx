@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Northwest Las Vegas Real Estate | Dr. Jan Duffy - Growing Communities",
@@ -95,6 +96,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Northwest Las Vegas?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Northwest Las Vegas?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Northwest Las Vegas is one of the fastest-growing areas in the valley, offering new construction homes, modern amenities, and excellent value for money with convenient access to the Strip.
@@ -141,6 +143,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Northwest Las Vegas Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Northwest Las Vegas Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Northwest Las Vegas offers the perfect combination of new construction, modern amenities, and convenient access to everything Las Vegas has to offer.
@@ -178,7 +181,7 @@ export default component$(() => {
                 <li class="flex items-start">
                   <span class="text-purple-500 mr-3 mt-1">✓</span>
                   <div>
-                    <strong>Family-Friendly:</strong> New schools, parks, and recreational facilities designed for modern living
+                    <strong>Parks and recreation:</strong> New parks, trails, and recreation centers
                   </div>
                 </li>
               </ul>
@@ -220,6 +223,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Northwest Las Vegas Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Northwest Las Vegas Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Northwest Las Vegas's diverse neighborhoods, from master-planned communities to new construction developments.
@@ -270,6 +274,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="New Construction in Northwest Las Vegas" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">New Construction in Northwest Las Vegas</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Northwest Las Vegas is home to numerous new construction developments offering modern homes with the latest features and designs.
@@ -336,6 +341,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Northwest Las Vegas Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Northwest Las Vegas Listings</h2>
             <p class="text-lg text-gray-600">Explore available homes in Northwest Las Vegas's growing communities</p>
           </div>
@@ -354,6 +360,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Dr. Jan Duffy for Northwest Las Vegas Real Estate?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Dr. Jan Duffy for Northwest Las Vegas Real Estate?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               With comprehensive knowledge of Northwest Las Vegas's growing communities and new construction developments, Dr. Jan Duffy provides expert guidance for your home purchase.

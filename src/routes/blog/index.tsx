@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { CfImage } from "~/components/media/CfImage";
 import { business } from "~/config/business";
 
@@ -95,6 +96,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Featured Articles" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Articles</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Stay informed with the latest Las Vegas real estate trends, market insights, and community spotlights
@@ -277,6 +279,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="AI-Powered Real Estate Insights" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">AI-Powered Real Estate Insights</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Get personalized real estate insights powered by advanced AI technology

@@ -5,6 +5,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
@@ -240,6 +241,7 @@ Format as JSON with sections: golf_home_definition, property_types, golf_ameniti
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Golf Course Home Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Golf Course Home Listings</h2>
             <p class="text-lg text-gray-600">Explore available properties on Las Vegas's premier golf courses</p>
           </div>

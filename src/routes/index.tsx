@@ -1,6 +1,7 @@
 import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { PhotoCard } from "~/components/media/PhotoCard";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { CfImage } from "~/components/media/CfImage";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutHeroWidget } from "~/components/real-estate/RealScoutHeroWidget";
@@ -428,6 +429,7 @@ export default component$(() => {
       <section class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Luxury Amenities & Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Luxury Amenities & Lifestyle</h2>
             <p class="text-lg text-gray-600 mb-8">
               8,000 sq ft clubhouse, resort pool, pickleball, bocce, and trails in Summerlin West
@@ -470,6 +472,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Heritage at Stonebridge?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Heritage at Stonebridge?</h2>
             <p class="text-lg text-gray-600 mb-8">
               Single-story Lennar homes, Red Rock views, and 89138 Summerlin West location

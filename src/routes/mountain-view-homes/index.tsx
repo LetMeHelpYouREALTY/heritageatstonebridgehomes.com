@@ -5,6 +5,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
@@ -240,6 +241,7 @@ Format as JSON with sections: mountain_home_definition, view_types, scenic_benef
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Mountain View Home Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Mountain View Home Listings</h2>
             <p class="text-lg text-gray-600">Explore available properties with stunning mountain views in Las Vegas</p>
           </div>

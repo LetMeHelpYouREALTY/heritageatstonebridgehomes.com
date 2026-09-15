@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { CfImage } from "~/components/media/CfImage";
 
 export default component$(() => {
@@ -118,6 +119,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier 55+ Communities in Las Vegas" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Premier 55+ Communities in Las Vegas
             </h2>
@@ -237,6 +239,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose 55+ Community Living?" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose 55+ Community Living?
             </h2>
@@ -299,6 +302,7 @@ export default component$(() => {
         <div class="max-w-7xl mx-auto px-4">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
+              <HeadingPhoto heading="Prime Las Vegas Locations" />
               <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Prime Las Vegas Locations
               </h2>
@@ -375,6 +379,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Frequently Asked Questions" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -483,6 +488,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current 55+ Community Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current 55+ Community Listings</h2>
             <p class="text-lg text-gray-600">Explore available properties in Las Vegas's premier active adult communities</p>
           </div>

@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export const head: DocumentHead = {
   title: "Summerlin Homes for Sale | Dr. Jan Duffy - Luxury Community Specialist",
@@ -95,6 +96,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Summerlin?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Summerlin?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Summerlin is Las Vegas's most prestigious master-planned community, offering luxury homes, championship golf courses, and resort-style amenities in a beautiful desert setting.
@@ -141,6 +143,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Summerlin Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Summerlin Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Living in Summerlin means enjoying the perfect balance of luxury amenities, natural beauty, and convenient access to everything Las Vegas has to offer.
@@ -220,6 +223,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Summerlin Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Summerlin Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Summerlin's diverse neighborhoods, from luxury estates to active adult communities, each offering unique amenities and lifestyle options.
@@ -242,7 +246,7 @@ export default component$(() => {
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
               <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates and exclusive golf course access.</p>
-              <a href="/the-ridges-summerlin" class="text-green-600 hover:text-green-800 font-semibold">View Ridges Homes →</a>
+              <a href="/luxury-homes" class="text-green-600 hover:text-green-800 font-semibold">View Ridges Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -270,6 +274,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="55+ Active Adult Communities in Summerlin" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">55+ Active Adult Communities in Summerlin</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Summerlin offers some of the finest active adult communities in the Southwest, designed specifically for the 55+ lifestyle with resort-style amenities and social activities.
@@ -342,6 +347,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Summerlin Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Summerlin Listings</h2>
             <p class="text-lg text-gray-600">Explore available homes in Summerlin's premier communities</p>
           </div>
@@ -360,6 +366,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Dr. Jan Duffy for Summerlin Real Estate?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Dr. Jan Duffy for Summerlin Real Estate?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               With deep knowledge of Summerlin's communities and specialized expertise in 55+ active adult living, Dr. Jan Duffy provides unmatched service in Las Vegas's premier master-planned community.
