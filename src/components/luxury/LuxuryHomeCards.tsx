@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { cfImage } from "~/config/images";
+import { CfImage } from "~/components/media/CfImage";
 
 interface HomeCard {
   name: string;
@@ -10,8 +10,8 @@ interface HomeCard {
   garage: string;
   description: string;
   features: string[];
-  floorPlan: string;
-  image: string;
+  floorPlanId: string;
+  imageId: string;
 }
 
 const homeCards: HomeCard[] = [
@@ -29,8 +29,8 @@ const homeCards: HomeCard[] = [
       "Hardwood Floors",
       "Energy Efficient",
     ],
-    floorPlan: cfImage("luxury-kitchen", "card"),
-    image: cfImage("cromwell-home", "card"),
+    floorPlanId: "luxury-kitchen",
+    imageId: "cromwell-home",
   },
   {
     name: "The Stonebridge",
@@ -41,8 +41,8 @@ const homeCards: HomeCard[] = [
     garage: "3-Car Garage",
     description: "Spacious luxury design with premium amenities",
     features: ["Quartz Countertops", "Smart Home Features", "Custom Cabinetry", "Solar Ready"],
-    floorPlan: cfImage("great-room", "card"),
-    image: cfImage("stirling-home", "card"),
+    floorPlanId: "great-room",
+    imageId: "stirling-home",
   },
   {
     name: "The Signature",
@@ -53,8 +53,8 @@ const homeCards: HomeCard[] = [
     garage: "3-Car Garage",
     description: "Premium custom features and luxury finishes",
     features: ["Marble Countertops", "Wine Cellar", "Home Theater", "Smart Security"],
-    floorPlan: cfImage("luxury-kitchen", "card"),
-    image: cfImage("evander-home", "card"),
+    floorPlanId: "luxury-kitchen",
+    imageId: "evander-home",
   },
 ];
 
@@ -68,9 +68,10 @@ export const LuxuryHomeCards = component$(() => {
         >
           {/* Image Section */}
           <div class="relative h-64 overflow-hidden">
-            <img
-              src={home.image}
+            <CfImage
+              id={home.imageId}
               alt={home.name}
+              variant="card"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -84,9 +85,10 @@ export const LuxuryHomeCards = component$(() => {
             <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
               <div class="bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
                 <div class="text-xs font-medium text-gray-700 mb-1">Floor Plan</div>
-                <img
-                  src={home.floorPlan}
-                  alt={`${home.name} Floor Plan`}
+                <CfImage
+                  id={home.floorPlanId}
+                  alt={`${home.name} kitchen and interior`}
+                  variant="thumbnail"
                   class="w-16 h-12 object-cover rounded"
                 />
               </div>

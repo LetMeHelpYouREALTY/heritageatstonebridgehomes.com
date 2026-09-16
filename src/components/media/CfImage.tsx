@@ -40,9 +40,10 @@ export const CfImage = component$<CfImageProps>(
         decoding="async"
         onError$={(event) => {
           const el = event.target as HTMLImageElement;
-          if (el && !el.src.endsWith(fallback)) {
-            el.src = fallback;
-          }
+          if (!el || el.dataset.cfFallback === "1") return;
+          el.dataset.cfFallback = "1";
+          el.removeAttribute("srcset");
+          el.src = fallback;
         }}
       />
     );

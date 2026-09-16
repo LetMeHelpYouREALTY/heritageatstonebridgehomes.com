@@ -23,9 +23,10 @@ export const LocationHeroImage = component$(() => {
         decoding="async"
         onError$={(event) => {
           const el = event.target as HTMLImageElement;
-          if (el && !el.src.endsWith(fallback)) {
-            el.src = fallback;
-          }
+          if (!el || el.dataset.cfFallback === "1") return;
+          el.dataset.cfFallback = "1";
+          el.removeAttribute("srcset");
+          el.src = fallback;
         }}
       />
       <div class="absolute inset-0 bg-slate-900/40 pointer-events-none" aria-hidden="true"></div>

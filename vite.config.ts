@@ -5,6 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(() => {
   return {
+    envPrefix: ["VITE_", "PUBLIC_"],
     plugins: [
       qwikCity(),
       qwikVite({

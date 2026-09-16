@@ -1,8 +1,8 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
-import { cfImage } from "~/config/images";
+import { CfImage } from "~/components/media/CfImage";
 
 interface HeroImage {
-  src: string;
+  id: string;
   alt: string;
   title: string;
   description: string;
@@ -10,31 +10,31 @@ interface HeroImage {
 
 const luxuryImages: HeroImage[] = [
   {
-    src: cfImage("heritage-stonebridge-hero", "hero"),
+    id: "heritage-stonebridge-hero",
     alt: "Guard-gated Heritage at Stonebridge entrance in Summerlin West, Las Vegas NV 89138",
     title: "The Heritage Collection",
     description: "Starting from $650,000",
   },
   {
-    src: cfImage("luxury-kitchen", "hero"),
+    id: "luxury-kitchen",
     alt: "Lennar Everything's Included kitchen at Heritage at Stonebridge",
     title: "The Stonebridge Collection",
     description: "Starting from $750,000",
   },
   {
-    src: cfImage("great-room", "hero"),
+    id: "great-room",
     alt: "Open great room in a Heritage at Stonebridge home",
     title: "The Signature Collection",
     description: "Starting from $850,000",
   },
   {
-    src: cfImage("evander-home", "hero"),
+    id: "evander-home",
     alt: "Evander collection luxury home exterior at Heritage at Stonebridge",
     title: "Master Retreat",
     description: "Premium finishes throughout",
   },
   {
-    src: cfImage("pool-spa", "hero"),
+    id: "pool-spa",
     alt: "Resort-style pool and spa at Heritage at Stonebridge",
     title: "Resort-Style Living",
     description: "Private outdoor entertainment areas",
@@ -111,9 +111,11 @@ export const HeroImageCarousel = component$(() => {
     <div class="relative h-96 md:h-[500px] lg:h-[600px] overflow-hidden rounded-xl shadow-2xl">
       {/* Main Image */}
       <div class="relative h-full">
-        <img
-          src={luxuryImages[currentIndex.value].src}
+        <CfImage
+          id={luxuryImages[currentIndex.value].id}
           alt={luxuryImages[currentIndex.value].alt}
+          variant="hero"
+          priority
           class="w-full h-full object-cover transition-all duration-500 ease-in-out"
         />
 
@@ -199,7 +201,12 @@ export const HeroImageCarousel = component$(() => {
               }`}
               aria-label={`View ${image.title}`}
             >
-              <img src={image.src} alt={image.alt} class="w-full h-full object-cover" />
+              <CfImage
+                id={image.id}
+                alt={image.alt}
+                variant="thumbnail"
+                class="w-full h-full object-cover"
+              />
             </button>
           ))}
         </div>

@@ -1,12 +1,22 @@
 /**
  * Image catalog for Heritage at Stonebridge.
  *
- * Primary delivery: Cloudflare Images (imagedelivery.net) when
- * PUBLIC_CLOUDFLARE_IMAGES_HASH is set.
- * Backup: git-tracked files in /public/images/*.jpg (served by Vercel).
+ * Primary delivery: Cloudflare hosted Images
+ *   https://imagedelivery.net/{ACCOUNT_HASH}/{IMAGE_ID}/{VARIANT}
+ * Docs: https://developers.cloudflare.com/images/optimization/hosted-images/serve-uploaded-images/
  *
- * Do not orange-cloud the Vercel apex — Images/R2 is a separate hostname.
+ * Custom image IDs match git filenames without `.jpg`.
+ * Named variants: public, hero, card, thumbnail (created by scripts/upload-cloudflare-images.mjs).
+ *
+ * Backup: git-tracked files in /public/images/*.jpg (served by Vercel).
+ * Do not orange-cloud the Vercel apex — imagedelivery.net is a separate hostname.
  */
+
+/** Public Images account hash. Safe to ship in client URLs. Override with PUBLIC_CLOUDFLARE_IMAGES_HASH. */
+export const CLOUDFLARE_IMAGES_ACCOUNT_HASH = "byE6BTe9lNqo21V57n4aPQ";
+
+/** Cloudflare account ID for the Images API (upload script). Not a delivery secret. */
+export const CLOUDFLARE_IMAGES_ACCOUNT_ID = "2cc579c1ec9e426ed585e933ebf4753b";
 
 export type ImageVariant = "public" | "hero" | "card" | "thumbnail";
 
@@ -391,32 +401,26 @@ export function getPageMedia(pathname: string): PageMedia {
 }
 
 export function cloudflareAccountHash(): string {
-  return (import.meta.env.PUBLIC_CLOUDFLARE_IMAGES_HASH as string | undefined) || "";
+  const fromEnv = (import.meta.env.PUBLIC_CLOUDFLARE_IMAGES_HASH as string | undefined)?.trim();
+  return fromEnv || CLOUDFLARE_IMAGES_ACCOUNT_HASH;
 }
 
 export function cfImage(id: string, variant: ImageVariant = "public"): string {
   const hash = cloudflareAccountHash();
-  const image = SITE_IMAGES[id];
-  const file = image?.file ?? `${id}.jpg`;
-  if (hash) {
-    return `https://imagedelivery.net/${hash}/${id}/${variant}`;
-  }
-  return `/images/${file}`;
+  return `https://imagedelivery.net/${hash}/${id}/${variant}`;
 }
 
 export function cfImageAbsolute(id: string, variant: ImageVariant = "public"): string {
-  const hash = cloudflareAccountHash();
-  if (hash) {
-    return `https://imagedelivery.net/${hash}/${id}/${variant}`;
-  }
-  const image = SITE_IMAGES[id];
-  const file = image?.file ?? `${id}.jpg`;
-  return `${SITE_ORIGIN}/images/${file}`;
+  return `https://imagedelivery.net/${cloudflareAccountHash()}/${id}/${variant}`;
 }
 
 export function gitBackupPath(id: string): string {
   const image = SITE_IMAGES[id];
   return `/images/${image?.file ?? `${id}.jpg`}`;
+}
+
+export function gitImageAbsolute(id: string): string {
+  return `${SITE_ORIGIN}${gitBackupPath(id)}`;
 }
 
 export const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/images/heritage-stonebridge-hero.jpg`;
@@ -474,9 +478,10 @@ export function headingFigureHtml(heading: string): string {
   const id = imageIdForHeading(heading);
   const img = SITE_IMAGES[id] ?? SITE_IMAGES["heritage-stonebridge-hero"];
   const src = cfImage(id, "hero");
+  const fallback = gitBackupPath(id);
   const alt = escapeHtml(img.alt);
   const caption = escapeHtml(heading.replace(/<[^>]+>/g, "").trim());
-  return `<figure class="mb-4 overflow-hidden rounded-lg"><img src="${src}" alt="${alt}" width="1280" height="720" class="w-full h-48 object-cover" loading="lazy" decoding="async" /><figcaption class="sr-only">${caption} at Heritage at Stonebridge, Summerlin West, Las Vegas</figcaption></figure>`;
+  return `<figure class="mb-4 overflow-hidden rounded-lg"><img src="${src}" alt="${alt}" width="1280" height="720" class="w-full h-48 object-cover" loading="lazy" decoding="async" onerror="if(this.dataset.cfFallback)return;this.dataset.cfFallback='1';this.removeAttribute('srcset');this.src='${fallback}';" /><figcaption class="sr-only">${caption} at Heritage at Stonebridge, Summerlin West, Las Vegas</figcaption></figure>`;
 }
 
 export function decorateHeadingsWithImages(html: string): string {
@@ -498,7 +503,8 @@ export function getAllPagePaths(): string[] {
 
 export function pageOgImage(pathname: string): string {
   const media = getPageMedia(pathname);
-  return cfImageAbsolute(media.hero, "hero");
+  // Crawlers do not run img onerror. Keep Open Graph on git-backed origin URLs.
+  return gitImageAbsolute(media.hero);
 }
 
 export const GBP_FAQS = [

@@ -1,11 +1,10 @@
 import { type RequestHandler } from "@builder.io/qwik-city";
-import { SITE_IMAGES, getAllPagePaths, getPageMedia } from "~/config/images";
+import { SITE_IMAGES, getAllPagePaths, getPageMedia, gitImageAbsolute } from "~/config/images";
 
 const ORIGIN = "https://heritagestonebridge.com";
 
 function imageUrl(id: string): string {
-  const file = SITE_IMAGES[id]?.file ?? `${id}.jpg`;
-  return `${ORIGIN}/images/${file}`;
+  return gitImageAbsolute(id);
 }
 
 export const onGet: RequestHandler = async (requestEvent) => {
