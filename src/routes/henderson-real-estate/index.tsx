@@ -224,8 +224,8 @@ export default component$(() => {
                   <span>108 square miles</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="font-semibold">Schools:</span>
-                  <span>40+ public schools</span>
+                  <span class="font-semibold">Medical offices:</span>
+                  <span>St. Rose and nearby campuses</span>
                 </div>
                 <div class="flex justify-between">
                   <span class="font-semibold">Parks:</span>

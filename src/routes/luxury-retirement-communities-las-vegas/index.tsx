@@ -257,7 +257,7 @@ export default component$(() => {
                 <li>• Private social clubs</li>
               </ul>
               <div class="text-lg font-bold text-gold-600 mb-4">$600,000 - $2,000,000+</div>
-              <a href="/siena-summerlin-homes" class="text-gold-600 hover:text-gold-800 font-semibold">View Siena Homes →</a>
+              <a href="/luxury-homes" class="text-gold-600 hover:text-gold-800 font-semibold">View Siena Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -272,7 +272,7 @@ export default component$(() => {
                 <li>• Concierge services</li>
               </ul>
               <div class="text-lg font-bold text-gold-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/red-rock-country-club" class="text-gold-600 hover:text-gold-800 font-semibold">View Country Club Homes →</a>
+              <a href="/golf-course-homes" class="text-gold-600 hover:text-gold-800 font-semibold">View Country Club Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">

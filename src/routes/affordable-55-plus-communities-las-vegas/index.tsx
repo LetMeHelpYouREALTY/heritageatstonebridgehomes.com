@@ -251,7 +251,7 @@ export default component$(() => {
                 <li>• Social clubs</li>
                 <li>• Maintenance-free living</li>
               </ul>
-              <a href="/del-webb-las-vegas" class="text-green-600 hover:text-green-800 font-semibold">View Del Webb Homes →</a>
+              <a href="/sun-city-del-webb-real-estate" class="text-green-600 hover:text-green-800 font-semibold">View Del Webb Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">

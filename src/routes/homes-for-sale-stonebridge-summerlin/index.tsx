@@ -6,6 +6,7 @@ import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { CfImage } from "~/components/media/CfImage";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Homes for Sale in Stonebridge, Summerlin, Las Vegas NV | Dr. Jan Duffy",
@@ -238,46 +239,18 @@ export default component$(() => {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Gated Security */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">🔒</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Gated Security</h3>
-                <p class="text-gray-600">
-                  24/7 gated access with professional security ensuring privacy and peace of mind
-                  for all residents.
-                </p>
-              </div>
-            </div>
-
-            {/* Resort Amenities */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">🏊</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Resort Amenities</h3>
-                <p class="text-gray-600">
-                  8,000 sq ft clubhouse, resort-style pool & heated lap pool, fitness center, pickleball & bocce courts, walking trails, and RV parking for active living.
-                </p>
-              </div>
-            </div>
-
-            {/* Prime Location */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">📍</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Prime Location</h3>
-                <p class="text-gray-600">
-                  Minutes from Red Rock Canyon, Downtown Summerlin, and world-class shopping and
-                  dining.
-                </p>
-              </div>
-            </div>
+            <PhotoThumbCard
+              heading="Gated Security"
+              description="Guard-gated access at Crossbridge Dr with 24/7 entry control for residents and guests."
+            />
+            <PhotoThumbCard
+              heading="Resort Amenities"
+              description="8,000 sq ft clubhouse, resort pool, fitness center, pickleball, bocce, and trails."
+            />
+            <PhotoThumbCard
+              heading="Prime Location"
+              description="Minutes from Red Rock Canyon and Downtown Summerlin shopping and dining."
+            />
           </div>
         </div>
       </section>

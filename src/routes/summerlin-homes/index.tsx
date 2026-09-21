@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Summerlin Homes for Sale | Dr. Jan Duffy - Luxury Community Specialist",
@@ -104,37 +105,22 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">⛳</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Golf Courses</h3>
-              <p class="text-gray-600">Multiple championship golf courses including TPC Las Vegas and Red Rock Country Club</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏪</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Shopping & Dining</h3>
-              <p class="text-gray-600">Downtown Summerlin, Red Rock Resort, and world-class restaurants</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏊</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Resort Amenities</h3>
-              <p class="text-gray-600">Pools, spas, fitness centers, and tennis courts throughout the community</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏔️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Mountain Views</h3>
-              <p class="text-gray-600">Stunning views of Red Rock Canyon and Spring Mountains</p>
-            </div>
+            <PhotoThumbCard
+              heading="Golf Courses"
+              description="Championship golf including TPC Las Vegas and Red Rock Country Club."
+            />
+            <PhotoThumbCard
+              heading="Shopping & Dining"
+              description="Downtown Summerlin, Red Rock Resort, and dining along the 215 Beltway."
+            />
+            <PhotoThumbCard
+              heading="Resort Amenities"
+              description="Pools, spas, fitness centers, and courts throughout Summerlin villages."
+            />
+            <PhotoThumbCard
+              heading="Mountain Views"
+              description="Red Rock Canyon and Spring Mountains from Summerlin West ridgelines."
+            />
           </div>
         </div>
       </section>
@@ -231,41 +217,42 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Luxury 55+ active adult community with resort-style amenities and stunning mountain views.</p>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-green-600 hover:text-green-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Summerlin</h3>
-              <p class="text-gray-600 mb-4">Premier 55+ community with golf courses, recreation centers, and vibrant social scene.</p>
-              <a href="/sun-city-summerlin-homes" class="text-green-600 hover:text-green-800 font-semibold">View Sun City Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates and exclusive golf course access.</p>
-              <a href="/luxury-homes" class="text-green-600 hover:text-green-800 font-semibold">View Ridges Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Siena</h3>
-              <p class="text-gray-600 mb-4">Gated community featuring Tuscan-inspired architecture and resort amenities.</p>
-              <a href="/siena-summerlin-homes" class="text-green-600 hover:text-green-800 font-semibold">View Siena Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Golf course community with luxury homes and exclusive country club membership.</p>
-              <a href="/red-rock-country-club" class="text-green-600 hover:text-green-800 font-semibold">View Country Club Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Arbors</h3>
-              <p class="text-gray-600 mb-4">Parks, trails, and recreation centers in a master-planned Summerlin village.</p>
-              <a href="/the-arbors-summerlin" class="text-green-600 hover:text-green-800 font-semibold">View Arbors Homes →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Heritage at Stonebridge"
+              description="Lennar's guard-gated 55+ community with resort amenities and Red Rock Canyon views."
+              href="/homes-for-sale-stonebridge-summerlin"
+              linkLabel="View Stonebridge Homes →"
+            />
+            <PhotoThumbCard
+              heading="Sun City Summerlin"
+              description="Established 55+ golf community with recreation centers and mature landscaping."
+              href="/sun-city-del-webb-real-estate"
+              linkLabel="View Sun City Homes →"
+            />
+            <PhotoThumbCard
+              heading="The Ridges"
+              description="Custom hilltop estates with exclusive golf access in Summerlin West."
+              href="/luxury-homes"
+              linkLabel="View Ridges Homes →"
+            />
+            <PhotoThumbCard
+              heading="Siena"
+              description="Gated Italian-inspired architecture and resort amenities in Summerlin."
+              href="/luxury-homes"
+              linkLabel="View Siena Homes →"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Country Club"
+              description="Golf-course homes with Red Rock Canyon as the backdrop."
+              href="/golf-course-homes"
+              linkLabel="View Country Club Homes →"
+            />
+            <PhotoThumbCard
+              heading="The Arbors"
+              description="Parks, trails, and recreation centers in a master-planned Summerlin village."
+              href="/summerlin-homes"
+              linkLabel="View Arbors Homes →"
+            />
           </div>
         </div>
       </section>
@@ -335,7 +322,7 @@ export default component$(() => {
                   Healthcare facilities on-site
                 </li>
               </ul>
-              <a href="/sun-city-summerlin-homes" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block">
+              <a href="/sun-city-del-webb-real-estate" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block">
                 View Sun City Homes
               </a>
             </div>

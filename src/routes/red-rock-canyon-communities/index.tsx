@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Red Rock Canyon Communities | Dr. Jan Duffy - Mountain View Homes",
@@ -104,37 +105,22 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏔️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Mountain Views</h3>
-              <p class="text-gray-600">Breathtaking views of Red Rock Canyon and Spring Mountains from your home</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🥾</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Outdoor Recreation</h3>
-              <p class="text-gray-600">Hiking, rock climbing, and nature trails right in your backyard</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">⛳</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Golf Courses</h3>
-              <p class="text-gray-600">Championship golf courses with stunning mountain backdrops</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏊</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Luxury Amenities</h3>
-              <p class="text-gray-600">Resort-style pools, spas, and fitness centers with mountain views</p>
-            </div>
+            <PhotoThumbCard
+              heading="Mountain Views"
+              description="Red Rock Canyon and Spring Mountains from west-valley ridgelines."
+            />
+            <PhotoThumbCard
+              heading="Outdoor Recreation"
+              description="Hiking paths and scenic drives minutes from Red Rock Canyon."
+            />
+            <PhotoThumbCard
+              heading="Golf Courses"
+              description="Championship golf with desert mountains as the backdrop."
+            />
+            <PhotoThumbCard
+              heading="Gated Communities"
+              description="Guard-gated streets and private amenities in Summerlin West."
+            />
           </div>
         </div>
       </section>
@@ -231,41 +217,42 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Luxury 55+ community with stunning Red Rock Canyon views and resort-style amenities.</p>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-red-600 hover:text-red-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates and exclusive golf course access.</p>
-              <a href="/luxury-homes" class="text-red-600 hover:text-red-800 font-semibold">View Ridges Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Golf course community with luxury homes and exclusive country club membership.</p>
-              <a href="/red-rock-country-club" class="text-red-600 hover:text-red-800 font-semibold">View Country Club Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Mountain's Edge</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with mountain views, parks, and recreation amenities.</p>
-              <a href="/mountains-edge-homes" class="text-red-600 hover:text-red-800 font-semibold">View Mountain's Edge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Inspirada</h3>
-              <p class="text-gray-600 mb-4">Modern community with contemporary homes and outdoor recreation facilities.</p>
-              <a href="/henderson-real-estate" class="text-red-600 hover:text-red-800 font-semibold">View Inspirada Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Rhodes Ranch</h3>
-              <p class="text-gray-600 mb-4">Golf course community with luxury homes and resort-style amenities.</p>
-              <a href="/rhodes-ranch-homes" class="text-red-600 hover:text-red-800 font-semibold">View Rhodes Ranch Homes →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Heritage at Stonebridge"
+              description="Guard-gated 55+ community with Red Rock Canyon views and resort amenities."
+              href="/homes-for-sale-stonebridge-summerlin"
+              linkLabel="View Stonebridge Homes →"
+            />
+            <PhotoThumbCard
+              heading="The Ridges"
+              description="Custom hilltop estates with exclusive golf access in Summerlin West."
+              href="/luxury-homes"
+              linkLabel="View Ridges Homes →"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Country Club"
+              description="Golf-course homes with Red Rock Canyon as the backdrop."
+              href="/golf-course-homes"
+              linkLabel="View Country Club Homes →"
+            />
+            <PhotoThumbCard
+              heading="Mountain's Edge"
+              description="Master-planned streets, parks, and mountain views in the southwest valley."
+              href="/red-rock-canyon-communities"
+              linkLabel="View Mountain's Edge Homes →"
+            />
+            <PhotoThumbCard
+              heading="Inspirada"
+              description="Contemporary Henderson homes with parks and walking paths."
+              href="/henderson-active-adult-communities"
+              linkLabel="View Inspirada Homes →"
+            />
+            <PhotoThumbCard
+              heading="Rhodes Ranch"
+              description="Golf-course neighborhood with resort-style clubhouse amenities."
+              href="/golf-course-homes"
+              linkLabel="View Rhodes Ranch Homes →"
+            />
           </div>
         </div>
       </section>

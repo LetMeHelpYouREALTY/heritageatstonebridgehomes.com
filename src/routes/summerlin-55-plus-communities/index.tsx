@@ -257,7 +257,7 @@ export default component$(() => {
                 <li>• Strong resale market</li>
               </ul>
               <div class="text-lg font-bold text-green-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-summerlin-homes" class="text-green-600 hover:text-green-800 font-semibold">View Sun City Summerlin →</a>
+              <a href="/sun-city-del-webb-real-estate" class="text-green-600 hover:text-green-800 font-semibold">View Sun City Summerlin →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -287,7 +287,7 @@ export default component$(() => {
                 <li>• Private social clubs</li>
               </ul>
               <div class="text-lg font-bold text-green-600 mb-4">$600,000 - $2,000,000+</div>
-              <a href="/siena-summerlin-homes" class="text-green-600 hover:text-green-800 font-semibold">View Siena →</a>
+              <a href="/luxury-homes" class="text-green-600 hover:text-green-800 font-semibold">View Siena →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -302,7 +302,7 @@ export default component$(() => {
                 <li>• Concierge services</li>
               </ul>
               <div class="text-lg font-bold text-green-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/red-rock-country-club" class="text-green-600 hover:text-green-800 font-semibold">View Country Club →</a>
+              <a href="/golf-course-homes" class="text-green-600 hover:text-green-800 font-semibold">View Country Club →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -317,7 +317,7 @@ export default component$(() => {
                 <li>• Convenient location</li>
               </ul>
               <div class="text-lg font-bold text-green-600 mb-4">$400,000 - $1,200,000</div>
-              <a href="/the-arbors-summerlin" class="text-green-600 hover:text-green-800 font-semibold">View The Arbors →</a>
+              <a href="/summerlin-homes" class="text-green-600 hover:text-green-800 font-semibold">View The Arbors →</a>
             </div>
           </div>
         </div>

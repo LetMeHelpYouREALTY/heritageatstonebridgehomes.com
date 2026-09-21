@@ -299,7 +299,7 @@ export default component$(() => {
                   </ul>
                 </div>
               </div>
-              <a href="/sun-city-summerlin-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Sun City Summerlin Homes →</a>
+              <a href="/sun-city-del-webb-real-estate" class="text-purple-600 hover:text-purple-800 font-semibold">View Sun City Summerlin Homes →</a>
             </div>
 
             {/* #3 The Ridges */}

@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Sun City Del Webb Real Estate | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -202,18 +203,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Proven Track Record</h3>
-              <p class="text-gray-600">Established communities with mature amenities, strong resale markets, and proven appreciation</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Championship Golf</h3>
-              <p class="text-gray-600">Multiple golf courses with established memberships and tournament-quality facilities</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Mature Amenities</h3>
-              <p class="text-gray-600">Fully developed clubhouses, fitness centers, pools, and social facilities</p>
-            </div>
+            <PhotoThumbCard
+              heading="Proven Track Record"
+              description="Established communities with mature amenities and documented resale history."
+            />
+            <PhotoThumbCard
+              heading="Championship Golf"
+              description="Multiple golf courses with tournament-quality fairways and clubhouses."
+            />
+            <PhotoThumbCard
+              heading="Mature Amenities"
+              description="Fully developed clubhouses, fitness centers, pools, and social rooms."
+            />
           </div>
         </div>
       </section>
@@ -230,95 +231,84 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Summerlin</h3>
-              <p class="text-gray-600 mb-4">Premier established 55+ community with multiple golf courses and mature amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple championship golf courses</li>
-                <li>• Recreation centers and pools</li>
-                <li>• Extensive social clubs</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-purple-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-summerlin-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Sun City Summerlin →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Anthem</h3>
-              <p class="text-gray-600 mb-4">Henderson's premier 55+ community with golf courses and vibrant social scene</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple golf courses</li>
-                <li>• Recreation centers</li>
-                <li>• Active social scene</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-purple-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-del-webb-real-estate" class="text-purple-600 hover:text-purple-800 font-semibold">View Sun City Anthem →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Del Webb Communities</h3>
-              <p class="text-gray-600 mb-4">Newer Del Webb developments with contemporary amenities and modern designs</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Modern clubhouse designs</li>
-                <li>• Updated fitness centers</li>
-                <li>• Contemporary social spaces</li>
-                <li>• Latest technology integration</li>
-                <li>• Quality construction</li>
-                <li>• Active lifestyle focus</li>
-              </ul>
-              <div class="text-lg font-bold text-purple-600 mb-4">$400,000 - $1,500,000</div>
-              <a href="/del-webb-las-vegas" class="text-purple-600 hover:text-purple-800 font-semibold">View Del Webb Communities →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City MacDonald Ranch</h3>
-              <p class="text-gray-600 mb-4">Luxury golf course community with custom homes and exclusive amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Golf course access</li>
-                <li>• Private amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive location</li>
-                <li>• High-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-purple-600 mb-4">$700,000 - $2,500,000+</div>
-              <a href="/henderson-real-estate" class="text-purple-600 hover:text-purple-800 font-semibold">View MacDonald Ranch →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Seven Hills</h3>
-              <p class="text-gray-600 mb-4">Gated luxury community with custom estates and stunning mountain views</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Gated community</li>
-                <li>• Custom estates</li>
-                <li>• Mountain views</li>
-                <li>• Private amenities</li>
-                <li>• Exclusive location</li>
-                <li>• Luxury finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-purple-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/gated-communities" class="text-purple-600 hover:text-purple-800 font-semibold">View Seven Hills →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Del Webb Inspirada</h3>
-              <p class="text-gray-600 mb-4">Modern master-planned community with contemporary homes and amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Modern design</li>
-                <li>• Contemporary amenities</li>
-                <li>• Parks and trails</li>
-                <li>• Community events</li>
-                <li>• New construction</li>
-                <li>• Energy-efficient homes</li>
-              </ul>
-              <div class="text-lg font-bold text-purple-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/henderson-active-adult-communities" class="text-purple-600 hover:text-purple-800 font-semibold">View Inspirada →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Sun City Summerlin"
+              description="Established 55+ community with multiple golf courses and recreation centers."
+              items={[
+                "Multiple championship golf courses",
+                "Recreation centers and pools",
+                "Extensive social clubs",
+                "Mature landscaping",
+              ]}
+              price="$500,000 - $1,500,000"
+              href="/sun-city-del-webb-real-estate"
+              linkLabel="View Sun City Summerlin →"
+            />
+            <PhotoThumbCard
+              heading="Sun City Anthem"
+              description="Henderson 55+ golf community with recreation centers and mature landscaping."
+              items={[
+                "Multiple golf courses",
+                "Recreation centers",
+                "Active social scene",
+                "Mature landscaping",
+              ]}
+              price="$500,000 - $1,500,000"
+              href="/sun-city-del-webb-real-estate"
+              linkLabel="View Sun City Anthem →"
+            />
+            <PhotoThumbCard
+              heading="Del Webb Communities"
+              description="Newer Del Webb plans with contemporary clubhouses and fitness centers."
+              items={[
+                "Modern clubhouse designs",
+                "Updated fitness centers",
+                "Contemporary social spaces",
+                "New construction options",
+              ]}
+              price="$400,000 - $1,500,000"
+              href="/sun-city-del-webb-real-estate"
+              linkLabel="View Del Webb Communities →"
+            />
+            <PhotoThumbCard
+              heading="Sun City MacDonald Ranch"
+              description="Luxury golf-course homes and custom estates in Henderson."
+              items={[
+                "Custom luxury homes",
+                "Golf course access",
+                "Private amenities",
+                "Mountain views",
+              ]}
+              price="$700,000 - $2,500,000+"
+              href="/henderson-real-estate"
+              linkLabel="View MacDonald Ranch →"
+            />
+            <PhotoThumbCard
+              heading="Sun City Seven Hills"
+              description="Gated custom estates on Henderson hillsides."
+              items={[
+                "Gated community",
+                "Custom estates",
+                "Mountain views",
+                "Private amenities",
+              ]}
+              price="$800,000 - $3,000,000+"
+              href="/gated-communities"
+              linkLabel="View Seven Hills →"
+            />
+            <PhotoThumbCard
+              heading="Del Webb Inspirada"
+              description="Contemporary new-construction homes, parks, and trails in Henderson."
+              items={[
+                "Modern design",
+                "Parks and trails",
+                "New construction",
+                "Energy-efficient homes",
+              ]}
+              price="$500,000 - $1,500,000"
+              href="/henderson-active-adult-communities"
+              linkLabel="View Inspirada →"
+            />
           </div>
         </div>
       </section>

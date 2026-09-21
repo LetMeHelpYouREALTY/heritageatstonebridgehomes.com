@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Las Vegas Real Estate | Dr. Jan Duffy - 55+ Communities Specialist",
@@ -311,41 +312,42 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Summerlin</h3>
-              <p class="text-gray-600 mb-4">Premier master-planned community with luxury homes, golf courses, and resort-style amenities.</p>
-              <a href="/summerlin-homes" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Summerlin Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Henderson</h3>
-              <p class="text-gray-600 mb-4">Parks, recreation centers, and a wide range of housing types in Henderson.</p>
-              <a href="/henderson-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Henderson Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Northwest Las Vegas</h3>
-              <p class="text-gray-600 mb-4">Growing area with new construction, modern amenities, and convenient access to the Strip.</p>
-              <a href="/northwest-las-vegas" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Northwest Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Canyon</h3>
-              <p class="text-gray-600 mb-4">Stunning mountain views and luxury communities near Red Rock Canyon National Conservation Area.</p>
-              <a href="/red-rock-canyon-communities" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Red Rock Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Boulder City</h3>
-              <p class="text-gray-600 mb-4">Historic community near Lake Mead with small-town charm and outdoor recreation.</p>
-              <a href="/boulder-city-homes" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Boulder City Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Las Vegas Strip Area</h3>
-              <p class="text-gray-600 mb-4">High-rise condos and luxury properties in the heart of Las Vegas entertainment district.</p>
-              <a href="/las-vegas-condos" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Strip Condos →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Summerlin"
+              description="Master-planned streets, golf, and resort amenities in Las Vegas's west valley."
+              href="/summerlin-homes"
+              linkLabel="Explore Summerlin Homes →"
+            />
+            <PhotoThumbCard
+              heading="Henderson"
+              description="Parks, recreation centers, and a wide range of housing types in Henderson."
+              href="/henderson-real-estate"
+              linkLabel="Explore Henderson Homes →"
+            />
+            <PhotoThumbCard
+              heading="Northwest Las Vegas"
+              description="New construction and 215 Beltway access in the northwest valley."
+              href="/northwest-las-vegas"
+              linkLabel="Explore Northwest Homes →"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Canyon"
+              description="Luxury communities near Red Rock Canyon National Conservation Area."
+              href="/red-rock-canyon-communities"
+              linkLabel="Explore Red Rock Homes →"
+            />
+            <PhotoThumbCard
+              heading="Boulder City"
+              description="Historic streets near Lake Mead with outdoor recreation and a slower pace."
+              href="/boulder-city-homes"
+              linkLabel="Explore Boulder City Homes →"
+            />
+            <PhotoThumbCard
+              heading="Las Vegas Strip Area"
+              description="High-rise condos and west-valley views toward the Strip skyline."
+              href="/55-plus-condos-las-vegas"
+              linkLabel="Explore Strip Condos →"
+            />
           </div>
         </div>
       </section>

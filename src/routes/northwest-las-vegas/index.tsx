@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Northwest Las Vegas Real Estate | Dr. Jan Duffy - Growing Communities",
@@ -231,41 +232,42 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Skye Canyon</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with outdoor recreation, parks, and modern amenities.</p>
-              <a href="/skye-canyon-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Skye Canyon Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Centennial Hills</h3>
-              <p class="text-gray-600 mb-4">Established community with parks, schools, and convenient shopping.</p>
-              <a href="/centennial-hills-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Centennial Hills Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Aliante</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with golf course, parks, and recreation amenities.</p>
-              <a href="/aliante-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Aliante Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Tule Springs</h3>
-              <p class="text-gray-600 mb-4">New development with modern homes and community amenities.</p>
-              <a href="/tule-springs-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Tule Springs Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Desert Shores</h3>
-              <p class="text-gray-600 mb-4">Waterfront community with lakes, parks, and recreational facilities.</p>
-              <a href="/desert-shores-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Desert Shores Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">North Las Vegas</h3>
-              <p class="text-gray-600 mb-4">Growing area with new construction and affordable housing options.</p>
-              <a href="/north-las-vegas-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View North Las Vegas Homes →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Skye Canyon"
+              description="Master-planned parks, trails, and new construction in northwest Las Vegas."
+              href="/northwest-las-vegas"
+              linkLabel="View Skye Canyon Homes →"
+            />
+            <PhotoThumbCard
+              heading="Centennial Hills"
+              description="Established streets, parks, and shopping along the 215 Beltway."
+              href="/northwest-las-vegas"
+              linkLabel="View Centennial Hills Homes →"
+            />
+            <PhotoThumbCard
+              heading="Aliante"
+              description="Golf-course neighborhood with parks and recreation amenities."
+              href="/northwest-las-vegas"
+              linkLabel="View Aliante Homes →"
+            />
+            <PhotoThumbCard
+              heading="Tule Springs"
+              description="New-construction homes and community amenities in the far northwest."
+              href="/northwest-las-vegas"
+              linkLabel="View Tule Springs Homes →"
+            />
+            <PhotoThumbCard
+              heading="Desert Shores"
+              description="Lakes, paths, and recreation around a waterfront neighborhood."
+              href="/northwest-las-vegas"
+              linkLabel="View Desert Shores Homes →"
+            />
+            <PhotoThumbCard
+              heading="North Las Vegas"
+              description="New construction and a range of price points in North Las Vegas."
+              href="/northwest-las-vegas"
+              linkLabel="View North Las Vegas Homes →"
+            />
           </div>
         </div>
       </section>

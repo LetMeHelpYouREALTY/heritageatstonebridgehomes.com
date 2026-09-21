@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "55+ Communities in Las Vegas | Active Adult Living Guide - Dr. Jan Duffy",
@@ -230,95 +231,84 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Lennar's newest 55+ community in Summerlin with Everything's Included® features</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Three home collections</li>
-                <li>• Resort-style amenities</li>
-                <li>• Red Rock Canyon views</li>
-                <li>• Gated community</li>
-                <li>• Smart home technology</li>
-                <li>• New construction</li>
-              </ul>
-              <div class="text-lg font-bold text-emerald-600 mb-4">Starting from $464,990</div>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-emerald-600 hover:text-emerald-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Summerlin</h3>
-              <p class="text-gray-600 mb-4">Established premier 55+ community with golf courses and mature amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple golf courses</li>
-                <li>• Recreation centers</li>
-                <li>• Active social scene</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-emerald-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-summerlin-homes" class="text-emerald-600 hover:text-emerald-800 font-semibold">View Sun City Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates and exclusive golf course access</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Exclusive golf course</li>
-                <li>• Mountain views</li>
-                <li>• Private amenities</li>
-                <li>• Elite social scene</li>
-                <li>• Highest-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-emerald-600 mb-4">$1,000,000 - $5,000,000+</div>
-              <a href="/luxury-homes" class="text-emerald-600 hover:text-emerald-800 font-semibold">View Ridges Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Siena</h3>
-              <p class="text-gray-600 mb-4">Tuscan-inspired luxury community with resort amenities and sophisticated design</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Tuscan-inspired architecture</li>
-                <li>• Resort-style amenities</li>
-                <li>• Wine cellar & tasting room</li>
-                <li>• Gourmet dining</li>
-                <li>• Spa & wellness center</li>
-                <li>• Private social clubs</li>
-              </ul>
-              <div class="text-lg font-bold text-emerald-600 mb-4">$600,000 - $2,000,000+</div>
-              <a href="/siena-summerlin-homes" class="text-emerald-600 hover:text-emerald-800 font-semibold">View Siena Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Del Webb Communities</h3>
-              <p class="text-gray-600 mb-4">Multiple Del Webb communities with quality construction and active lifestyle focus</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Established reputation</li>
-                <li>• Quality construction</li>
-                <li>• Active lifestyle focus</li>
-                <li>• Social activities</li>
-                <li>• Maintenance-free living</li>
-                <li>• Various price points</li>
-              </ul>
-              <div class="text-lg font-bold text-emerald-600 mb-4">$400,000 - $1,500,000</div>
-              <a href="/del-webb-las-vegas" class="text-emerald-600 hover:text-emerald-800 font-semibold">View Del Webb Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Exclusive golf course community with luxury homes and private membership</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Private golf course</li>
-                <li>• Country club membership</li>
-                <li>• Luxury amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive events</li>
-                <li>• Concierge services</li>
-              </ul>
-              <div class="text-lg font-bold text-emerald-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/red-rock-country-club" class="text-emerald-600 hover:text-emerald-800 font-semibold">View Country Club Homes →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Heritage at Stonebridge"
+              description="Lennar's newest 55+ community in Summerlin with Everything's Included® features."
+              items={[
+                "Three home collections",
+                "Resort-style amenities",
+                "Red Rock Canyon views",
+                "Gated community",
+              ]}
+              price="Starting from $464,990"
+              href="/homes-for-sale-stonebridge-summerlin"
+              linkLabel="View Stonebridge Homes →"
+            />
+            <PhotoThumbCard
+              heading="Sun City Summerlin"
+              description="Established 55+ golf community with recreation centers and mature landscaping."
+              items={[
+                "Multiple golf courses",
+                "Recreation centers",
+                "Active social scene",
+                "Mature landscaping",
+              ]}
+              price="$500,000 - $1,500,000"
+              href="/sun-city-del-webb-real-estate"
+              linkLabel="View Sun City Homes →"
+            />
+            <PhotoThumbCard
+              heading="The Ridges"
+              description="Custom hilltop estates with exclusive golf access in Summerlin West."
+              items={[
+                "Custom luxury homes",
+                "Exclusive golf course",
+                "Mountain views",
+                "Private amenities",
+              ]}
+              price="$1,000,000 - $5,000,000+"
+              href="/luxury-homes"
+              linkLabel="View Ridges Homes →"
+            />
+            <PhotoThumbCard
+              heading="Siena"
+              description="Italian-inspired gated homes and resort amenities in Summerlin."
+              items={[
+                "Tuscan-inspired architecture",
+                "Resort-style amenities",
+                "Spa and wellness center",
+                "Private social clubs",
+              ]}
+              price="$600,000 - $2,000,000+"
+              href="/luxury-homes"
+              linkLabel="View Siena Homes →"
+            />
+            <PhotoThumbCard
+              heading="Del Webb Communities"
+              description="Del Webb plans with clubhouses, fitness, and maintenance-free exteriors."
+              items={[
+                "Quality construction",
+                "Active lifestyle focus",
+                "Social activities",
+                "Various price points",
+              ]}
+              price="$400,000 - $1,500,000"
+              href="/sun-city-del-webb-real-estate"
+              linkLabel="View Del Webb Homes →"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Country Club"
+              description="Golf-course homes with Red Rock Canyon as the backdrop."
+              items={[
+                "Private golf course",
+                "Country club membership",
+                "Luxury amenities",
+                "Mountain views",
+              ]}
+              price="$800,000 - $3,000,000+"
+              href="/golf-course-homes"
+              linkLabel="View Country Club Homes →"
+            />
           </div>
         </div>
       </section>
