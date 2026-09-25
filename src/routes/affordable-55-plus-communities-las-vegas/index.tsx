@@ -5,6 +5,8 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Affordable 55+ Communities in Las Vegas | Budget-Friendly Active Adult Living - Dr. Jan Duffy",
@@ -202,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Price Range</h3>
-              <p class="text-gray-600">$300,000 - $500,000 for quality 55+ communities with essential amenities</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Value Features</h3>
-              <p class="text-gray-600">Clubhouses, pools, fitness centers, and social activities included</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Financing Options</h3>
-              <p class="text-gray-600">Traditional mortgages, FHA, VA loans, and specialized programs available</p>
-            </div>
+            <PhotoThumbCard
+              heading="Price Range"
+              description="$300,000 - $500,000 for quality 55+ communities with essential amenities"
+            />
+            <PhotoThumbCard
+              heading="Value Features"
+              description="Clubhouses, pools, fitness centers, and social activities included"
+            />
+            <PhotoThumbCard
+              heading="Financing Options"
+              description="Traditional mortgages, FHA, VA loans, and specialized programs available"
+            />
           </div>
         </div>
       </section>
@@ -229,43 +231,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Starting at $464,990 - New construction with Lennar Everything's Included® features</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• 8,000 sq ft clubhouse</li>
-                <li>• Resort-style pool & spa</li>
-                <li>• Pickleball & bocce courts</li>
-                <li>• Gated community</li>
-              </ul>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-green-600 hover:text-green-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Del Webb Communities</h3>
-              <p class="text-gray-600 mb-4">Various price points - Established communities with proven amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Golf course communities</li>
-                <li>• Fitness centers</li>
-                <li>• Social clubs</li>
-                <li>• Maintenance-free living</li>
-              </ul>
-              <a href="/sun-city-del-webb-real-estate" class="text-green-600 hover:text-green-800 font-semibold">View Del Webb Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Resale</h3>
-              <p class="text-gray-600 mb-4">$350,000+ - Established community with mature amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Mature landscaping</li>
-                <li>• Established amenities</li>
-                <li>• Active social scene</li>
-                <li>• Proven track record</li>
-              </ul>
-              <a href="/sun-city-resale-homes" class="text-green-600 hover:text-green-800 font-semibold">View Sun City Resale →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="affordable" />
         </div>
       </section>
 

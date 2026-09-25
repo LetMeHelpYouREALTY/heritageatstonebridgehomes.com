@@ -391,29 +391,20 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏆</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Henderson Specialist</h3>
-              <p class="text-gray-600">Deep expertise in Henderson's neighborhoods, schools, and community amenities.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Henderson Specialist"
+              description="Deep expertise in Henderson's neighborhoods, parks, and community amenities."
+            />
             
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🎯</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">55+ Community Expert</h3>
-              <p class="text-gray-600">Specialized knowledge of active adult communities and their unique requirements.</p>
-            </div>
+            <PhotoThumbCard
+              heading="55+ Community Expert"
+              description="Specialized knowledge of active adult communities and their unique requirements."
+            />
             
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🤝</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Personalized Service</h3>
-              <p class="text-gray-600">Dedicated support throughout your Henderson home buying or selling journey.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Personalized Service"
+              description="Dedicated support throughout your Henderson home buying or selling journey."
+            />
           </div>
         </div>
       </section>

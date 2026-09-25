@@ -5,6 +5,8 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Luxury Retirement Communities in Las Vegas | Premium Active Adult Living - Dr. Jan Duffy",
@@ -202,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Concierge Services</h3>
-              <p class="text-gray-600">Personalized assistance with reservations, travel planning, event coordination, and daily conveniences</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Premium Amenities</h3>
-              <p class="text-gray-600">Private golf courses, spa facilities, gourmet dining, wine cellars, theaters, and exclusive social spaces</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Custom Homes</h3>
-              <p class="text-gray-600">Architectural excellence, high-end finishes, smart home technology, and personalized design options</p>
-            </div>
+            <PhotoThumbCard
+              heading="Concierge Services"
+              description="Personalized assistance with reservations, travel planning, event coordination, and daily conveniences"
+            />
+            <PhotoThumbCard
+              heading="Premium Amenities"
+              description="Private golf courses, spa facilities, gourmet dining, wine cellars, theaters, and exclusive social spaces"
+            />
+            <PhotoThumbCard
+              heading="Custom Homes"
+              description="Architectural excellence, high-end finishes, smart home technology, and personalized design options"
+            />
           </div>
         </div>
       </section>
@@ -229,97 +231,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates, exclusive golf course access, and mountain views.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Exclusive golf course</li>
-                <li>• Private concierge services</li>
-                <li>• Mountain views</li>
-                <li>• Elite social scene</li>
-                <li>• Highest-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$1,000,000 - $5,000,000+</div>
-              <a href="/luxury-homes" class="text-gold-600 hover:text-gold-800 font-semibold">View The Ridges Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Siena</h3>
-              <p class="text-gray-600 mb-4">Tuscan-inspired luxury community with resort amenities and sophisticated design.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Tuscan-inspired architecture</li>
-                <li>• Resort-style amenities</li>
-                <li>• Wine cellar & tasting room</li>
-                <li>• Gourmet dining</li>
-                <li>• Spa & wellness center</li>
-                <li>• Private social clubs</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$600,000 - $2,000,000+</div>
-              <a href="/luxury-homes" class="text-gold-600 hover:text-gold-800 font-semibold">View Siena Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Exclusive golf course community with luxury homes and private country club membership.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Private golf course</li>
-                <li>• Country club membership</li>
-                <li>• Luxury amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive events</li>
-                <li>• Concierge services</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/golf-course-homes" class="text-gold-600 hover:text-gold-800 font-semibold">View Country Club Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Luxury new construction with Everything's Included® features and modern amenities.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• New construction luxury</li>
-                <li>• Everything's Included®</li>
-                <li>• Smart home technology</li>
-                <li>• Resort-style amenities</li>
-                <li>• Red Rock Canyon views</li>
-                <li>• Gated community</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$464,990 - $1,200,000+</div>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-gold-600 hover:text-gold-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">MacDonald Ranch</h3>
-              <p class="text-gray-600 mb-4">Henderson's premier luxury community with custom homes and golf course access.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Golf course access</li>
-                <li>• Private amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive location</li>
-                <li>• High-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$700,000 - $2,500,000+</div>
-              <a href="/henderson-real-estate" class="text-gold-600 hover:text-gold-800 font-semibold">View MacDonald Ranch Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Seven Hills</h3>
-              <p class="text-gray-600 mb-4">Gated luxury community with custom estates and stunning mountain views.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Gated community</li>
-                <li>• Custom estates</li>
-                <li>• Mountain views</li>
-                <li>• Private amenities</li>
-                <li>• Exclusive location</li>
-                <li>• Luxury finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/gated-communities" class="text-gold-600 hover:text-gold-800 font-semibold">View Seven Hills Homes →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="luxury" />
         </div>
       </section>
 

@@ -5,6 +5,8 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "55+ Communities in Las Vegas for Sale | Active Adult Homes Available - Dr. Jan Duffy",
@@ -202,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">New Construction</h3>
-              <p class="text-gray-600">Heritage at Stonebridge and other new developments with modern amenities and contemporary designs</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Resale Market</h3>
-              <p class="text-gray-600">Established communities like Sun City Summerlin with mature amenities and proven track records</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Luxury Options</h3>
-              <p class="text-gray-600">High-end communities including The Ridges and Siena with premium amenities and custom homes</p>
-            </div>
+            <PhotoThumbCard
+              heading="New Construction"
+              description="Heritage at Stonebridge and other new developments with modern amenities and contemporary designs"
+            />
+            <PhotoThumbCard
+              heading="Resale Market"
+              description="Established communities like Sun City Summerlin with mature amenities and proven track records"
+            />
+            <PhotoThumbCard
+              heading="Luxury Options"
+              description="High-end communities including The Ridges and Siena with premium amenities and custom homes"
+            />
           </div>
         </div>
       </section>
@@ -229,97 +231,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">New construction 55+ community with Lennar Everything's Included® features</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Three home collections available</li>
-                <li>• Starting from $464,990</li>
-                <li>• Resort-style amenities</li>
-                <li>• Red Rock Canyon views</li>
-                <li>• Gated community</li>
-                <li>• Smart home technology</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">New Construction Available</div>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Available Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Summerlin</h3>
-              <p class="text-gray-600 mb-4">Established community with resale homes and mature amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple golf courses</li>
-                <li>• Recreation centers</li>
-                <li>• Active social scene</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">Resale Homes Available</div>
-              <a href="/sun-city-del-webb-real-estate" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Resale Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates and exclusive amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Exclusive golf course</li>
-                <li>• Mountain views</li>
-                <li>• Private amenities</li>
-                <li>• Elite social scene</li>
-                <li>• Highest-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">Luxury Estates Available</div>
-              <a href="/luxury-homes" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Luxury Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Siena</h3>
-              <p class="text-gray-600 mb-4">Tuscan-inspired community with resort amenities and sophisticated design</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Tuscan-inspired architecture</li>
-                <li>• Resort-style amenities</li>
-                <li>• Wine cellar & tasting room</li>
-                <li>• Gourmet dining</li>
-                <li>• Spa & wellness center</li>
-                <li>• Private social clubs</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">Resort-Style Homes Available</div>
-              <a href="/luxury-homes" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Siena Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Del Webb Communities</h3>
-              <p class="text-gray-600 mb-4">Multiple Del Webb communities with homes available across Las Vegas</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Established reputation</li>
-                <li>• Quality construction</li>
-                <li>• Active lifestyle focus</li>
-                <li>• Social activities</li>
-                <li>• Maintenance-free living</li>
-                <li>• Various price points</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">Multiple Communities Available</div>
-              <a href="/sun-city-del-webb-real-estate" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Del Webb Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Exclusive golf course community with luxury homes and private membership</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Private golf course</li>
-                <li>• Country club membership</li>
-                <li>• Luxury amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive events</li>
-                <li>• Concierge services</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">Golf Course Homes Available</div>
-              <a href="/golf-course-homes" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Country Club Homes →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="premier" />
         </div>
       </section>
 

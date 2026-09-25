@@ -5,6 +5,8 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "55+ Communities in Las Vegas for Rent | Active Adult Rental Homes - Dr. Jan Duffy",
@@ -202,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Rental Availability</h3>
-              <p class="text-gray-600">Limited but available rental homes in established 55+ communities with owner-occupied properties</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Amenity Access</h3>
-              <p class="text-gray-600">Renters typically have access to community amenities, pools, fitness centers, and social activities</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Flexible Terms</h3>
-              <p class="text-gray-600">Various lease terms available, from short-term rentals to annual leases with renewal options</p>
-            </div>
+            <PhotoThumbCard
+              heading="Rental Availability"
+              description="Limited but available rental homes in established 55+ communities with owner-occupied properties"
+            />
+            <PhotoThumbCard
+              heading="Amenity Access"
+              description="Renters typically have access to community amenities, pools, fitness centers, and social activities"
+            />
+            <PhotoThumbCard
+              heading="Flexible Terms"
+              description="Various lease terms available, from short-term rentals to annual leases with renewal options"
+            />
           </div>
         </div>
       </section>
@@ -229,97 +231,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Summerlin</h3>
-              <p class="text-gray-600 mb-4">Established community with occasional rental homes available from owners</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple golf courses</li>
-                <li>• Recreation centers</li>
-                <li>• Active social scene</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Owner rentals available</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$2,500 - $4,500/month</div>
-              <a href="/sun-city-summerlin-rentals" class="text-teal-600 hover:text-teal-800 font-semibold">View Rental Options →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Del Webb Communities</h3>
-              <p class="text-gray-600 mb-4">Various Del Webb communities with rental homes from individual owners</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Quality construction</li>
-                <li>• Active lifestyle focus</li>
-                <li>• Social activities</li>
-                <li>• Maintenance-free living</li>
-                <li>• Various price points</li>
-                <li>• Owner rental policies</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$2,000 - $5,000/month</div>
-              <a href="/del-webb-rentals" class="text-teal-600 hover:text-teal-800 font-semibold">View Del Webb Rentals →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Siena</h3>
-              <p class="text-gray-600 mb-4">Luxury community with occasional rental homes from owners</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Tuscan-inspired architecture</li>
-                <li>• Resort-style amenities</li>
-                <li>• Wine cellar & tasting room</li>
-                <li>• Gourmet dining</li>
-                <li>• Spa & wellness center</li>
-                <li>• Private social clubs</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$3,500 - $6,000/month</div>
-              <a href="/siena-rentals" class="text-teal-600 hover:text-teal-800 font-semibold">View Siena Rentals →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Exclusive golf course community with limited rental opportunities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Private golf course</li>
-                <li>• Country club membership</li>
-                <li>• Luxury amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive events</li>
-                <li>• Limited rental availability</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$4,000 - $8,000/month</div>
-              <a href="/red-rock-country-club-rentals" class="text-teal-600 hover:text-teal-800 font-semibold">View Country Club Rentals →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">MacDonald Ranch</h3>
-              <p class="text-gray-600 mb-4">Henderson luxury community with occasional rental homes</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Golf course access</li>
-                <li>• Private amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive location</li>
-                <li>• High-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$3,000 - $7,000/month</div>
-              <a href="/55-and-over-communities-las-vegas-for-rent" class="text-teal-600 hover:text-teal-800 font-semibold">View MacDonald Ranch Rentals →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Seven Hills</h3>
-              <p class="text-gray-600 mb-4">Gated luxury community with limited rental opportunities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Gated community</li>
-                <li>• Custom estates</li>
-                <li>• Mountain views</li>
-                <li>• Private amenities</li>
-                <li>• Exclusive location</li>
-                <li>• Luxury finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$3,500 - $8,000/month</div>
-              <a href="/55-and-over-communities-las-vegas-for-rent" class="text-teal-600 hover:text-teal-800 font-semibold">View Seven Hills Rentals →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="rentals" />
         </div>
       </section>
 

@@ -65,7 +65,7 @@ export default component$(() => {
 6. Community amenities and recreational facilities
 7. Local shopping, dining, and entertainment options
 8. Transportation and accessibility information
-9. Schools and educational facilities
+9. Shopping, grocery stores, and daily errand access
 10. Healthcare and medical services
 
 Format as JSON with sections: summerlin_guide, henderson_guide, red_rock_guide, northwest_guide, boulder_city_guide, community_amenities, local_attractions, transportation, education, and healthcare.`;
@@ -118,8 +118,8 @@ Format as JSON with sections: summerlin_guide, henderson_guide, red_rock_guide, 
               </div>
               
               <div class="bg-gradient-to-r from-emerald-50 to-green-50 p-6 rounded-lg border-l-4 border-emerald-500">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">🎓 Education</h2>
-                <p class="text-gray-700">${parsedContent.education || 'Educational facilities being detailed...'}</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">🛒 Shopping and Daily Errands</h2>
+                <p class="text-gray-700">${parsedContent.education || 'Shopping, grocery, and daily errand access being detailed...'}</p>
               </div>
               
               <div class="bg-gradient-to-r from-gray-50 to-slate-50 p-6 rounded-lg border-l-4 border-gray-500">

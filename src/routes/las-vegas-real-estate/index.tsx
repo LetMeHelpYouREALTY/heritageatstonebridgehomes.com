@@ -364,18 +364,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Market Growth</h3>
-              <p class="text-gray-600">Las Vegas property values have shown consistent growth, driven by population increases and economic diversification.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Investment Opportunities</h3>
-              <p class="text-gray-600">Strong rental market, no state income tax, and growing tourism industry create excellent investment potential.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Diverse Options</h3>
-              <p class="text-gray-600">From luxury estates to 55+ communities, Las Vegas offers properties for every lifestyle and budget.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Market Growth"
+              description="Las Vegas property values have shown consistent growth, driven by population increases and economic diversification."
+            />
+            <PhotoThumbCard
+              heading="Investment Opportunities"
+              description="Strong rental market, no state income tax, and growing tourism industry create excellent investment potential."
+            />
+            <PhotoThumbCard
+              heading="Diverse Options"
+              description="From luxury estates to 55+ communities, Las Vegas offers properties for every lifestyle and budget."
+            />
           </div>
         </div>
       </section>
@@ -478,29 +478,20 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏆</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">55+ Community Specialist</h3>
-              <p class="text-gray-600">Deep expertise in active adult communities, understanding unique needs and lifestyle preferences.</p>
-            </div>
+            <PhotoThumbCard
+              heading="55+ Community Specialist"
+              description="Deep expertise in active adult communities, understanding unique needs and lifestyle preferences."
+            />
             
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">📍</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Local Market Expert</h3>
-              <p class="text-gray-600">Comprehensive knowledge of Las Vegas neighborhoods, market trends, and property values.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Local Market Expert"
+              description="Comprehensive knowledge of Las Vegas neighborhoods, market trends, and property values."
+            />
             
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🤝</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Personalized Service</h3>
-              <p class="text-gray-600">Dedicated support throughout the entire buying or selling process with attention to detail.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Personalized Service"
+              description="Dedicated support throughout the entire buying or selling process with attention to detail."
+            />
           </div>
         </div>
       </section>

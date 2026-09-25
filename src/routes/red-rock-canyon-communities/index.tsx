@@ -355,29 +355,20 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏔️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Mountain View Specialist</h3>
-              <p class="text-gray-600">Expert knowledge of communities with the best Red Rock Canyon views and access.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Mountain View Specialist"
+              description="Expert knowledge of communities with the best Red Rock Canyon views and access."
+            />
             
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🥾</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Outdoor Lifestyle Expert</h3>
-              <p class="text-gray-600">Understanding of outdoor recreation needs and mountain community amenities.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Outdoor Lifestyle Expert"
+              description="Understanding of outdoor recreation needs and mountain community amenities."
+            />
             
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏆</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Luxury Home Specialist</h3>
-              <p class="text-gray-600">Experience with high-end properties and exclusive community requirements.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Luxury Home Specialist"
+              description="Experience with high-end properties and exclusive community requirements."
+            />
           </div>
         </div>
       </section>

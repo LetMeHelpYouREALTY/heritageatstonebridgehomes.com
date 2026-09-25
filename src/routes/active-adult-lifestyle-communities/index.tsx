@@ -5,6 +5,8 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Active Adult Lifestyle Communities | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -202,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Resort-Style Amenities</h3>
-              <p class="text-gray-600">Fitness centers, pools, golf courses, clubhouses, and spa facilities</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Social Activities</h3>
-              <p class="text-gray-600">Clubs, events, classes, and activities designed for active adult engagement</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Maintenance-Free Living</h3>
-              <p class="text-gray-600">No yard work, exterior maintenance, or repairs - focus on enjoying life</p>
-            </div>
+            <PhotoThumbCard
+              heading="Resort-Style Amenities"
+              description="Fitness centers, pools, golf courses, clubhouses, and spa facilities"
+            />
+            <PhotoThumbCard
+              heading="Social Activities"
+              description="Clubs, events, classes, and activities designed for active adult engagement"
+            />
+            <PhotoThumbCard
+              heading="Maintenance-Free Living"
+              description="No yard work, exterior maintenance, or repairs - focus on enjoying life"
+            />
           </div>
         </div>
       </section>
@@ -229,97 +231,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Lennar's newest 55+ community with Everything's Included® features and resort amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Three home collections</li>
-                <li>• 8,000 sq ft clubhouse</li>
-                <li>• Resort-style pool</li>
-                <li>• Pickleball & bocce courts</li>
-                <li>• Red Rock Canyon views</li>
-                <li>• Gated community</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">Starting from $464,990</div>
-              <a href="/heritage-at-stonebridge-homes-for-sale" class="text-teal-600 hover:text-teal-800 font-semibold">View Heritage at Stonebridge →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Summerlin</h3>
-              <p class="text-gray-600 mb-4">Established premier 55+ community with multiple golf courses and mature amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple golf courses</li>
-                <li>• Recreation centers</li>
-                <li>• Extensive social clubs</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-del-webb-real-estate" class="text-teal-600 hover:text-teal-800 font-semibold">View Sun City Summerlin →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Anthem</h3>
-              <p class="text-gray-600 mb-4">Henderson's premier 55+ community with golf courses and vibrant social scene</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple golf courses</li>
-                <li>• Recreation centers</li>
-                <li>• Active social scene</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-del-webb-real-estate" class="text-teal-600 hover:text-teal-800 font-semibold">View Sun City Anthem →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates and exclusive golf course access</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Exclusive golf course</li>
-                <li>• Private amenities</li>
-                <li>• Mountain views</li>
-                <li>• Elite social scene</li>
-                <li>• Highest-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$1,000,000 - $5,000,000+</div>
-              <a href="/luxury-homes" class="text-teal-600 hover:text-teal-800 font-semibold">View The Ridges →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Siena</h3>
-              <p class="text-gray-600 mb-4">Tuscan-inspired luxury community with resort amenities and sophisticated design</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Tuscan-inspired architecture</li>
-                <li>• Resort-style amenities</li>
-                <li>• Wine cellar & tasting room</li>
-                <li>• Gourmet dining</li>
-                <li>• Spa & wellness center</li>
-                <li>• Private social clubs</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$600,000 - $2,000,000+</div>
-              <a href="/luxury-homes" class="text-teal-600 hover:text-teal-800 font-semibold">View Siena →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Exclusive golf course community with luxury homes and private membership</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Private golf course</li>
-                <li>• Country club membership</li>
-                <li>• Luxury amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive events</li>
-                <li>• Concierge services</li>
-              </ul>
-              <div class="text-lg font-bold text-teal-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/golf-course-homes" class="text-teal-600 hover:text-teal-800 font-semibold">View Country Club →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="valley" />
         </div>
       </section>
 

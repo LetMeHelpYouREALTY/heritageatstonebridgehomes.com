@@ -5,6 +5,8 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Henderson Active Adult Communities | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -202,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Parks, trails, and recreation centers</h3>
-              <p class="text-gray-600">Residential streets with parks, recreation centers, and a short drive to Lake Mead</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Lake Mead Access</h3>
-              <p class="text-gray-600">Direct access to Lake Mead National Recreation Area for water sports and outdoor recreation</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Convenient Location</h3>
-              <p class="text-gray-600">20 minutes to Las Vegas Strip and McCarran Airport with suburban tranquility</p>
-            </div>
+            <PhotoThumbCard
+              heading="Parks, trails, and recreation centers"
+              description="Residential streets with parks, recreation centers, and a short drive to Lake Mead"
+            />
+            <PhotoThumbCard
+              heading="Lake Mead Access"
+              description="Direct access to Lake Mead National Recreation Area for water sports and outdoor recreation"
+            />
+            <PhotoThumbCard
+              heading="Convenient Location"
+              description="20 minutes to Las Vegas Strip and McCarran Airport with suburban tranquility"
+            />
           </div>
         </div>
       </section>
@@ -229,97 +231,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Anthem</h3>
-              <p class="text-gray-600 mb-4">Premier 55+ community with golf courses, recreation centers, and vibrant social scene</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple golf courses</li>
-                <li>• Recreation centers and pools</li>
-                <li>• Extensive social clubs</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-del-webb-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">View Sun City Anthem →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">MacDonald Ranch</h3>
-              <p class="text-gray-600 mb-4">Luxury golf course community with custom homes and exclusive amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Golf course access</li>
-                <li>• Private amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive location</li>
-                <li>• High-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$700,000 - $2,500,000+</div>
-              <a href="/henderson-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">View MacDonald Ranch →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Seven Hills</h3>
-              <p class="text-gray-600 mb-4">Gated luxury community with custom estates and stunning mountain views</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Gated community</li>
-                <li>• Custom estates</li>
-                <li>• Mountain views</li>
-                <li>• Private amenities</li>
-                <li>• Exclusive location</li>
-                <li>• Luxury finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/gated-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Seven Hills →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Green Valley</h3>
-              <p class="text-gray-600 mb-4">Mature trees, parks, and recreation centers along Henderson residential streets</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Mature landscaping</li>
-                <li>• Parks and trails</li>
-                <li>• Excellent schools</li>
-                <li>• Established community</li>
-                <li>• Convenient location</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$400,000 - $1,200,000</div>
-              <a href="/henderson-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">View Green Valley →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Inspirada</h3>
-              <p class="text-gray-600 mb-4">Modern master-planned community with contemporary homes and amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Modern design</li>
-                <li>• Contemporary amenities</li>
-                <li>• Parks and trails</li>
-                <li>• Community events</li>
-                <li>• New construction</li>
-                <li>• Energy-efficient homes</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/henderson-active-adult-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Inspirada →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Anthem</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with golf courses, parks, and resort amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Golf courses</li>
-                <li>• Parks and trails</li>
-                <li>• Resort amenities</li>
-                <li>• Community events</li>
-                <li>• Parks and trails</li>
-                <li>• Established community</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$600,000 - $2,000,000</div>
-              <a href="/henderson-active-adult-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Anthem →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="henderson" />
         </div>
       </section>
 
@@ -366,11 +278,11 @@ export default component$(() => {
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
-                  Excellent schools and healthcare facilities
+                  Nearby medical offices and recreation centers
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
-                  Safe, well-maintained communities
+                  Well-maintained streets, parks, and recreation centers
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>

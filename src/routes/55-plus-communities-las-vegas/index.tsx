@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
 import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
@@ -203,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">New Construction</h3>
-              <p class="text-gray-600">Modern communities like Heritage at Stonebridge with contemporary amenities and smart home technology</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Established Communities</h3>
-              <p class="text-gray-600">Mature communities like Sun City Summerlin with proven amenities and established social scenes</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Luxury Options</h3>
-              <p class="text-gray-600">High-end communities including The Ridges and Siena with premium amenities and concierge services</p>
-            </div>
+            <PhotoThumbCard
+              heading="New Construction"
+              description="Modern communities like Heritage at Stonebridge with contemporary amenities and smart home technology"
+            />
+            <PhotoThumbCard
+              heading="Established Communities"
+              description="Mature communities like Sun City Summerlin with proven amenities and established social scenes"
+            />
+            <PhotoThumbCard
+              heading="Luxury Options"
+              description="High-end communities including The Ridges and Siena with premium amenities and concierge services"
+            />
           </div>
         </div>
       </section>
@@ -230,86 +231,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <PhotoThumbCard
-              heading="Heritage at Stonebridge"
-              description="Lennar's newest 55+ community in Summerlin with Everything's Included® features."
-              items={[
-                "Three home collections",
-                "Resort-style amenities",
-                "Red Rock Canyon views",
-                "Gated community",
-              ]}
-              price="Starting from $464,990"
-              href="/homes-for-sale-stonebridge-summerlin"
-              linkLabel="View Stonebridge Homes →"
-            />
-            <PhotoThumbCard
-              heading="Sun City Summerlin"
-              description="Established 55+ golf community with recreation centers and mature landscaping."
-              items={[
-                "Multiple golf courses",
-                "Recreation centers",
-                "Active social scene",
-                "Mature landscaping",
-              ]}
-              price="$500,000 - $1,500,000"
-              href="/sun-city-del-webb-real-estate"
-              linkLabel="View Sun City Homes →"
-            />
-            <PhotoThumbCard
-              heading="The Ridges"
-              description="Custom hilltop estates with exclusive golf access in Summerlin West."
-              items={[
-                "Custom luxury homes",
-                "Exclusive golf course",
-                "Mountain views",
-                "Private amenities",
-              ]}
-              price="$1,000,000 - $5,000,000+"
-              href="/luxury-homes"
-              linkLabel="View Ridges Homes →"
-            />
-            <PhotoThumbCard
-              heading="Siena"
-              description="Italian-inspired gated homes and resort amenities in Summerlin."
-              items={[
-                "Tuscan-inspired architecture",
-                "Resort-style amenities",
-                "Spa and wellness center",
-                "Private social clubs",
-              ]}
-              price="$600,000 - $2,000,000+"
-              href="/luxury-homes"
-              linkLabel="View Siena Homes →"
-            />
-            <PhotoThumbCard
-              heading="Del Webb Communities"
-              description="Del Webb plans with clubhouses, fitness, and maintenance-free exteriors."
-              items={[
-                "Quality construction",
-                "Active lifestyle focus",
-                "Social activities",
-                "Various price points",
-              ]}
-              price="$400,000 - $1,500,000"
-              href="/sun-city-del-webb-real-estate"
-              linkLabel="View Del Webb Homes →"
-            />
-            <PhotoThumbCard
-              heading="Red Rock Country Club"
-              description="Golf-course homes with Red Rock Canyon as the backdrop."
-              items={[
-                "Private golf course",
-                "Country club membership",
-                "Luxury amenities",
-                "Mountain views",
-              ]}
-              price="$800,000 - $3,000,000+"
-              href="/golf-course-homes"
-              linkLabel="View Country Club Homes →"
-            />
-          </div>
+          <PremierCommunityGrid variant="premier" />
         </div>
       </section>
 

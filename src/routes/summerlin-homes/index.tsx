@@ -361,29 +361,20 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏆</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Summerlin Specialist</h3>
-              <p class="text-gray-600">Deep expertise in Summerlin's communities, amenities, and unique lifestyle offerings.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Summerlin Specialist"
+              description="Deep expertise in Summerlin's communities, amenities, and unique lifestyle offerings."
+            />
             
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🎯</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">55+ Community Expert</h3>
-              <p class="text-gray-600">Specialized knowledge of active adult communities and their unique requirements.</p>
-            </div>
+            <PhotoThumbCard
+              heading="55+ Community Expert"
+              description="Specialized knowledge of active adult communities and their unique requirements."
+            />
             
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🤝</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Personalized Service</h3>
-              <p class="text-gray-600">Dedicated support throughout your Summerlin home buying or selling journey.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Personalized Service"
+              description="Dedicated support throughout your Summerlin home buying or selling journey."
+            />
           </div>
         </div>
       </section>

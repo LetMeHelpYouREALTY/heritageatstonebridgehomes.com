@@ -5,6 +5,8 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "New 55+ Communities in Las Vegas | Latest Active Adult Developments - Dr. Jan Duffy",
@@ -202,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Modern Amenities</h3>
-              <p class="text-gray-600">State-of-the-art clubhouses, fitness centers, and recreational facilities with the latest equipment and technology</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Energy Efficiency</h3>
-              <p class="text-gray-600">Energy-efficient appliances, HVAC systems, and smart home technology to reduce utility costs</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Warranty Coverage</h3>
-              <p class="text-gray-600">Comprehensive builder warranties covering structural elements, systems, and finishes for peace of mind</p>
-            </div>
+            <PhotoThumbCard
+              heading="Modern Amenities"
+              description="State-of-the-art clubhouses, fitness centers, and recreational facilities with the latest equipment and technology"
+            />
+            <PhotoThumbCard
+              heading="Energy Efficiency"
+              description="Energy-efficient appliances, HVAC systems, and smart home technology to reduce utility costs"
+            />
+            <PhotoThumbCard
+              heading="Warranty Coverage"
+              description="Comprehensive builder warranties covering structural elements, systems, and finishes for peace of mind"
+            />
           </div>
         </div>
       </section>
@@ -229,47 +231,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Lennar's newest 55+ community in Summerlin with Everything's Included® features</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Three home collections (Cromwell, Stirling, Evander)</li>
-                <li>• 8,000 sq ft clubhouse with fitness center</li>
-                <li>• Resort-style pool & heated lap pool</li>
-                <li>• Pickleball & bocce courts</li>
-                <li>• Smart home technology included</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">Starting from $464,990</div>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-blue-600 hover:text-blue-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">New Del Webb Communities</h3>
-              <p class="text-gray-600 mb-4">Latest Del Webb developments with contemporary amenities and designs</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Modern clubhouse designs</li>
-                <li>• Updated fitness centers</li>
-                <li>• Contemporary social spaces</li>
-                <li>• Latest technology integration</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">Various Price Points</div>
-              <a href="/del-webb-new-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Del Webb New →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Upcoming Developments</h3>
-              <p class="text-gray-600 mb-4">New 55+ communities planned for Henderson and Northwest Las Vegas</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Pre-construction opportunities</li>
-                <li>• Customizable floor plans</li>
-                <li>• Early buyer incentives</li>
-                <li>• Preferred lot selection</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">Coming Soon</div>
-              <a href="/upcoming-55-plus-communities" class="text-blue-600 hover:text-blue-800 font-semibold">Get Early Access →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="newBuilds" />
         </div>
       </section>
 

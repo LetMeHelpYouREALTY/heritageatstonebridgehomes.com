@@ -105,37 +105,25 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏗️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">New Construction</h3>
-              <p class="text-gray-600">Modern homes with the latest features, designs, and energy-efficient systems</p>
-            </div>
+            <PhotoThumbCard
+              heading="New Construction"
+              description="Modern homes with the latest features, designs, and energy-efficient systems"
+            />
             
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🚗</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Convenient Access</h3>
-              <p class="text-gray-600">Easy access to the Las Vegas Strip, downtown, and major highways</p>
-            </div>
+            <PhotoThumbCard
+              heading="Convenient Access"
+              description="Easy access to the Las Vegas Strip, downtown, and major highways"
+            />
             
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">💰</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Great Value</h3>
-              <p class="text-gray-600">More home for your money compared to established areas</p>
-            </div>
+            <PhotoThumbCard
+              heading="Great Value"
+              description="More home for your money compared to established areas"
+            />
             
-            <div class="text-center">
-              <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">📈</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Growth Potential</h3>
-              <p class="text-gray-600">Rapidly developing area with increasing property values</p>
-            </div>
+            <PhotoThumbCard
+              heading="Growth Potential"
+              description="Rapidly developing area with increasing property values"
+            />
           </div>
         </div>
       </section>
@@ -207,8 +195,8 @@ export default component$(() => {
                   <span>15-25 minutes</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="font-semibold">Schools:</span>
-                  <span>New & modern facilities</span>
+                  <span class="font-semibold">Medical offices:</span>
+                  <span>Valley Health and MountainView nearby</span>
                 </div>
                 <div class="flex justify-between">
                   <span class="font-semibold">Parks:</span>
@@ -370,29 +358,20 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏆</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Northwest Specialist</h3>
-              <p class="text-gray-600">Deep expertise in Northwest Las Vegas communities and new construction developments.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Northwest Specialist"
+              description="Deep expertise in Northwest Las Vegas communities and new construction developments."
+            />
             
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏗️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">New Construction Expert</h3>
-              <p class="text-gray-600">Specialized knowledge of new construction processes and builder relationships.</p>
-            </div>
+            <PhotoThumbCard
+              heading="New Construction Expert"
+              description="Specialized knowledge of new construction processes and builder relationships."
+            />
             
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🤝</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Personalized Service</h3>
-              <p class="text-gray-600">Dedicated support throughout your Northwest Las Vegas home buying journey.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Personalized Service"
+              description="Dedicated support throughout your Northwest Las Vegas home buying journey."
+            />
           </div>
         </div>
       </section>

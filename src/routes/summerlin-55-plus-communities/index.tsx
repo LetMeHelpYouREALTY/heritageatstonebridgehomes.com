@@ -5,6 +5,8 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Summerlin 55+ Communities | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -202,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Master-Planned Excellence</h3>
-              <p class="text-gray-600">Thoughtfully designed communities with parks, trails, and world-class amenities</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Championship Golf</h3>
-              <p class="text-gray-600">Multiple golf courses including TPC Las Vegas and Red Rock Country Club</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Canyon Access</h3>
-              <p class="text-gray-600">Minutes from hiking, rock climbing, and scenic drives in Red Rock Canyon</p>
-            </div>
+            <PhotoThumbCard
+              heading="Master-Planned Excellence"
+              description="Thoughtfully designed communities with parks, trails, and world-class amenities"
+            />
+            <PhotoThumbCard
+              heading="Championship Golf"
+              description="Multiple golf courses including TPC Las Vegas and Red Rock Country Club"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Canyon Access"
+              description="Minutes from hiking, rock climbing, and scenic drives in Red Rock Canyon"
+            />
           </div>
         </div>
       </section>
@@ -229,97 +231,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Lennar's newest 55+ community in Summerlin West with Everything's Included® features</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Three home collections (Cromwell, Stirling, Evander)</li>
-                <li>• 8,000 sq ft clubhouse with fitness center</li>
-                <li>• Resort-style pool & heated lap pool</li>
-                <li>• Pickleball & bocce courts</li>
-                <li>• Red Rock Canyon views</li>
-                <li>• Gated community with RV parking</li>
-              </ul>
-              <div class="text-lg font-bold text-green-600 mb-4">Starting from $464,990</div>
-              <a href="/heritage-at-stonebridge-homes-for-sale" class="text-green-600 hover:text-green-800 font-semibold">View Heritage at Stonebridge →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Summerlin</h3>
-              <p class="text-gray-600 mb-4">Established premier 55+ community with multiple golf courses and mature amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple championship golf courses</li>
-                <li>• Recreation centers and pools</li>
-                <li>• Extensive social clubs</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-green-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-del-webb-real-estate" class="text-green-600 hover:text-green-800 font-semibold">View Sun City Summerlin →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates and exclusive golf course access</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Exclusive golf course</li>
-                <li>• Mountain views</li>
-                <li>• Private amenities</li>
-                <li>• Elite social scene</li>
-                <li>• Highest-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-green-600 mb-4">$1,000,000 - $5,000,000+</div>
-              <a href="/luxury-homes" class="text-green-600 hover:text-green-800 font-semibold">View The Ridges →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Siena</h3>
-              <p class="text-gray-600 mb-4">Tuscan-inspired luxury community with resort amenities and sophisticated design</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Tuscan-inspired architecture</li>
-                <li>• Resort-style amenities</li>
-                <li>• Wine cellar & tasting room</li>
-                <li>• Gourmet dining</li>
-                <li>• Spa & wellness center</li>
-                <li>• Private social clubs</li>
-              </ul>
-              <div class="text-lg font-bold text-green-600 mb-4">$600,000 - $2,000,000+</div>
-              <a href="/luxury-homes" class="text-green-600 hover:text-green-800 font-semibold">View Siena →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Exclusive golf course community with luxury homes and private membership</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Private golf course</li>
-                <li>• Country club membership</li>
-                <li>• Luxury amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive events</li>
-                <li>• Concierge services</li>
-              </ul>
-              <div class="text-lg font-bold text-green-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/golf-course-homes" class="text-green-600 hover:text-green-800 font-semibold">View Country Club →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Arbors</h3>
-              <p class="text-gray-600 mb-4">Parks, trails, and recreation centers in a master-planned Summerlin village</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Parks and trails</li>
-                <li>• Excellent schools</li>
-                <li>• Parks and trails</li>
-                <li>• Community events</li>
-                <li>• Safe environment</li>
-                <li>• Convenient location</li>
-              </ul>
-              <div class="text-lg font-bold text-green-600 mb-4">$400,000 - $1,200,000</div>
-              <a href="/summerlin-homes" class="text-green-600 hover:text-green-800 font-semibold">View The Arbors →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="summerlin" />
         </div>
       </section>
 
@@ -366,7 +278,7 @@ export default component$(() => {
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Safe, well-maintained neighborhoods
+                  Parks, trails, and recreation centers
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>

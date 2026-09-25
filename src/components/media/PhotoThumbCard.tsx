@@ -7,7 +7,7 @@ type PhotoThumbCardProps = {
   description?: string;
   href?: string;
   linkLabel?: string;
-  items?: string[];
+  items?: readonly string[];
   price?: string;
 };
 

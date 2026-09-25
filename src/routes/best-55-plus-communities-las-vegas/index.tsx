@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Best 55+ Communities in Las Vegas | Top-Rated Active Adult Living - Dr. Jan Duffy",
@@ -202,18 +203,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Amenities & Facilities</h3>
-              <p class="text-gray-600">Quality and variety of recreational facilities, clubhouses, fitness centers, and social spaces</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Location & Access</h3>
-              <p class="text-gray-600">Proximity to shopping, dining, healthcare, entertainment, and transportation</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Value & Investment</h3>
-              <p class="text-gray-600">Price-to-value ratio, HOA fees, resale potential, and overall cost of living</p>
-            </div>
+            <PhotoThumbCard
+              heading="Amenities & Facilities"
+              description="Quality and variety of recreational facilities, clubhouses, fitness centers, and social spaces"
+            />
+            <PhotoThumbCard
+              heading="Location & Access"
+              description="Proximity to shopping, dining, healthcare, entertainment, and transportation"
+            />
+            <PhotoThumbCard
+              heading="Value & Investment"
+              description="Price-to-value ratio, HOA fees, resale potential, and overall cost of living"
+            />
           </div>
         </div>
       </section>

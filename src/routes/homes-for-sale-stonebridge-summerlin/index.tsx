@@ -407,30 +407,30 @@ export default component$(() => {
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-2xl font-bold text-gray-900 mb-6">Community Amenities</h3>
               <div class="grid grid-cols-2 gap-4">
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🏊</span>
-                  <p class="font-semibold">Swimming Pools</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🏓</span>
-                  <p class="font-semibold">Pickleball Courts</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">💪</span>
-                  <p class="font-semibold">Fitness Center</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🏠</span>
-                  <p class="font-semibold">Clubhouse</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🚶</span>
-                  <p class="font-semibold">Walking Trails</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🌳</span>
-                  <p class="font-semibold">Parks & Gardens</p>
-                </div>
+                <PhotoThumbCard
+              heading="Swimming Pools"
+              description="Swimming Pools"
+            />
+                <PhotoThumbCard
+              heading="Pickleball Courts"
+              description="Pickleball Courts"
+            />
+                <PhotoThumbCard
+              heading="Fitness Center"
+              description="Fitness Center"
+            />
+                <PhotoThumbCard
+              heading="Clubhouse"
+              description="Clubhouse"
+            />
+                <PhotoThumbCard
+              heading="Walking Trails"
+              description="Walking Trails"
+            />
+                <PhotoThumbCard
+              heading="Parks & Gardens"
+              description="Parks & Gardens"
+            />
               </div>
             </div>
           </div>

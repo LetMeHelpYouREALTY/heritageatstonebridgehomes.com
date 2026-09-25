@@ -5,6 +5,8 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Heritage at Stonebridge Homes for Sale | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -273,18 +275,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Current Pricing</h3>
-              <p class="text-gray-600">Starting from $464,990 for Cromwell collection homes with Everything's Included® features</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Market Demand</h3>
-              <p class="text-gray-600">High demand with limited inventory - homes selling quickly in this premier location</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Investment Potential</h3>
-              <p class="text-gray-600">Strong appreciation potential in Summerlin West with Red Rock Canyon proximity</p>
-            </div>
+            <PhotoThumbCard
+              heading="Current Pricing"
+              description="Starting from $464,990 for Cromwell collection homes with Everything's Included® features"
+            />
+            <PhotoThumbCard
+              heading="Market Demand"
+              description="High demand with limited inventory - homes selling quickly in this premier location"
+            />
+            <PhotoThumbCard
+              heading="Investment Potential"
+              description="Strong appreciation potential in Summerlin West with Red Rock Canyon proximity"
+            />
           </div>
         </div>
       </section>
@@ -300,49 +302,7 @@ export default component$(() => {
             </p>
           </div>
           
-          <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Cromwell Collection</h3>
-              <p class="text-gray-600 mb-4">Starting at $464,990 - Perfect for active adults seeking modern comfort</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• 1,500-2,000 sq ft single-story homes</li>
-                <li>• Open concept living areas</li>
-                <li>• Master suite with walk-in closet</li>
-                <li>• Covered patio or lanai</li>
-                <li>• 2-car garage</li>
-                <li>• Everything's Included® features</li>
-              </ul>
-              <div class="text-lg font-bold text-red-600 mb-4">Starting from $464,990</div>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Stirling Collection</h3>
-              <p class="text-gray-600 mb-4">Mid-range pricing - Enhanced features and larger layouts</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• 1,800-2,400 sq ft single-story homes</li>
-                <li>• Expanded living spaces</li>
-                <li>• Upgraded finishes</li>
-                <li>• Larger master suite</li>
-                <li>• Extended covered outdoor living</li>
-                <li>• Premium Everything's Included®</li>
-              </ul>
-              <div class="text-lg font-bold text-red-600 mb-4">Mid-range pricing</div>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Evander Collection</h3>
-              <p class="text-gray-600 mb-4">Premium pricing - Luxury features and maximum space</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• 2,200-2,800 sq ft single-story homes</li>
-                <li>• Spacious great rooms</li>
-                <li>• Luxury master suite</li>
-                <li>• Gourmet kitchen</li>
-                <li>• Large covered patio</li>
-                <li>• Premium Everything's Included®</li>
-              </ul>
-              <div class="text-lg font-bold text-red-600 mb-4">Premium pricing</div>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="collections" />
         </div>
       </section>
 
@@ -417,37 +377,25 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏢</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">8,000 Sq Ft Clubhouse</h3>
-              <p class="text-gray-600">State-of-the-art clubhouse with fitness center, social spaces, and meeting rooms</p>
-            </div>
+            <PhotoThumbCard
+              heading="8,000 Sq Ft Clubhouse"
+              description="State-of-the-art clubhouse with fitness center, social spaces, and meeting rooms"
+            />
             
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏊</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Resort-Style Pool</h3>
-              <p class="text-gray-600">Main pool and heated lap pool for year-round swimming and relaxation</p>
-            </div>
+            <PhotoThumbCard
+              heading="Resort-Style Pool"
+              description="Main pool and heated lap pool for year-round swimming and relaxation"
+            />
             
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🎾</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sports Courts</h3>
-              <p class="text-gray-600">Pickleball and bocce courts for active recreation and social activities</p>
-            </div>
+            <PhotoThumbCard
+              heading="Sports Courts"
+              description="Pickleball and bocce courts for active recreation and social activities"
+            />
             
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏔️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Canyon Views</h3>
-              <p class="text-gray-600">Stunning mountain views of Red Rock Canyon National Conservation Area</p>
-            </div>
+            <PhotoThumbCard
+              heading="Red Rock Canyon Views"
+              description="Stunning mountain views of Red Rock Canyon National Conservation Area"
+            />
           </div>
         </div>
       </section>

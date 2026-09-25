@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import {
   business,
@@ -317,70 +318,30 @@ export default component$(() => {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Phone */}
-            <div class="text-center p-6 bg-blue-50 rounded-lg">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">📞</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Call</h3>
-              <p class="text-gray-600 mb-4">Speak directly with Dr. Jan Duffy</p>
-              <a
-                href={business.telephoneHref}
-                class="text-blue-600 hover:text-blue-800 font-semibold text-lg"
-              >
-                {business.telephoneDisplay}
-              </a>
-            </div>
-
-            {/* Email */}
-            <div class="text-center p-6 bg-green-50 rounded-lg">
-              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">✉️</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-              <p class="text-gray-600 mb-4">Send a detailed message</p>
-              <a
-                href={`mailto:${business.email}`}
-                class="text-green-600 hover:text-green-800 font-semibold text-sm break-all"
-              >
-                {business.email}
-              </a>
-            </div>
-
-            {/* Office */}
-            <div class="text-center p-6 bg-purple-50 rounded-lg">
-              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">📍</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Office</h3>
-              <p class="text-gray-600 mb-4">Visit our location</p>
-              <p class="text-purple-600 font-semibold text-sm">
-                <a
-                  href={business.mapsUrl}
-                  class="hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Crossbridge Dr
-                  <br />
-                  Las Vegas, NV 89138
-                </a>
-              </p>
-            </div>
-
-            {/* Hours */}
-            <div class="text-center p-6 bg-orange-50 rounded-lg">
-              <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🕒</span>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Hours</h3>
-              <p class="text-gray-600 mb-4">Business hours</p>
-              <div class="text-orange-600 font-semibold text-sm">
-                <p>Mon-Fri: 9:00 AM–6:00 PM</p>
-                <p>Sat: 10:00 AM–4:30 PM</p>
-                <p>Sun: Closed</p>
-              </div>
-            </div>
+            <PhotoThumbCard
+              heading="Call the Heritage Stonebridge office"
+              description="Speak directly with Dr. Jan Duffy about Heritage at Stonebridge tours and listings."
+              href={business.telephoneHref}
+              linkLabel={business.telephoneDisplay}
+            />
+            <PhotoThumbCard
+              heading="Email Dr. Jan Duffy"
+              description="Send listing questions, tour requests, or HOA details."
+              href={`mailto:${business.email}`}
+              linkLabel={business.email}
+            />
+            <PhotoThumbCard
+              heading="Office on Crossbridge Dr"
+              description="Heritage Stonebridge | Homes By Dr. Jan Duffy — Crossbridge Dr, Las Vegas, NV 89138."
+              href={business.mapsUrl}
+              linkLabel="Get directions"
+            />
+            <PhotoThumbCard
+              heading="Office Hours"
+              description="Monday–Friday 9:00 AM–6:00 PM. Saturday 10:00 AM–4:30 PM. Sunday closed."
+              href={business.telephoneHref}
+              linkLabel={`Call ${business.telephoneDisplay}`}
+            />
           </div>
 
           <div class="mt-10 flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
@@ -486,34 +447,30 @@ export default component$(() => {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="text-center p-6 bg-blue-50 rounded-lg">
-              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-xl">🏘️</span>
-              </div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 text-sm">Community specialist</p>
-            </div>
-            <div class="text-center p-6 bg-green-50 rounded-lg">
-              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-xl">👥</span>
-              </div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">55+ Communities</h3>
-              <p class="text-gray-600 text-sm">Active adult living</p>
-            </div>
-            <div class="text-center p-6 bg-purple-50 rounded-lg">
-              <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-xl">💎</span>
-              </div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Luxury Properties</h3>
-              <p class="text-gray-600 text-sm">High-end homes</p>
-            </div>
-            <div class="text-center p-6 bg-orange-50 rounded-lg">
-              <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-xl">🏠</span>
-              </div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">First-Time Buyers</h3>
-              <p class="text-gray-600 text-sm">Expert guidance</p>
-            </div>
+            <PhotoThumbCard
+              heading="Heritage at Stonebridge"
+              description="Community specialist for Lennar's guard-gated 55+ neighborhood in Summerlin West."
+              href="/homes-for-sale-stonebridge-summerlin"
+              linkLabel="View Stonebridge homes →"
+            />
+            <PhotoThumbCard
+              heading="55+ Communities"
+              description="Active adult living across Summerlin, Henderson, and Las Vegas."
+              href="/55-plus-communities-las-vegas"
+              linkLabel="Compare 55+ communities →"
+            />
+            <PhotoThumbCard
+              heading="Luxury Properties"
+              description="Gated estates and high-end homes near Red Rock Canyon."
+              href="/luxury-homes"
+              linkLabel="View luxury homes →"
+            />
+            <PhotoThumbCard
+              heading="First-Time Buyers"
+              description="Tour prep, financing questions, and Heritage at Stonebridge inventory."
+              href="/first-time-buyers"
+              linkLabel="First-time buyer guide →"
+            />
           </div>
         </div>
       </section>

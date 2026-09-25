@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export default component$(() => {
   // Inject structured data as JSON-LD script
@@ -501,133 +502,35 @@ export default component$(() => {
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">8,000 Sq Ft Clubhouse</h3>
-              <p class="text-gray-600">
-                Spacious gathering areas, meeting rooms, and event spaces for community activities
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="8,000 Sq Ft Clubhouse"
+              description="Spacious gathering areas, meeting rooms, and event spaces for community activities"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-green-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Pickleball Courts</h3>
-              <p class="text-gray-600">
-                Multiple courts for America's fastest-growing sport among active adults
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Pickleball Courts"
+              description="Multiple courts for America's fastest-growing sport among active adults"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Resort-Style Pool</h3>
-              <p class="text-gray-600">
-                Heated pool with cabanas, spa, and poolside relaxation areas
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Resort-Style Pool"
+              description="Heated pool with cabanas, spa, and poolside relaxation areas"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-purple-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Fitness Center</h3>
-              <p class="text-gray-600">State-of-the-art equipment and group fitness classes</p>
-            </div>
+            <PhotoThumbCard
+              heading="Fitness Center"
+              description="State-of-the-art equipment and group fitness classes"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-yellow-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Library & Game Room</h3>
-              <p class="text-gray-600">
-                Quiet reading spaces and entertainment areas for socializing
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Library & Game Room"
+              description="Quiet reading spaces and entertainment areas for socializing"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-red-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Security</h3>
-              <p class="text-gray-600">Gated entrance with professional security monitoring</p>
-            </div>
+            <PhotoThumbCard
+              heading="24/7 Security"
+              description="Gated entrance with professional security monitoring"
+            />
           </div>
 
           {/* Lifestyle Activities */}

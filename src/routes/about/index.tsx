@@ -4,6 +4,7 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "About Dr. Jan Duffy - Las Vegas Real Estate Expert | Heritage at Stonebridge",
@@ -391,89 +392,42 @@ export default component$(() => {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Heritage at Stonebridge */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">🏘️</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Heritage at Stonebridge</h3>
-                <p class="text-gray-600">
-                  Recognized specialist in Heritage at Stonebridge community with deep knowledge 
-                  of home collections, amenities, and market trends.
-                </p>
-              </div>
-            </div>
-
-            {/* 55+ Communities */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">👥</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">55+ Communities</h3>
-                <p class="text-gray-600">
-                  Expert in active adult living communities throughout Las Vegas, 
-                  Summerlin, and Henderson areas.
-                </p>
-              </div>
-            </div>
-
-            {/* Luxury Properties */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">💎</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Luxury Properties</h3>
-                <p class="text-gray-600">
-                  Specialized knowledge of luxury homes, gated communities, 
-                  and high-end properties in Las Vegas market.
-                </p>
-              </div>
-            </div>
-
-            {/* Red Rock Canyon */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">🏔️</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Red Rock Canyon</h3>
-                <p class="text-gray-600">
-                  Expert in properties near Red Rock Canyon with stunning mountain views 
-                  and natural beauty.
-                </p>
-              </div>
-            </div>
-
-            {/* Investment Properties */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">📈</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Investment Properties</h3>
-                <p class="text-gray-600">
-                  Advanced market analysis and investment consulting for 
-                  buyers seeking profitable real estate opportunities.
-                </p>
-              </div>
-            </div>
-
-            {/* First-Time Buyers */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">🏠</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">First-Time Buyers</h3>
-                <p class="text-gray-600">
-                  Patient guidance and education for first-time homebuyers 
-                  navigating the Las Vegas real estate market.
-                </p>
-              </div>
-            </div>
+            <PhotoThumbCard
+              heading="Heritage at Stonebridge"
+              description="Recognized specialist in Heritage at Stonebridge community with deep knowledge of home collections, amenities, and market trends."
+              href="/homes-for-sale-stonebridge-summerlin"
+              linkLabel="View Stonebridge homes →"
+            />
+            <PhotoThumbCard
+              heading="55+ Communities"
+              description="Expert in active adult living communities throughout Las Vegas, Summerlin, and Henderson areas."
+              href="/55-plus-communities-las-vegas"
+              linkLabel="Compare 55+ communities →"
+            />
+            <PhotoThumbCard
+              heading="Luxury Properties"
+              description="Specialized knowledge of luxury homes, gated communities, and high-end properties in Las Vegas market."
+              href="/luxury-homes"
+              linkLabel="View luxury homes →"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Canyon"
+              description="Expert in properties near Red Rock Canyon with mountain views and trail access."
+              href="/red-rock-canyon-communities"
+              linkLabel="View Red Rock communities →"
+            />
+            <PhotoThumbCard
+              heading="Investment Properties"
+              description="Market analysis and investment consulting for buyers seeking Las Vegas real estate opportunities."
+              href="/market-analysis"
+              linkLabel="Read market analysis →"
+            />
+            <PhotoThumbCard
+              heading="First-Time Buyers"
+              description="Guidance for first-time homebuyers navigating the Las Vegas real estate market."
+              href="/first-time-buyers"
+              linkLabel="First-time buyer guide →"
+            />
           </div>
         </div>
       </section>
@@ -493,22 +447,22 @@ export default component$(() => {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="text-center p-6 bg-blue-50 rounded-lg">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Las Vegas</h3>
-              <p class="text-gray-600">Complete Las Vegas metropolitan area coverage</p>
-            </div>
-            <div class="text-center p-6 bg-green-50 rounded-lg">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Summerlin</h3>
-              <p class="text-gray-600">Premier master-planned community specialist</p>
-            </div>
-            <div class="text-center p-6 bg-purple-50 rounded-lg">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Henderson</h3>
-              <p class="text-gray-600">Established neighborhoods and new construction</p>
-            </div>
-            <div class="text-center p-6 bg-orange-50 rounded-lg">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Red Rock Canyon</h3>
-              <p class="text-gray-600">Properties with stunning mountain views</p>
-            </div>
+            <PhotoThumbCard
+              heading="Las Vegas"
+              description="Complete Las Vegas metropolitan area coverage"
+            />
+            <PhotoThumbCard
+              heading="Summerlin"
+              description="Premier master-planned community specialist"
+            />
+            <PhotoThumbCard
+              heading="Henderson"
+              description="Established neighborhoods and new construction"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Canyon"
+              description="Properties with stunning mountain views"
+            />
           </div>
         </div>
       </section>

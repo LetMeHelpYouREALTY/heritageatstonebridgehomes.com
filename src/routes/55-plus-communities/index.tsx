@@ -5,6 +5,7 @@ import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScou
 import { LocationHeroImage } from "~/components/media/LocationHeroImage";
 import { PagePhotoRail } from "~/components/media/PagePhotoRail";
 import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 import { CfImage } from "~/components/media/CfImage";
 
 export default component$(() => {
@@ -250,49 +251,25 @@ export default component$(() => {
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏠</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-3">Maintenance-Free</h3>
-              <p class="text-gray-600">
-                Enjoy your retirement without the hassle of home maintenance. Exterior care,
-                landscaping, and repairs are handled for you.
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Maintenance-Free"
+              description="Enjoy your retirement without the hassle of home maintenance. Exterior care, landscaping, and repairs are handled for you."
+            />
 
-            <div class="text-center">
-              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">👥</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-3">Like-Minded Neighbors</h3>
-              <p class="text-gray-600">
-                Connect with neighbors who share similar interests and life experiences. Build
-                lasting friendships in your community.
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Like-Minded Neighbors"
+              description="Connect with neighbors who share similar interests and life experiences. Build lasting friendships in your community."
+            />
 
-            <div class="text-center">
-              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏊</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-3">Resort Amenities</h3>
-              <p class="text-gray-600">
-                Access to pools, fitness centers, golf courses, and social clubs. Live like you're
-                on vacation every day.
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Resort Amenities"
+              description="Access to pools, fitness centers, golf courses, and social clubs. Live like you're on vacation every day."
+            />
 
-            <div class="text-center">
-              <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🔒</span>
-              </div>
-              <h3 class="text-xl font-semibold mb-3">Security & Privacy</h3>
-              <p class="text-gray-600">
-                Gated communities provide peace of mind with controlled access and professional
-                security services.
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Security & Privacy"
+              description="Gated communities provide peace of mind with controlled access and professional security services."
+            />
           </div>
         </div>
       </section>
