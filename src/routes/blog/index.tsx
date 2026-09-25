@@ -1,6 +1,11 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { CfImage } from "~/components/media/CfImage";
+import { business } from "~/config/business";
 
 export const head: DocumentHead = {
   title: "Las Vegas Real Estate Blog & Market Insights | Dr. Jan Duffy",
@@ -64,9 +69,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Las Vegas Real Estate Blog
           </h1>
@@ -74,7 +80,7 @@ export default component$(() => {
             Expert insights, market analysis, and community guides to help you make informed real estate decisions
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
               Schedule Consultation
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-800 transition-colors shadow-lg inline-block text-center">
@@ -84,10 +90,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Featured Articles */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Featured Articles" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Articles</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Stay informed with the latest Las Vegas real estate trends, market insights, and community spotlights
@@ -96,13 +105,18 @@ export default component$(() => {
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                <span class="text-white text-4xl">🏘️</span>
-              </div>
+              <CfImage
+                id="pickleball-bocce"
+                alt="Pickleball courts at Heritage at Stonebridge, a 55+ community in Summerlin West"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
                 <div class="text-sm text-blue-600 font-semibold mb-2">MARKET ANALYSIS</div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
-                  <a href="/blog/las-vegas-55-plus-communities-market-trends-2025" class="hover:text-blue-600">
+                  <a href="/market-analysis" class="hover:text-blue-600">
                     Las Vegas 55+ Communities Market Trends 2025
                   </a>
                 </h3>
@@ -111,7 +125,7 @@ export default component$(() => {
                 </p>
                 <div class="flex items-center justify-between">
                   <span class="text-sm text-gray-500">Dr. Jan Duffy</span>
-                  <a href="/blog/las-vegas-55-plus-communities-market-trends-2025" class="text-blue-600 hover:text-blue-800 font-semibold">
+                  <a href="/market-analysis" class="text-blue-600 hover:text-blue-800 font-semibold">
                     Read More →
                   </a>
                 </div>
@@ -119,13 +133,18 @@ export default component$(() => {
             </article>
 
             <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-                <span class="text-white text-4xl">🏔️</span>
-              </div>
+              <CfImage
+                id="red-rock-canyon"
+                alt="Red Rock Canyon sandstone cliffs near Heritage at Stonebridge in Summerlin West"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
                 <div class="text-sm text-green-600 font-semibold mb-2">COMMUNITY SPOTLIGHT</div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
-                  <a href="/blog/red-rock-canyon-luxury-living-guide" class="hover:text-green-600">
+                  <a href="/red-rock-canyon-communities" class="hover:text-green-600">
                     Red Rock Canyon Luxury Living Guide
                   </a>
                 </h3>
@@ -134,7 +153,7 @@ export default component$(() => {
                 </p>
                 <div class="flex items-center justify-between">
                   <span class="text-sm text-gray-500">Dr. Jan Duffy</span>
-                  <a href="/blog/red-rock-canyon-luxury-living-guide" class="text-green-600 hover:text-green-800 font-semibold">
+                  <a href="/red-rock-canyon-communities" class="text-green-600 hover:text-green-800 font-semibold">
                     Read More →
                   </a>
                 </div>
@@ -142,13 +161,18 @@ export default component$(() => {
             </article>
 
             <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-                <span class="text-white text-4xl">💰</span>
-              </div>
+              <CfImage
+                id="summerlin-homes"
+                alt="Summerlin West neighborhood streets near Heritage at Stonebridge, Las Vegas NV 89138"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
                 <div class="text-sm text-purple-600 font-semibold mb-2">INVESTMENT GUIDE</div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
-                  <a href="/blog/summerlin-luxury-real-estate-investment-guide" class="hover:text-purple-600">
+                  <a href="/summerlin-homes" class="hover:text-purple-600">
                     Summerlin Luxury Real Estate Investment Guide
                   </a>
                 </h3>
@@ -157,7 +181,7 @@ export default component$(() => {
                 </p>
                 <div class="flex items-center justify-between">
                   <span class="text-sm text-gray-500">Dr. Jan Duffy</span>
-                  <a href="/blog/summerlin-luxury-real-estate-investment-guide" class="text-purple-600 hover:text-purple-800 font-semibold">
+                  <a href="/summerlin-homes" class="text-purple-600 hover:text-purple-800 font-semibold">
                     Read More →
                   </a>
                 </div>
@@ -165,13 +189,18 @@ export default component$(() => {
             </article>
 
             <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div class="h-48 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                <span class="text-white text-4xl">🏊</span>
-              </div>
+              <CfImage
+                id="pool-spa"
+                alt="Resort-style pool and spa at Heritage at Stonebridge 55+ community in Summerlin"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
                 <div class="text-sm text-red-600 font-semibold mb-2">LIFESTYLE</div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
-                  <a href="/blog/active-adult-community-amenities-guide" class="hover:text-red-600">
+                  <a href="/active-adult-communities" class="hover:text-red-600">
                     Active Adult Community Amenities Guide
                   </a>
                 </h3>
@@ -180,7 +209,7 @@ export default component$(() => {
                 </p>
                 <div class="flex items-center justify-between">
                   <span class="text-sm text-gray-500">Dr. Jan Duffy</span>
-                  <a href="/blog/active-adult-community-amenities-guide" class="text-red-600 hover:text-red-800 font-semibold">
+                  <a href="/active-adult-communities" class="text-red-600 hover:text-red-800 font-semibold">
                     Read More →
                   </a>
                 </div>
@@ -188,13 +217,18 @@ export default component$(() => {
             </article>
 
             <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center">
-                <span class="text-white text-4xl">🏡</span>
-              </div>
+              <CfImage
+                id="homebuyer-entry"
+                alt="Front entry of a new single-story Heritage at Stonebridge home ready for a private tour"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
                 <div class="text-sm text-yellow-600 font-semibold mb-2">BUYER'S GUIDE</div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
-                  <a href="/blog/first-time-55-plus-home-buyer-guide" class="hover:text-yellow-600">
+                  <a href="/first-time-buyers" class="hover:text-yellow-600">
                     First-Time 55+ Home Buyer Guide
                   </a>
                 </h3>
@@ -203,7 +237,7 @@ export default component$(() => {
                 </p>
                 <div class="flex items-center justify-between">
                   <span class="text-sm text-gray-500">Dr. Jan Duffy</span>
-                  <a href="/blog/first-time-55-plus-home-buyer-guide" class="text-yellow-600 hover:text-yellow-800 font-semibold">
+                  <a href="/first-time-buyers" class="text-yellow-600 hover:text-yellow-800 font-semibold">
                     Read More →
                   </a>
                 </div>
@@ -211,22 +245,27 @@ export default component$(() => {
             </article>
 
             <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
-                <span class="text-white text-4xl">📊</span>
-              </div>
+              <CfImage
+                id="henderson-community"
+                alt="Residential streets in Henderson, Nevada active adult communities"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
                 <div class="text-sm text-teal-600 font-semibold mb-2">MARKET DATA</div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
-                  <a href="/blog/henderson-real-estate-market-analysis" class="hover:text-teal-600">
+                  <a href="/henderson-real-estate" class="hover:text-teal-600">
                     Henderson Real Estate Market Analysis
                   </a>
                 </h3>
                 <p class="text-gray-600 mb-4">
-                  In-depth analysis of Henderson's real estate market, including price trends, inventory levels, and best neighborhoods for families and retirees.
+                  In-depth analysis of Henderson's real estate market, including price trends, inventory levels, and active-adult community options.
                 </p>
                 <div class="flex items-center justify-between">
                   <span class="text-sm text-gray-500">Dr. Jan Duffy</span>
-                  <a href="/blog/henderson-real-estate-market-analysis" class="text-teal-600 hover:text-teal-800 font-semibold">
+                  <a href="/henderson-real-estate" class="text-teal-600 hover:text-teal-800 font-semibold">
                     Read More →
                   </a>
                 </div>
@@ -240,6 +279,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="AI-Powered Real Estate Insights" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">AI-Powered Real Estate Insights</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Get personalized real estate insights powered by advanced AI technology
@@ -279,15 +319,15 @@ export default component$(() => {
                   Ask our AI assistant about Las Vegas real estate, 55+ communities, or specific neighborhoods.
                 </p>
                 <div class="space-y-3">
-                  <button class="w-full bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors">
+                  <a href="/55-plus-communities" class="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors text-center">
                     Ask About 55+ Communities
-                  </button>
-                  <button class="w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors">
+                  </a>
+                  <a href="/market-analysis" class="block w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors text-center">
                     Get Market Analysis
-                  </button>
-                  <button class="w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors">
+                  </a>
+                  <a href="/luxury-homes" class="block w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors text-center">
                     Find Luxury Homes
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -297,24 +337,28 @@ export default component$(() => {
 
       {/* Newsletter Signup */}
       <section class="py-16 bg-gradient-to-br from-purple-600 to-purple-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-4">Stay Updated with Las Vegas Real Estate</h2>
           <p class="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
             Get the latest market insights, community spotlights, and expert advice delivered to your inbox.
           </p>
           <div class="max-w-md mx-auto">
-            <div class="flex gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-300"
-              />
-              <button class="bg-white text-purple-800 px-6 py-3 rounded-lg font-semibold hover:bg-purple-100 transition-colors">
-                Subscribe
-              </button>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={`mailto:${business.email}?subject=Heritage%20at%20Stonebridge%20market%20updates`}
+                class="bg-white text-purple-800 px-6 py-3 rounded-lg font-semibold hover:bg-purple-100 transition-colors"
+              >
+                Email market updates
+              </a>
+              <a
+                href={business.telephoneHref}
+                class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-800 transition-colors"
+              >
+                Call {business.telephoneDisplay}
+              </a>
             </div>
             <p class="text-sm text-purple-200 mt-2">
-              No spam, unsubscribe at any time. We respect your privacy.
+              No spam. Dr. Jan Duffy sends MLS-backed Summerlin West updates on request.
             </p>
           </div>
         </div>

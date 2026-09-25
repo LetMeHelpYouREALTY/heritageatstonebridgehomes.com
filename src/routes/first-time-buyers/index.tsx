@@ -2,6 +2,9 @@ import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "First Time Buyers Guide Las Vegas | Home Buying Tips - Dr. Jan Duffy",
@@ -158,9 +161,10 @@ Format as JSON with sections: pre_approval_process, down_payment_assistance, buy
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-orange-900 via-red-800 to-pink-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-orange-900 via-red-800 to-pink-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             First-Time Buyers Guide
           </h1>
@@ -184,6 +188,8 @@ Format as JSON with sections: pre_approval_process, down_payment_assistance, buy
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* AI Buyer Content */}
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
@@ -193,7 +199,7 @@ Format as JSON with sections: pre_approval_process, down_payment_assistance, buy
               <p class="text-gray-600">Generating first-time buyer guide...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={buyerContent.value}></div>
+            <HeadingRichHtml html={buyerContent.value} />
           )}
         </div>
       </section>

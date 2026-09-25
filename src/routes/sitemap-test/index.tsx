@@ -1,5 +1,7 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 
 export default component$(() => {
   const sitemapStatus = useSignal<string>("Checking...");
@@ -34,10 +36,12 @@ export default component$(() => {
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white rounded-lg shadow-lg p-8">
           <h1 class="text-3xl font-bold text-gray-900 mb-8">Sitemap Validation & Testing</h1>
+          <PagePhotoRail />
 
           <div class="space-y-6">
             {/* Sitemap Links */}
             <div>
+              <HeadingPhoto heading="Sitemap Links Test" />
               <h2 class="text-xl font-semibold text-gray-800 mb-4">Sitemap Links Test</h2>
               <div class="space-y-3">
                 <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
@@ -92,6 +96,7 @@ export default component$(() => {
 
             {/* SEO Information */}
             <div>
+              <HeadingPhoto heading="SEO Implementation Status" />
               <h2 class="text-xl font-semibold text-gray-800 mb-4">SEO Implementation Status</h2>
               <div class="grid md:grid-cols-2 gap-4">
                 <div class="p-4 bg-green-50 rounded-lg">
@@ -121,6 +126,7 @@ export default component$(() => {
 
             {/* Technical Details */}
             <div>
+              <HeadingPhoto heading="Technical Implementation Details" />
               <h2 class="text-xl font-semibold text-gray-800 mb-4">
                 Technical Implementation Details
               </h2>
@@ -156,6 +162,7 @@ export default component$(() => {
 
             {/* Validation Tools */}
             <div>
+              <HeadingPhoto heading="External Validation Tools" />
               <h2 class="text-xl font-semibold text-gray-800 mb-4">External Validation Tools</h2>
               <div class="grid md:grid-cols-2 gap-4">
                 <div class="p-4 border rounded-lg">

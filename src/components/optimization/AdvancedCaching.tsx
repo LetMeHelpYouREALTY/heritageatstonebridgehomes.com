@@ -99,9 +99,9 @@ export const AdvancedCaching = component$(() => {
     // Advanced Preloading Strategy
     const preloadCriticalResources = () => {
       const criticalImages = [
-        "/images/hero-bg.webp",
-        "/images/stonebridge-entrance.webp",
-        "/images/clubhouse.webp",
+        "/images/heritage-stonebridge-hero.jpg",
+        "/images/stonebridge-entrance.jpg",
+        "/images/clubhouse.jpg",
       ];
 
       criticalImages.forEach((src) => {

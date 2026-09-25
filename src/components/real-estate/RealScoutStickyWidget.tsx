@@ -98,7 +98,7 @@ export const RealScoutStickyWidget = component$<RealScoutStickyWidgetProps>(
               </div>
 
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 target="_blank"
                 rel="noopener"
                 class="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 py-3 px-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg inline-block text-center"

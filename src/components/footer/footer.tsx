@@ -8,7 +8,7 @@ export const Footer = component$(() => {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
-            <h3 class="text-xl font-bold mb-4">{business.name}</h3>
+            <p class="text-xl font-bold mb-4">{business.name}</p>
             <p class="text-gray-300 mb-4">
               Your local guide to Heritage at Stonebridge — Lennar's guard-gated 55+ community in
               Summerlin West (89138).
@@ -34,7 +34,25 @@ export const Footer = component$(() => {
               </p>
               <p class="flex items-center">
                 <span class="mr-2">📍</span>
-                {business.addressDisplay}
+                <a
+                  href={business.mapsUrl}
+                  class="hover:text-blue-400 underline-offset-2 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {business.addressDisplay}
+                </a>
+              </p>
+              <p class="flex items-center">
+                <span class="mr-2">⭐</span>
+                <a
+                  href={business.reviewsUrl}
+                  class="hover:text-blue-400 underline-offset-2 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Google Reviews
+                </a>
               </p>
               <p class="flex items-start">
                 <span class="mr-2">🕒</span>
@@ -45,7 +63,7 @@ export const Footer = component$(() => {
 
           {/* Service Areas */}
           <div>
-            <h3 class="text-xl font-bold mb-4">Service Areas</h3>
+            <p class="text-xl font-bold mb-4">Service Areas</p>
             <ul class="space-y-2 text-gray-300">
               <li>
                 <a
@@ -118,7 +136,7 @@ export const Footer = component$(() => {
 
           {/* Property Types */}
           <div>
-            <h3 class="text-xl font-bold mb-4">Property Types</h3>
+            <p class="text-xl font-bold mb-4">Property Types</p>
             <ul class="space-y-2 text-gray-300">
               <li>
                 <a
@@ -191,7 +209,7 @@ export const Footer = component$(() => {
 
           {/* 55+ Community Services */}
           <div>
-            <h3 class="text-xl font-bold mb-4">55+ Community Services</h3>
+            <p class="text-xl font-bold mb-4">55+ Community Services</p>
             <ul class="space-y-2 text-gray-300">
               <li>
                 <a
@@ -286,7 +304,7 @@ export const Footer = component$(() => {
 
           {/* Resources */}
           <div>
-            <h3 class="text-xl font-bold mb-4">Resources</h3>
+            <p class="text-xl font-bold mb-4">Resources</p>
             <ul class="space-y-2 text-gray-300 mb-6">
               <li>
                 <a href="/about" class="hover:text-blue-400">
@@ -404,15 +422,19 @@ export const Footer = component$(() => {
             </div>
           </div>
 
-          {/* SEO Keywords Footer */}
-          <div class="mt-6 text-xs text-gray-500 leading-relaxed">
+          <div class="mt-6 text-xs text-gray-500 leading-relaxed space-y-3">
+            <p>
+              Housing for older persons (55+) under the federal Housing for Older Persons Act.
+              Occupancy is limited to households with at least one person 55 years of age or older,
+              as permitted by law. Equal Housing Opportunity.
+            </p>
             <p>
               Dr. Jan Duffy is a Las Vegas real estate expert specializing in 55+ communities,
               active adult living, luxury homes, and gated communities in Summerlin, Red Rock
               Canyon, Henderson, and Northwest Las Vegas. Serving clients in Del Webb communities,
-              Sun City, Siena, The Ridges, and all premier Nevada retirement communities. 
-              Features AI-powered market analysis, neighborhood insights, luxury living guides, 
-              and community comparisons for enhanced real estate intelligence.
+              Sun City, Siena, The Ridges, and all premier Nevada retirement communities.
+              Features MLS-backed market analysis, neighborhood insights, luxury living guides,
+              and community comparisons.
             </p>
           </div>
         </div>

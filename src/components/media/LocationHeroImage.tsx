@@ -1,0 +1,35 @@
+import { component$ } from "@builder.io/qwik";
+import { useLocation } from "@builder.io/qwik-city";
+import { cfImage, getPageMedia, gitBackupPath } from "~/config/images";
+
+export const LocationHeroImage = component$(() => {
+  const loc = useLocation();
+  const media = getPageMedia(loc.url.pathname);
+  const src = cfImage(media.hero, "hero");
+  const fallback = gitBackupPath(media.hero);
+  const srcSet = `${cfImage(media.hero, "card")} 800w, ${cfImage(media.hero, "hero")} 1280w`;
+
+  return (
+    <>
+      <img
+        src={src}
+        srcset={srcSet}
+        sizes="100vw"
+        alt={media.heroAlt}
+        width={1280}
+        height={720}
+        class="absolute inset-0 h-full w-full object-cover"
+        loading="eager"
+        decoding="async"
+        onError$={(event) => {
+          const el = event.target as HTMLImageElement;
+          if (!el || el.dataset.cfFallback === "1") return;
+          el.dataset.cfFallback = "1";
+          el.removeAttribute("srcset");
+          el.src = fallback;
+        }}
+      />
+      <div class="absolute inset-0 bg-slate-900/40 pointer-events-none" aria-hidden="true"></div>
+    </>
+  );
+});

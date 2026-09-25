@@ -2,6 +2,10 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Red Rock Canyon Communities | Dr. Jan Duffy - Mountain View Homes",
@@ -66,9 +70,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-30"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Red Rock Canyon Communities
           </h1>
@@ -76,7 +81,7 @@ export default component$(() => {
             Discover luxury living with stunning mountain views near Red Rock Canyon National Conservation Area
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-red-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-red-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-100 transition-colors shadow-lg inline-block text-center">
               Schedule Mountain Tour
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-red-800 transition-colors shadow-lg inline-block text-center">
@@ -86,10 +91,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Red Rock Canyon Overview */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Living Near Red Rock Canyon" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Living Near Red Rock Canyon</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience the natural beauty of Red Rock Canyon while enjoying luxury amenities and stunning mountain views. These premier communities offer the perfect blend of outdoor recreation and sophisticated living.
@@ -97,37 +105,22 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏔️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Mountain Views</h3>
-              <p class="text-gray-600">Breathtaking views of Red Rock Canyon and Spring Mountains from your home</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🥾</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Outdoor Recreation</h3>
-              <p class="text-gray-600">Hiking, rock climbing, and nature trails right in your backyard</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">⛳</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Golf Courses</h3>
-              <p class="text-gray-600">Championship golf courses with stunning mountain backdrops</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏊</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Luxury Amenities</h3>
-              <p class="text-gray-600">Resort-style pools, spas, and fitness centers with mountain views</p>
-            </div>
+            <PhotoThumbCard
+              heading="Mountain Views"
+              description="Red Rock Canyon and Spring Mountains from west-valley ridgelines."
+            />
+            <PhotoThumbCard
+              heading="Outdoor Recreation"
+              description="Hiking paths and scenic drives minutes from Red Rock Canyon."
+            />
+            <PhotoThumbCard
+              heading="Golf Courses"
+              description="Championship golf with desert mountains as the backdrop."
+            />
+            <PhotoThumbCard
+              heading="Gated Communities"
+              description="Guard-gated streets and private amenities in Summerlin West."
+            />
           </div>
         </div>
       </section>
@@ -136,6 +129,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Red Rock Canyon Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Red Rock Canyon Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Living near Red Rock Canyon offers the ultimate combination of natural beauty, outdoor adventure, and luxury amenities in Las Vegas's most scenic area.
@@ -215,6 +209,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier Red Rock Canyon Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier Red Rock Canyon Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Discover luxury communities that offer the perfect combination of natural beauty, outdoor recreation, and sophisticated amenities.
@@ -222,41 +217,42 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Luxury 55+ community with stunning Red Rock Canyon views and resort-style amenities.</p>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-red-600 hover:text-red-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates and exclusive golf course access.</p>
-              <a href="/the-ridges-summerlin" class="text-red-600 hover:text-red-800 font-semibold">View Ridges Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Golf course community with luxury homes and exclusive country club membership.</p>
-              <a href="/red-rock-country-club" class="text-red-600 hover:text-red-800 font-semibold">View Country Club Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Mountain's Edge</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with mountain views and family-friendly amenities.</p>
-              <a href="/mountains-edge-homes" class="text-red-600 hover:text-red-800 font-semibold">View Mountain's Edge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Inspirada</h3>
-              <p class="text-gray-600 mb-4">Modern community with contemporary homes and outdoor recreation facilities.</p>
-              <a href="/inspirada-homes" class="text-red-600 hover:text-red-800 font-semibold">View Inspirada Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Rhodes Ranch</h3>
-              <p class="text-gray-600 mb-4">Golf course community with luxury homes and resort-style amenities.</p>
-              <a href="/rhodes-ranch-homes" class="text-red-600 hover:text-red-800 font-semibold">View Rhodes Ranch Homes →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Heritage at Stonebridge"
+              description="Guard-gated 55+ community with Red Rock Canyon views and resort amenities."
+              href="/homes-for-sale-stonebridge-summerlin"
+              linkLabel="View Stonebridge Homes →"
+            />
+            <PhotoThumbCard
+              heading="The Ridges"
+              description="Custom hilltop estates with exclusive golf access in Summerlin West."
+              href="/luxury-homes"
+              linkLabel="View Ridges Homes →"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Country Club"
+              description="Golf-course homes with Red Rock Canyon as the backdrop."
+              href="/golf-course-homes"
+              linkLabel="View Country Club Homes →"
+            />
+            <PhotoThumbCard
+              heading="Mountain's Edge"
+              description="Master-planned streets, parks, and mountain views in the southwest valley."
+              href="/red-rock-canyon-communities"
+              linkLabel="View Mountain's Edge Homes →"
+            />
+            <PhotoThumbCard
+              heading="Inspirada"
+              description="Contemporary Henderson homes with parks and walking paths."
+              href="/henderson-active-adult-communities"
+              linkLabel="View Inspirada Homes →"
+            />
+            <PhotoThumbCard
+              heading="Rhodes Ranch"
+              description="Golf-course neighborhood with resort-style clubhouse amenities."
+              href="/golf-course-homes"
+              linkLabel="View Rhodes Ranch Homes →"
+            />
           </div>
         </div>
       </section>
@@ -265,6 +261,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Outdoor Recreation Opportunities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Outdoor Recreation Opportunities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Living near Red Rock Canyon means having access to world-class outdoor recreation right in your backyard.
@@ -331,6 +328,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Red Rock Canyon Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Red Rock Canyon Listings</h2>
             <p class="text-lg text-gray-600">Explore available homes with stunning mountain views</p>
           </div>
@@ -349,6 +347,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Dr. Jan Duffy for Red Rock Canyon Real Estate?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Dr. Jan Duffy for Red Rock Canyon Real Estate?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               With deep knowledge of Red Rock Canyon communities and their unique mountain lifestyle, Dr. Jan Duffy provides expert guidance for your luxury home purchase.
@@ -356,42 +355,33 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏔️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Mountain View Specialist</h3>
-              <p class="text-gray-600">Expert knowledge of communities with the best Red Rock Canyon views and access.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Mountain View Specialist"
+              description="Expert knowledge of communities with the best Red Rock Canyon views and access."
+            />
             
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🥾</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Outdoor Lifestyle Expert</h3>
-              <p class="text-gray-600">Understanding of outdoor recreation needs and mountain community amenities.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Outdoor Lifestyle Expert"
+              description="Understanding of outdoor recreation needs and mountain community amenities."
+            />
             
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏆</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Luxury Home Specialist</h3>
-              <p class="text-gray-600">Experience with high-end properties and exclusive community requirements.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Luxury Home Specialist"
+              description="Experience with high-end properties and exclusive community requirements."
+            />
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section class="bg-gradient-to-br from-red-600 to-red-800 py-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-4">Ready to Find Your Mountain View Home?</h2>
           <p class="text-lg text-red-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you discover the perfect home with stunning Red Rock Canyon views.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-red-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-red-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-100 transition-colors shadow-lg inline-block text-center">
               Schedule Mountain Tour
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-red-800 transition-colors shadow-lg inline-block text-center">

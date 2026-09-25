@@ -2,6 +2,9 @@ import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Heritage at Stonebridge Reviews | Client Testimonials - Dr. Jan Duffy",
@@ -158,9 +161,10 @@ Format as JSON with sections: first_time_buyers, luxury_homes, 55_plus_communiti
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-pink-900 via-rose-800 to-red-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-pink-900 via-rose-800 to-red-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Client Testimonials
           </h1>
@@ -184,6 +188,8 @@ Format as JSON with sections: first_time_buyers, luxury_homes, 55_plus_communiti
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* AI Testimonial Content */}
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
@@ -193,7 +199,7 @@ Format as JSON with sections: first_time_buyers, luxury_homes, 55_plus_communiti
               <p class="text-gray-600">Generating client testimonials...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={testimonialContent.value}></div>
+            <HeadingRichHtml html={testimonialContent.value} />
           )}
         </div>
       </section>

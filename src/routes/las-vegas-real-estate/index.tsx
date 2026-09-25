@@ -2,6 +2,10 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Las Vegas Real Estate | Dr. Jan Duffy - 55+ Communities Specialist",
@@ -76,7 +80,7 @@ export default component$(() => {
         "description": "Premier Heritage at Stonebridge real estate services in Las Vegas. Expert knowledge of Las Vegas market trends, pricing, and neighborhood insights with comprehensive coverage of all Las Vegas areas.",
         "image": {
           "@type": "ImageObject",
-          "url": "https://heritagestonebridge.com/images/las-vegas-real-estate.jpg",
+          "url": "https://heritagestonebridge.com/images/las-vegas-market.jpg",
           "width": 1200,
           "height": 630
         },
@@ -92,8 +96,8 @@ export default component$(() => {
         },
         "geo": {
           "@type": "GeoCoordinates", 
-          "latitude": "36.1699",
-          "longitude": "-115.1398"
+          "latitude": "36.1716",
+          "longitude": "-115.3384"
         },
         "openingHoursSpecification": [
           {
@@ -114,8 +118,8 @@ export default component$(() => {
           "@type": "GeoCircle",
           "geoMidpoint": {
             "@type": "GeoCoordinates",
-            "latitude": "36.1699",
-            "longitude": "-115.1398"
+            "latitude": "36.1716",
+            "longitude": "-115.3384"
           },
           "geoRadius": "50000"
         },
@@ -273,9 +277,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Las Vegas Real Estate
           </h1>
@@ -283,7 +288,7 @@ export default component$(() => {
             Expert real estate services specializing in 55+ communities, luxury homes, and active adult living throughout Las Vegas Valley
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Schedule Consultation
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">
@@ -293,10 +298,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Service Areas Overview */}
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Las Vegas Service Areas" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Las Vegas Service Areas</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Dr. Jan Duffy provides comprehensive real estate services across the Las Vegas Valley, with specialized expertise in 55+ communities and luxury properties.
@@ -304,41 +312,42 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Summerlin</h3>
-              <p class="text-gray-600 mb-4">Premier master-planned community with luxury homes, golf courses, and resort-style amenities.</p>
-              <a href="/summerlin-homes" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Summerlin Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Henderson</h3>
-              <p class="text-gray-600 mb-4">Family-friendly community with excellent schools, parks, and diverse housing options.</p>
-              <a href="/henderson-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Henderson Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Northwest Las Vegas</h3>
-              <p class="text-gray-600 mb-4">Growing area with new construction, modern amenities, and convenient access to the Strip.</p>
-              <a href="/northwest-las-vegas" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Northwest Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Canyon</h3>
-              <p class="text-gray-600 mb-4">Stunning mountain views and luxury communities near Red Rock Canyon National Conservation Area.</p>
-              <a href="/red-rock-canyon-communities" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Red Rock Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Boulder City</h3>
-              <p class="text-gray-600 mb-4">Historic community near Lake Mead with small-town charm and outdoor recreation.</p>
-              <a href="/boulder-city-homes" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Boulder City Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Las Vegas Strip Area</h3>
-              <p class="text-gray-600 mb-4">High-rise condos and luxury properties in the heart of Las Vegas entertainment district.</p>
-              <a href="/las-vegas-condos" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Strip Condos →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Summerlin"
+              description="Master-planned streets, golf, and resort amenities in Las Vegas's west valley."
+              href="/summerlin-homes"
+              linkLabel="Explore Summerlin Homes →"
+            />
+            <PhotoThumbCard
+              heading="Henderson"
+              description="Parks, recreation centers, and a wide range of housing types in Henderson."
+              href="/henderson-real-estate"
+              linkLabel="Explore Henderson Homes →"
+            />
+            <PhotoThumbCard
+              heading="Northwest Las Vegas"
+              description="New construction and 215 Beltway access in the northwest valley."
+              href="/northwest-las-vegas"
+              linkLabel="Explore Northwest Homes →"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Canyon"
+              description="Luxury communities near Red Rock Canyon National Conservation Area."
+              href="/red-rock-canyon-communities"
+              linkLabel="Explore Red Rock Homes →"
+            />
+            <PhotoThumbCard
+              heading="Boulder City"
+              description="Historic streets near Lake Mead with outdoor recreation and a slower pace."
+              href="/boulder-city-homes"
+              linkLabel="Explore Boulder City Homes →"
+            />
+            <PhotoThumbCard
+              heading="Las Vegas Strip Area"
+              description="High-rise condos and west-valley views toward the Strip skyline."
+              href="/55-plus-condos-las-vegas"
+              linkLabel="Explore Strip Condos →"
+            />
           </div>
         </div>
       </section>
@@ -347,6 +356,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Las Vegas Real Estate Market Overview" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Las Vegas Real Estate Market Overview</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               The Las Vegas real estate market continues to show strong growth with increasing property values, low inventory, and high demand across all price ranges and neighborhoods.
@@ -354,18 +364,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Market Growth</h3>
-              <p class="text-gray-600">Las Vegas property values have shown consistent growth, driven by population increases and economic diversification.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Investment Opportunities</h3>
-              <p class="text-gray-600">Strong rental market, no state income tax, and growing tourism industry create excellent investment potential.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Diverse Options</h3>
-              <p class="text-gray-600">From luxury estates to 55+ communities, Las Vegas offers properties for every lifestyle and budget.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Market Growth"
+              description="Las Vegas property values have shown consistent growth, driven by population increases and economic diversification."
+            />
+            <PhotoThumbCard
+              heading="Investment Opportunities"
+              description="Strong rental market, no state income tax, and growing tourism industry create excellent investment potential."
+            />
+            <PhotoThumbCard
+              heading="Diverse Options"
+              description="From luxury estates to 55+ communities, Las Vegas offers properties for every lifestyle and budget."
+            />
           </div>
         </div>
       </section>
@@ -374,6 +384,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="55+ Communities in Las Vegas" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">55+ Communities in Las Vegas</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Las Vegas offers some of the finest active adult communities in the Southwest, featuring resort-style amenities, golf courses, and vibrant social scenes.
@@ -440,6 +451,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Las Vegas Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Las Vegas Listings</h2>
             <p class="text-lg text-gray-600">Explore available properties across the Las Vegas Valley</p>
           </div>
@@ -458,6 +470,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Dr. Jan Duffy for Las Vegas Real Estate?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Dr. Jan Duffy for Las Vegas Real Estate?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               With deep local knowledge and specialized expertise in 55+ communities, Dr. Jan Duffy provides unmatched service throughout the Las Vegas Valley.
@@ -465,42 +478,33 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏆</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">55+ Community Specialist</h3>
-              <p class="text-gray-600">Deep expertise in active adult communities, understanding unique needs and lifestyle preferences.</p>
-            </div>
+            <PhotoThumbCard
+              heading="55+ Community Specialist"
+              description="Deep expertise in active adult communities, understanding unique needs and lifestyle preferences."
+            />
             
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">📍</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Local Market Expert</h3>
-              <p class="text-gray-600">Comprehensive knowledge of Las Vegas neighborhoods, market trends, and property values.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Local Market Expert"
+              description="Comprehensive knowledge of Las Vegas neighborhoods, market trends, and property values."
+            />
             
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🤝</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Personalized Service</h3>
-              <p class="text-gray-600">Dedicated support throughout the entire buying or selling process with attention to detail.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Personalized Service"
+              description="Dedicated support throughout the entire buying or selling process with attention to detail."
+            />
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section class="bg-gradient-to-br from-blue-600 to-blue-800 py-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-4">Ready to Find Your Las Vegas Dream Home?</h2>
           <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you navigate the Las Vegas real estate market and find the perfect home in your ideal community.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Schedule Consultation
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">

@@ -1,6 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Las Vegas Real Estate Market Analysis 2025 | Dr. Jan Duffy",
@@ -64,9 +68,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Las Vegas Real Estate Market Analysis 2025
           </h1>
@@ -74,7 +79,7 @@ export default component$(() => {
             Comprehensive market insights, trends, and investment opportunities across Las Vegas Valley's premier communities
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Get Personal Market Report
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">
@@ -84,10 +89,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Market Overview */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="2025 Market Overview" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">2025 Market Overview</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Las Vegas real estate continues to show strong fundamentals with particular strength in 55+ communities and luxury segments
@@ -126,6 +134,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Community Market Analysis" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Community Market Analysis</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Detailed analysis of Las Vegas's most sought-after communities and their market performance
@@ -133,104 +142,42 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                  <span class="text-green-600 text-xl">🏘️</span>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900">Summerlin</h3>
-                  <div class="text-sm text-gray-500">Master-Planned Community</div>
-                </div>
-              </div>
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Median Price:</span>
-                  <span class="font-semibold">$650,000</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Price Growth:</span>
-                  <span class="font-semibold text-green-600">+12.3%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Inventory:</span>
-                  <span class="font-semibold">Low (2.1 months)</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Market Status:</span>
-                  <span class="font-semibold text-green-600">Seller's Market</span>
-                </div>
-              </div>
-              <div class="text-sm text-gray-600">
-                <strong>Key Insight:</strong> Summerlin continues to lead in luxury home appreciation, with Heritage at Stonebridge showing exceptional demand for 55+ living.
-              </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <span class="text-blue-600 text-xl">👨‍👩‍👧‍👦</span>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900">Henderson</h3>
-                  <div class="text-sm text-gray-500">Family-Friendly City</div>
-                </div>
-              </div>
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Median Price:</span>
-                  <span class="font-semibold">$485,000</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Price Growth:</span>
-                  <span class="font-semibold text-green-600">+9.8%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Inventory:</span>
-                  <span class="font-semibold">Moderate (3.2 months)</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Market Status:</span>
-                  <span class="font-semibold text-blue-600">Balanced</span>
-                </div>
-              </div>
-              <div class="text-sm text-gray-600">
-                <strong>Key Insight:</strong> Henderson's excellent schools and family amenities continue to attract buyers, with Sun City Anthem leading 55+ community growth.
-              </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                  <span class="text-purple-600 text-xl">🏔️</span>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900">Red Rock Canyon</h3>
-                  <div class="text-sm text-gray-500">Mountain View Luxury</div>
-                </div>
-              </div>
-              <div class="space-y-3 mb-6">
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Median Price:</span>
-                  <span class="font-semibold">$850,000</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Price Growth:</span>
-                  <span class="font-semibold text-green-600">+15.2%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Inventory:</span>
-                  <span class="font-semibold">Very Low (1.8 months)</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Market Status:</span>
-                  <span class="font-semibold text-green-600">Strong Seller's Market</span>
-                </div>
-              </div>
-              <div class="text-sm text-gray-600">
-                <strong>Key Insight:</strong> Mountain view properties continue to command premium prices, with luxury buyers prioritizing outdoor recreation access.
-              </div>
-            </div>
+            <PhotoThumbCard
+              heading="Summerlin"
+              description="Master-planned community. Heritage at Stonebridge continues to draw 55+ buyers."
+              items={[
+                "Median price $650,000",
+                "Price growth +12.3%",
+                "Inventory 2.1 months",
+                "Seller's market",
+              ]}
+              href="/summerlin-homes"
+              linkLabel="View Summerlin homes →"
+            />
+            <PhotoThumbCard
+              heading="Henderson"
+              description="Parks, Lake Mead access, and 55+ inventory including Sun City Anthem."
+              items={[
+                "Median price $485,000",
+                "Price growth +9.8%",
+                "Inventory 3.2 months",
+                "Balanced market",
+              ]}
+              href="/henderson-real-estate"
+              linkLabel="View Henderson homes →"
+            />
+            <PhotoThumbCard
+              heading="Red Rock Canyon"
+              description="Mountain-view luxury homes with outdoor recreation access."
+              items={[
+                "Median price $850,000",
+                "Price growth +15.2%",
+                "Inventory 1.8 months",
+                "Strong seller's market",
+              ]}
+              href="/red-rock-canyon-communities"
+              linkLabel="View Red Rock communities →"
+            />
           </div>
         </div>
       </section>
@@ -239,6 +186,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="55+ Communities Market Analysis" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">55+ Communities Market Analysis</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Specialized analysis of active adult communities and their unique market dynamics
@@ -305,6 +253,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Investment Opportunities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Investment Opportunities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Strategic investment insights for Las Vegas real estate in 2025
@@ -312,50 +261,39 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="text-center mb-4">
-                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-green-600 text-2xl">📈</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Growth Markets</h3>
-              </div>
-              <ul class="space-y-2 text-gray-600">
-                <li>• Northwest Las Vegas new construction</li>
-                <li>• Henderson family communities</li>
-                <li>• Red Rock Canyon luxury properties</li>
-                <li>• 55+ community developments</li>
-              </ul>
-            </div>
-            
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="text-center mb-4">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-blue-600 text-2xl">💰</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Value Opportunities</h3>
-              </div>
-              <ul class="space-y-2 text-gray-600">
-                <li>• Boulder City historic properties</li>
-                <li>• Established Summerlin neighborhoods</li>
-                <li>• Golf course communities</li>
-                <li>• Mountain view properties</li>
-              </ul>
-            </div>
-            
-            <div class="bg-white rounded-lg shadow-lg p-6">
-              <div class="text-center mb-4">
-                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-purple-600 text-2xl">🎯</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Rental Potential</h3>
-              </div>
-              <ul class="space-y-2 text-gray-600">
-                <li>• Short-term rental markets</li>
-                <li>• Corporate housing demand</li>
-                <li>• Retirement community rentals</li>
-                <li>• Luxury vacation rentals</li>
-              </ul>
-            </div>
+            <PhotoThumbCard
+              heading="Growth Markets"
+              items={[
+                "Northwest Las Vegas new construction",
+                "Henderson master-planned communities",
+                "Red Rock Canyon luxury properties",
+                "55+ community developments",
+              ]}
+              href="/new-55-plus-communities-las-vegas"
+              linkLabel="View new 55+ communities →"
+            />
+            <PhotoThumbCard
+              heading="Value Opportunities"
+              items={[
+                "Boulder City historic properties",
+                "Summerlin neighborhoods with mature landscaping",
+                "Golf course communities",
+                "Mountain view properties",
+              ]}
+              href="/affordable-55-plus-communities-las-vegas"
+              linkLabel="View value-focused 55+ homes →"
+            />
+            <PhotoThumbCard
+              heading="Rental Potential"
+              items={[
+                "Short-term rental markets",
+                "Corporate housing demand",
+                "Retirement community rentals",
+                "Luxury vacation rentals",
+              ]}
+              href="/55-and-over-communities-las-vegas-for-rent"
+              linkLabel="View 55+ rental options →"
+            />
           </div>
         </div>
       </section>
@@ -364,6 +302,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="AI-Powered Market Predictions" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">AI-Powered Market Predictions</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Advanced AI analysis of market trends and future opportunities
@@ -396,15 +335,15 @@ export default component$(() => {
                   Our AI analyzes your specific criteria and provides personalized market insights and recommendations.
                 </p>
                 <div class="space-y-3">
-                  <button class="w-full bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors">
+                  <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener noreferrer" class="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors text-center">
                     Get AI Market Analysis
-                  </button>
-                  <button class="w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors">
+                  </a>
+                  <a href="/contact" class="block w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors text-center">
                     Investment Opportunity Report
-                  </button>
-                  <button class="w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors">
+                  </a>
+                  <a href="/community-comparison" class="block w-full bg-white text-purple-600 py-3 px-4 rounded-lg border border-purple-600 hover:bg-purple-50 transition-colors text-center">
                     Community Comparison Tool
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -414,13 +353,13 @@ export default component$(() => {
 
       {/* CTA Section */}
       <section class="bg-gradient-to-br from-blue-600 to-blue-800 py-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-4">Ready to Make Informed Real Estate Decisions?</h2>
           <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy provide you with personalized market analysis and expert guidance for your Las Vegas real estate investment.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Get Personal Market Report
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">

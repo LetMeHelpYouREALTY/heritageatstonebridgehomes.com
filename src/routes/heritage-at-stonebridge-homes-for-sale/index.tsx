@@ -2,6 +2,11 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Heritage at Stonebridge Homes for Sale | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -84,8 +89,8 @@ export default component$(() => {
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "36.1699",
-          "longitude": "-115.1398"
+          "latitude": "36.1716",
+          "longitude": "-115.3384"
         },
         "amenityFeature": [
           {
@@ -235,9 +240,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Heritage at Stonebridge Homes for Sale
           </h1>
@@ -245,7 +251,7 @@ export default component$(() => {
             Discover Lennar's premier 55+ community in Summerlin West with Everything's Included® features and stunning Red Rock Canyon views
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-red-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-red-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-100 transition-colors shadow-lg inline-block text-center">
               View Available Homes
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-red-800 transition-colors shadow-lg inline-block text-center">
@@ -255,10 +261,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Current Market Insight */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Current Heritage at Stonebridge Market Update" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Heritage at Stonebridge Market Update</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's premier 55+ community specialist, I'm seeing unprecedented demand for Heritage at Stonebridge homes. Here's what you need to know about today's market.
@@ -266,18 +275,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Current Pricing</h3>
-              <p class="text-gray-600">Starting from $464,990 for Cromwell collection homes with Everything's Included® features</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Market Demand</h3>
-              <p class="text-gray-600">High demand with limited inventory - homes selling quickly in this premier location</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Investment Potential</h3>
-              <p class="text-gray-600">Strong appreciation potential in Summerlin West with Red Rock Canyon proximity</p>
-            </div>
+            <PhotoThumbCard
+              heading="Current Pricing"
+              description="Starting from $464,990 for Cromwell collection homes with Everything's Included® features"
+            />
+            <PhotoThumbCard
+              heading="Market Demand"
+              description="High demand with limited inventory - homes selling quickly in this premier location"
+            />
+            <PhotoThumbCard
+              heading="Investment Potential"
+              description="Strong appreciation potential in Summerlin West with Red Rock Canyon proximity"
+            />
           </div>
         </div>
       </section>
@@ -286,55 +295,14 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Heritage at Stonebridge Home Collections" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Heritage at Stonebridge Home Collections</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Choose from three distinct home collections, each designed with active adult living in mind and featuring Lennar's Everything's Included® package.
             </p>
           </div>
           
-          <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Cromwell Collection</h3>
-              <p class="text-gray-600 mb-4">Starting at $464,990 - Perfect for active adults seeking modern comfort</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• 1,500-2,000 sq ft single-story homes</li>
-                <li>• Open concept living areas</li>
-                <li>• Master suite with walk-in closet</li>
-                <li>• Covered patio or lanai</li>
-                <li>• 2-car garage</li>
-                <li>• Everything's Included® features</li>
-              </ul>
-              <div class="text-lg font-bold text-red-600 mb-4">Starting from $464,990</div>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Stirling Collection</h3>
-              <p class="text-gray-600 mb-4">Mid-range pricing - Enhanced features and larger layouts</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• 1,800-2,400 sq ft single-story homes</li>
-                <li>• Expanded living spaces</li>
-                <li>• Upgraded finishes</li>
-                <li>• Larger master suite</li>
-                <li>• Extended covered outdoor living</li>
-                <li>• Premium Everything's Included®</li>
-              </ul>
-              <div class="text-lg font-bold text-red-600 mb-4">Mid-range pricing</div>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Evander Collection</h3>
-              <p class="text-gray-600 mb-4">Premium pricing - Luxury features and maximum space</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• 2,200-2,800 sq ft single-story homes</li>
-                <li>• Spacious great rooms</li>
-                <li>• Luxury master suite</li>
-                <li>• Gourmet kitchen</li>
-                <li>• Large covered patio</li>
-                <li>• Premium Everything's Included®</li>
-              </ul>
-              <div class="text-lg font-bold text-red-600 mb-4">Premium pricing</div>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="collections" />
         </div>
       </section>
 
@@ -342,6 +310,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Lennar's Everything's Included® Package" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Lennar's Everything's Included® Package</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Heritage at Stonebridge homes come with Lennar's Everything's Included® package, providing premium features at no additional cost.
@@ -400,6 +369,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Heritage at Stonebridge Amenities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Heritage at Stonebridge Amenities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience resort-style living with world-class amenities designed for active adults in the heart of Summerlin West.
@@ -407,37 +377,25 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏢</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">8,000 Sq Ft Clubhouse</h3>
-              <p class="text-gray-600">State-of-the-art clubhouse with fitness center, social spaces, and meeting rooms</p>
-            </div>
+            <PhotoThumbCard
+              heading="8,000 Sq Ft Clubhouse"
+              description="State-of-the-art clubhouse with fitness center, social spaces, and meeting rooms"
+            />
             
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏊</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Resort-Style Pool</h3>
-              <p class="text-gray-600">Main pool and heated lap pool for year-round swimming and relaxation</p>
-            </div>
+            <PhotoThumbCard
+              heading="Resort-Style Pool"
+              description="Main pool and heated lap pool for year-round swimming and relaxation"
+            />
             
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🎾</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sports Courts</h3>
-              <p class="text-gray-600">Pickleball and bocce courts for active recreation and social activities</p>
-            </div>
+            <PhotoThumbCard
+              heading="Sports Courts"
+              description="Pickleball and bocce courts for active recreation and social activities"
+            />
             
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏔️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Canyon Views</h3>
-              <p class="text-gray-600">Stunning mountain views of Red Rock Canyon National Conservation Area</p>
-            </div>
+            <PhotoThumbCard
+              heading="Red Rock Canyon Views"
+              description="Stunning mountain views of Red Rock Canyon National Conservation Area"
+            />
           </div>
         </div>
       </section>
@@ -446,6 +404,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Heritage at Stonebridge?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Heritage at Stonebridge?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults find their perfect home. Here's why Heritage at Stonebridge stands out.
@@ -514,13 +473,13 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-red-600 to-red-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Heritage at Stonebridge Home?</h2>
           <p class="text-lg text-red-100 mb-8 max-w-2xl mx-auto">
             As Las Vegas's premier 55+ community specialist, I'll help you find the perfect Heritage at Stonebridge home with Lennar's Everything's Included® features.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-red-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-red-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-100 transition-colors shadow-lg inline-block text-center">
               Start Your Search
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-red-800 transition-colors shadow-lg inline-block text-center">

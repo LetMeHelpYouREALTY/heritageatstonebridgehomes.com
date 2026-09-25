@@ -2,6 +2,9 @@ import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Las Vegas Neighborhood Insights | AI-Powered Market Analysis - Dr. Jan Duffy",
@@ -133,9 +136,10 @@ Format as JSON with sections: market_overview, neighborhood_analysis, price_tren
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-indigo-900 via-purple-800 to-blue-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-800 to-blue-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             AI-Powered Neighborhood Insights
           </h1>
@@ -159,6 +163,8 @@ Format as JSON with sections: market_overview, neighborhood_analysis, price_tren
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* AI Insights Content */}
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
@@ -168,7 +174,7 @@ Format as JSON with sections: market_overview, neighborhood_analysis, price_tren
               <p class="text-gray-600">Generating AI-powered neighborhood insights...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={insightsContent.value}></div>
+            <HeadingRichHtml html={insightsContent.value} />
           )}
         </div>
       </section>

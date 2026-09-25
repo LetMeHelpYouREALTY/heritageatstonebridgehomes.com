@@ -1,3 +1,4 @@
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
 import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import type { PropertySearchResult, SearchFilters as SearchFiltersType } from "../../types/real-estate";
 import { PropertyGrid } from "./PropertyGrid";
@@ -56,7 +57,7 @@ export const SearchInterface = component$<SearchInterfaceProps>(({ initialFilter
             beds: 3,
             baths: 2,
             sqft: 2500,
-            photos: ["/api/placeholder/400/300"],
+            photos: ["/images/home-collections.jpg"],
             address: {
               street: "123 Heritage Way",
               city: "Las Vegas",
@@ -66,7 +67,7 @@ export const SearchInterface = component$<SearchInterfaceProps>(({ initialFilter
             },
             agent: {
               id: "agent-123",
-              name: "Sarah Johnson",
+              name: "Dr. Jan Duffy",
               phone: "(702) 555-0123",
               email: "DrDuffySells@HeritageStonebridge.com",
             },
@@ -126,6 +127,7 @@ export const SearchInterface = component$<SearchInterfaceProps>(({ initialFilter
   return (
     <div class="max-w-7xl mx-auto px-4 py-8">
       <div class="mb-8">
+        <HeadingPhoto heading="Find Your Dream Home" />
         <h2 class="text-3xl font-bold text-gray-900 mb-4">Find Your Dream Home</h2>
         <div class="flex flex-col sm:flex-row gap-4">
           <div class="flex-1">

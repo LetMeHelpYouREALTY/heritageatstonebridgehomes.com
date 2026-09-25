@@ -2,6 +2,10 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export default component$(() => {
   // Inject structured data as JSON-LD script
@@ -14,7 +18,7 @@ export default component$(() => {
         description:
           "Premier 55+ active adult community in Summerlin West, Las Vegas, featuring luxury homes and resort-style amenities near Red Rock Canyon.",
         url: "https://heritagestonebridge.com/55-plus-communities-red-rock-canyon",
-        image: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.webp",
+        image: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.jpg",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Crossbridge Dr",
@@ -25,7 +29,7 @@ export default component$(() => {
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: "36.1699",
+          latitude: "36.1716",
           longitude: "-115.3338",
         },
         amenityFeature: [
@@ -78,9 +82,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative max-w-7xl mx-auto px-4">
+        <div class="relative z-10 max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Premier 55+ Communities Near Red Rock Canyon Las Vegas
@@ -92,7 +97,7 @@ export default component$(() => {
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 target="_blank"
                 rel="noopener"
                 class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
@@ -100,7 +105,7 @@ export default component$(() => {
                 Schedule Your Private Tour Today
               </a>
               <a
-                href="tel:+17022221964"
+                href="tel:+17027896561"
                 class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center"
               >
                 Call (702) 789-6561
@@ -130,11 +135,14 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Community Overview Section */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
+              <HeadingPhoto heading="Why Heritage at Stonebridge is Las Vegas's Top-Rated 55+ Community" />
               <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why Heritage at Stonebridge is Las Vegas's Top-Rated 55+ Community
               </h2>
@@ -199,7 +207,7 @@ export default component$(() => {
             </div>
             <div class="relative">
               <img
-                src="/images/heritage-stonebridge-community-overview.webp"
+                src="/images/heritage-stonebridge-hero.jpg"
                 alt="Heritage at Stonebridge 55+ community overview showing luxury homes and amenities"
                 class="w-full h-96 object-cover rounded-xl shadow-2xl"
                 loading="lazy"
@@ -218,6 +226,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Unmatched Location: Minutes from Red Rock Canyon & Downtown Summerlin" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Unmatched Location: Minutes from Red Rock Canyon & Downtown Summerlin
             </h2>
@@ -313,7 +322,7 @@ export default component$(() => {
               </h3>
               <div class="relative h-96 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.1234567890!2d-115.3338!3d36.1699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c1234567890%3A0x1234567890abcdef!2sHeritage%20at%20Stonebridge%2C%20Las%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.1234567890!2d-115.3338!3d36.1716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c1234567890%3A0x1234567890abcdef!2sHeritage%20at%20Stonebridge%2C%20Las%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -340,6 +349,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Three Distinct Home Collections: Cromwell, Stirling & Evander" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Three Distinct Home Collections: Cromwell, Stirling & Evander
             </h2>
@@ -354,7 +364,7 @@ export default component$(() => {
             {/* Cromwell Collection */}
             <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
               <img
-                src="/images/cromwell-collection-heritage-stonebridge.webp"
+                src="/images/cromwell-home.jpg"
                 alt="Cromwell Collection Heritage at Stonebridge floor plans"
                 class="w-full h-48 object-cover rounded-lg mb-6"
                 loading="lazy"
@@ -398,7 +408,7 @@ export default component$(() => {
                 </span>
               </div>
               <img
-                src="/images/stirling-collection-heritage-stonebridge.webp"
+                src="/images/stirling-home.jpg"
                 alt="Stirling Collection Heritage at Stonebridge luxury homes"
                 class="w-full h-48 object-cover rounded-lg mb-6"
                 loading="lazy"
@@ -437,7 +447,7 @@ export default component$(() => {
             {/* Evander Collection */}
             <div class="bg-gray-50 rounded-xl p-6 shadow-lg">
               <img
-                src="/images/evander-collection-heritage-stonebridge.webp"
+                src="/images/evander-home.jpg"
                 alt="Evander Collection Heritage at Stonebridge luxury estates"
                 class="w-full h-48 object-cover rounded-lg mb-6"
                 loading="lazy"
@@ -480,6 +490,7 @@ export default component$(() => {
       <section class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Resort-Style Amenities & Active Adult Lifestyle" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Resort-Style Amenities & Active Adult Lifestyle
             </h2>
@@ -491,133 +502,35 @@ export default component$(() => {
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">8,000 Sq Ft Clubhouse</h3>
-              <p class="text-gray-600">
-                Spacious gathering areas, meeting rooms, and event spaces for community activities
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="8,000 Sq Ft Clubhouse"
+              description="Spacious gathering areas, meeting rooms, and event spaces for community activities"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-green-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Pickleball Courts</h3>
-              <p class="text-gray-600">
-                Multiple courts for America's fastest-growing sport among active adults
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Pickleball Courts"
+              description="Multiple courts for America's fastest-growing sport among active adults"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Resort-Style Pool</h3>
-              <p class="text-gray-600">
-                Heated pool with cabanas, spa, and poolside relaxation areas
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Resort-Style Pool"
+              description="Heated pool with cabanas, spa, and poolside relaxation areas"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-purple-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Fitness Center</h3>
-              <p class="text-gray-600">State-of-the-art equipment and group fitness classes</p>
-            </div>
+            <PhotoThumbCard
+              heading="Fitness Center"
+              description="State-of-the-art equipment and group fitness classes"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-yellow-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Library & Game Room</h3>
-              <p class="text-gray-600">
-                Quiet reading spaces and entertainment areas for socializing
-              </p>
-            </div>
+            <PhotoThumbCard
+              heading="Library & Game Room"
+              description="Quiet reading spaces and entertainment areas for socializing"
+            />
 
-            <div class="bg-white rounded-xl p-6 shadow-lg text-center">
-              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-red-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Security</h3>
-              <p class="text-gray-600">Gated entrance with professional security monitoring</p>
-            </div>
+            <PhotoThumbCard
+              heading="24/7 Security"
+              description="Gated entrance with professional security monitoring"
+            />
           </div>
 
           {/* Lifestyle Activities */}
@@ -677,6 +590,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Smart Investment: Summerlin Property Values & Market Trends" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Smart Investment: Summerlin Property Values & Market Trends
             </h2>
@@ -794,6 +708,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Your New Neighborhood: Stonebridge Village & Summerlin West" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Your New Neighborhood: Stonebridge Village & Summerlin West
             </h2>
@@ -913,6 +828,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Frequently Asked Questions About Heritage at Stonebridge" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions About Heritage at Stonebridge
             </h2>
@@ -1045,7 +961,7 @@ export default component$(() => {
 
       {/* Final CTA Section */}
       <section class="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
             Ready to Experience Luxury 55+ Living Near Red Rock Canyon?
           </h2>
@@ -1056,7 +972,7 @@ export default component$(() => {
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
@@ -1064,7 +980,7 @@ export default component$(() => {
               Schedule Your Private Tour Today
             </a>
             <a
-              href="tel:+17022221964"
+              href="tel:+17027896561"
               class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center"
             >
               Call (702) 789-6561
@@ -1102,6 +1018,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Red Rock Canyon 55+ Community Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Red Rock Canyon 55+ Community Listings</h2>
             <p class="text-lg text-gray-600">Explore available properties in Las Vegas's premier Red Rock Canyon active adult communities</p>
           </div>
@@ -1155,7 +1072,7 @@ export const head: DocumentHead = {
     },
     {
       property: "og:image",
-      content: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.webp",
+      content: "https://heritagestonebridge.com/images/heritage-stonebridge-hero.jpg",
     },
     {
       name: "twitter:card",

@@ -25,8 +25,9 @@ export const business = {
   telephoneHref: "tel:+17027896561",
   smsHref: "sms:+17027896561",
   email: "DrDuffySells@HeritageStonebridge.com",
-  website: "https://www.heritagestonebridge.com/",
+  website: "https://heritagestonebridge.com",
   canonicalUrl: "https://heritagestonebridge.com",
+  tourUrl: "https://drjanduffy.realscout.com/onboarding",
   license: "S.0197614.LLC",
   broker: "Berkshire Hathaway HomeServices Nevada Properties",
   streetAddress: "Crossbridge Dr",
@@ -137,7 +138,12 @@ export const localBusinessJsonLd = {
   url: business.canonicalUrl,
   telephone: business.telephone,
   email: business.email,
-  image: "https://heritagestonebridge.com/images/dr-jan-duffy-headshot.jpg",
+  image: [
+    "https://heritagestonebridge.com/images/heritage-stonebridge-hero.jpg",
+    "https://heritagestonebridge.com/images/clubhouse.jpg",
+    "https://heritagestonebridge.com/images/pool-spa.jpg",
+    "https://heritagestonebridge.com/images/contact-office.jpg",
+  ],
   logo: "https://heritagestonebridge.com/images/heritage-stonebridge-logo.jpg",
   address: postalAddress,
   geo: {
@@ -192,6 +198,13 @@ export const localBusinessJsonLd = {
     "@type": "Organization",
     name: business.broker,
   },
+  sameAs: [
+    "https://www.facebook.com/DrJanDuffyRealEstate",
+    "https://www.linkedin.com/in/drjanduffy",
+    "https://www.instagram.com/drjanduffylasvegas",
+    business.mapsUrl,
+    business.reviewsUrl,
+  ],
 } as const;
 
 export const LOCAL_BUSINESS_JSON_LD = JSON.stringify(localBusinessJsonLd);

@@ -2,6 +2,11 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "New 55+ Communities in Las Vegas | Latest Active Adult Developments - Dr. Jan Duffy",
@@ -164,9 +169,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             New 55+ Communities in Las Vegas
           </h1>
@@ -174,7 +180,7 @@ export default component$(() => {
             Discover the latest active adult developments with modern amenities, contemporary designs, and cutting-edge features
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Explore New Communities
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">
@@ -184,10 +190,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* New Construction Benefits */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose New Construction 55+ Communities?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose New Construction 55+ Communities?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               New construction offers the latest in design, technology, and amenities specifically designed for active adult living.
@@ -195,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Modern Amenities</h3>
-              <p class="text-gray-600">State-of-the-art clubhouses, fitness centers, and recreational facilities with the latest equipment and technology</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Energy Efficiency</h3>
-              <p class="text-gray-600">Energy-efficient appliances, HVAC systems, and smart home technology to reduce utility costs</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Warranty Coverage</h3>
-              <p class="text-gray-600">Comprehensive builder warranties covering structural elements, systems, and finishes for peace of mind</p>
-            </div>
+            <PhotoThumbCard
+              heading="Modern Amenities"
+              description="State-of-the-art clubhouses, fitness centers, and recreational facilities with the latest equipment and technology"
+            />
+            <PhotoThumbCard
+              heading="Energy Efficiency"
+              description="Energy-efficient appliances, HVAC systems, and smart home technology to reduce utility costs"
+            />
+            <PhotoThumbCard
+              heading="Warranty Coverage"
+              description="Comprehensive builder warranties covering structural elements, systems, and finishes for peace of mind"
+            />
           </div>
         </div>
       </section>
@@ -215,53 +224,14 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Latest 55+ Community Developments" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Latest 55+ Community Developments</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Las Vegas's newest active adult communities featuring contemporary designs and modern amenities.
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Lennar's newest 55+ community in Summerlin with Everything's Included® features</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Three home collections (Cromwell, Stirling, Evander)</li>
-                <li>• 8,000 sq ft clubhouse with fitness center</li>
-                <li>• Resort-style pool & heated lap pool</li>
-                <li>• Pickleball & bocce courts</li>
-                <li>• Smart home technology included</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">Starting from $464,990</div>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-blue-600 hover:text-blue-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">New Del Webb Communities</h3>
-              <p class="text-gray-600 mb-4">Latest Del Webb developments with contemporary amenities and designs</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Modern clubhouse designs</li>
-                <li>• Updated fitness centers</li>
-                <li>• Contemporary social spaces</li>
-                <li>• Latest technology integration</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">Various Price Points</div>
-              <a href="/del-webb-new-communities" class="text-blue-600 hover:text-blue-800 font-semibold">View Del Webb New →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Upcoming Developments</h3>
-              <p class="text-gray-600 mb-4">New 55+ communities planned for Henderson and Northwest Las Vegas</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Pre-construction opportunities</li>
-                <li>• Customizable floor plans</li>
-                <li>• Early buyer incentives</li>
-                <li>• Preferred lot selection</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">Coming Soon</div>
-              <a href="/upcoming-55-plus-communities" class="text-blue-600 hover:text-blue-800 font-semibold">Get Early Access →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="newBuilds" />
         </div>
       </section>
 
@@ -269,6 +239,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The New Construction Process" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The New Construction Process</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Understanding the new construction process helps you make informed decisions and get the most value from your investment.
@@ -337,13 +308,13 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-blue-600 to-blue-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Explore New 55+ Communities?</h2>
           <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you discover the latest 55+ community developments in Las Vegas with modern amenities and contemporary designs.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Start Your Search
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">

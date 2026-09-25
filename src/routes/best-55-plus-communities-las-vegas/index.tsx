@@ -2,6 +2,10 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Best 55+ Communities in Las Vegas | Top-Rated Active Adult Living - Dr. Jan Duffy",
@@ -164,9 +168,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Best 55+ Communities in Las Vegas
           </h1>
@@ -174,7 +179,7 @@ export default component$(() => {
             Discover the top-rated active adult communities with premier amenities, prime locations, and exceptional lifestyle options
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
               Explore Top Communities
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-800 transition-colors shadow-lg inline-block text-center">
@@ -184,10 +189,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Ranking Criteria */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="How We Rank the Best 55+ Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">How We Rank the Best 55+ Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Our comprehensive evaluation considers amenities, location, value, lifestyle, and resident satisfaction to identify Las Vegas's premier active adult communities.
@@ -195,18 +203,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Amenities & Facilities</h3>
-              <p class="text-gray-600">Quality and variety of recreational facilities, clubhouses, fitness centers, and social spaces</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Location & Access</h3>
-              <p class="text-gray-600">Proximity to shopping, dining, healthcare, entertainment, and transportation</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Value & Investment</h3>
-              <p class="text-gray-600">Price-to-value ratio, HOA fees, resale potential, and overall cost of living</p>
-            </div>
+            <PhotoThumbCard
+              heading="Amenities & Facilities"
+              description="Quality and variety of recreational facilities, clubhouses, fitness centers, and social spaces"
+            />
+            <PhotoThumbCard
+              heading="Location & Access"
+              description="Proximity to shopping, dining, healthcare, entertainment, and transportation"
+            />
+            <PhotoThumbCard
+              heading="Value & Investment"
+              description="Price-to-value ratio, HOA fees, resale potential, and overall cost of living"
+            />
           </div>
         </div>
       </section>
@@ -215,6 +223,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Top-Rated 55+ Communities in Las Vegas" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Top-Rated 55+ Communities in Las Vegas</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Based on comprehensive analysis of amenities, location, value, and resident satisfaction.
@@ -291,7 +300,7 @@ export default component$(() => {
                   </ul>
                 </div>
               </div>
-              <a href="/sun-city-summerlin-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Sun City Summerlin Homes →</a>
+              <a href="/sun-city-del-webb-real-estate" class="text-purple-600 hover:text-purple-800 font-semibold">View Sun City Summerlin Homes →</a>
             </div>
 
             {/* #3 The Ridges */}
@@ -327,7 +336,7 @@ export default component$(() => {
                   </ul>
                 </div>
               </div>
-              <a href="/the-ridges-summerlin" class="text-purple-600 hover:text-purple-800 font-semibold">View The Ridges Homes →</a>
+              <a href="/luxury-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View The Ridges Homes →</a>
             </div>
           </div>
         </div>
@@ -337,6 +346,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Community Comparison Guide" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Community Comparison Guide</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Compare the top 55+ communities based on key factors to find the perfect match for your lifestyle and budget.
@@ -403,13 +413,13 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-purple-600 to-purple-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Perfect 55+ Community?</h2>
           <p class="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you choose from the best 55+ communities in Las Vegas based on your lifestyle, budget, and preferences.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
               Start Your Search
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-800 transition-colors shadow-lg inline-block text-center">

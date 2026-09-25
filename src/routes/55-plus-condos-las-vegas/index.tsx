@@ -2,6 +2,11 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "55+ Condos Las Vegas | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -164,9 +169,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             55+ Condos Las Vegas
           </h1>
@@ -174,7 +180,7 @@ export default component$(() => {
             Discover luxury maintenance-free living in Las Vegas with resort amenities, prime locations, and active adult lifestyle
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-indigo-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-indigo-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-100 transition-colors shadow-lg inline-block text-center">
               Explore 55+ Condos
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-800 transition-colors shadow-lg inline-block text-center">
@@ -184,10 +190,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Condo Living Advantage */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose 55+ Condos in Las Vegas?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose 55+ Condos in Las Vegas?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults discover the benefits of maintenance-free condo living with resort amenities.
@@ -195,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Maintenance-Free Living</h3>
-              <p class="text-gray-600">No yard work, exterior maintenance, or repairs - perfect for active adults who want to travel and enjoy life</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Resort Amenities</h3>
-              <p class="text-gray-600">Fitness centers, pools, clubhouses, social activities, and concierge services</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Prime Locations</h3>
-              <p class="text-gray-600">Convenient access to shopping, dining, entertainment, healthcare, and transportation</p>
-            </div>
+            <PhotoThumbCard
+              heading="Maintenance-Free Living"
+              description="No yard work, exterior maintenance, or repairs - perfect for active adults who want to travel and enjoy life"
+            />
+            <PhotoThumbCard
+              heading="Resort Amenities"
+              description="Fitness centers, pools, clubhouses, social activities, and concierge services"
+            />
+            <PhotoThumbCard
+              heading="Prime Locations"
+              description="Convenient access to shopping, dining, entertainment, healthcare, and transportation"
+            />
           </div>
         </div>
       </section>
@@ -215,103 +224,14 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier 55+ Condo Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier 55+ Condo Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Las Vegas's finest 55+ condo communities, each offering unique amenities and lifestyle options for discerning active adults.
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Martin at CityCenter</h3>
-              <p class="text-gray-600 mb-4">Luxury high-rise condos with Strip views and resort amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Strip views and city lights</li>
-                <li>• Resort-style amenities</li>
-                <li>• Concierge services</li>
-                <li>• Fitness center and spa</li>
-                <li>• Rooftop pool and deck</li>
-                <li>• Prime Strip location</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">$500,000 - $2,000,000+</div>
-              <a href="/the-martin-citycenter" class="text-indigo-600 hover:text-indigo-800 font-semibold">View The Martin →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Turnberry Place</h3>
-              <p class="text-gray-600 mb-4">Luxury condos with golf course views and resort amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Golf course views</li>
-                <li>• Resort amenities</li>
-                <li>• Fitness center</li>
-                <li>• Pool and spa</li>
-                <li>• Concierge services</li>
-                <li>• Prime Summerlin location</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">$400,000 - $1,500,000</div>
-              <a href="/turnberry-place" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Turnberry Place →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Signature at MGM Grand</h3>
-              <p class="text-gray-600 mb-4">Luxury condos with Strip access and resort amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Strip access</li>
-                <li>• Resort amenities</li>
-                <li>• Fitness center</li>
-                <li>• Pool and spa</li>
-                <li>• Concierge services</li>
-                <li>• Prime Strip location</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">$600,000 - $2,500,000+</div>
-              <a href="/signature-mgm-grand" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Signature →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Residences at Mandarin Oriental</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury condos with Strip views and five-star amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Strip views</li>
-                <li>• Five-star amenities</li>
-                <li>• Concierge services</li>
-                <li>• Fitness center</li>
-                <li>• Pool and spa</li>
-                <li>• Prime Strip location</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">$800,000 - $5,000,000+</div>
-              <a href="/mandarin-oriental-residences" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Mandarin Oriental →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Residences at Wynn</h3>
-              <p class="text-gray-600 mb-4">Luxury condos with Strip views and resort amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Strip views</li>
-                <li>• Resort amenities</li>
-                <li>• Concierge services</li>
-                <li>• Fitness center</li>
-                <li>• Pool and spa</li>
-                <li>• Prime Strip location</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">$700,000 - $3,000,000+</div>
-              <a href="/wynn-residences" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Wynn Residences →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Residences at Bellagio</h3>
-              <p class="text-gray-600 mb-4">Luxury condos with Strip views and resort amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Strip views</li>
-                <li>• Resort amenities</li>
-                <li>• Concierge services</li>
-                <li>• Fitness center</li>
-                <li>• Pool and spa</li>
-                <li>• Prime Strip location</li>
-              </ul>
-              <div class="text-lg font-bold text-indigo-600 mb-4">$600,000 - $2,500,000+</div>
-              <a href="/bellagio-residences" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Bellagio Residences →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="condos" />
         </div>
       </section>
 
@@ -319,6 +239,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The 55+ Condo Lifestyle Advantage" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The 55+ Condo Lifestyle Advantage</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience the perfect blend of luxury, convenience, and active adult living in Las Vegas's premier 55+ condo communities.
@@ -387,13 +308,13 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-indigo-600 to-indigo-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Perfect 55+ Condo?</h2>
           <p class="text-lg text-indigo-100 mb-8 max-w-2xl mx-auto">
             As Las Vegas's premier 55+ community specialist, I'll help you discover the ideal condo community that matches your lifestyle, budget, and preferences.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-indigo-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-indigo-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-100 transition-colors shadow-lg inline-block text-center">
               Start Your Search
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-800 transition-colors shadow-lg inline-block text-center">

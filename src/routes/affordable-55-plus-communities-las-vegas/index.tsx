@@ -2,6 +2,11 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Affordable 55+ Communities in Las Vegas | Budget-Friendly Active Adult Living - Dr. Jan Duffy",
@@ -164,9 +169,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Affordable 55+ Communities in Las Vegas
           </h1>
@@ -174,7 +180,7 @@ export default component$(() => {
             Discover budget-friendly active adult living options in Las Vegas with quality amenities and vibrant social scenes
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-100 transition-colors shadow-lg inline-block text-center">
               Find Affordable Communities
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-800 transition-colors shadow-lg inline-block text-center">
@@ -184,10 +190,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Affordable Options Overview */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Budget-Friendly 55+ Living Options" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Budget-Friendly 55+ Living Options</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Las Vegas offers several affordable 55+ communities that provide quality amenities and active adult lifestyle without breaking the budget.
@@ -195,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Price Range</h3>
-              <p class="text-gray-600">$300,000 - $500,000 for quality 55+ communities with essential amenities</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Value Features</h3>
-              <p class="text-gray-600">Clubhouses, pools, fitness centers, and social activities included</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Financing Options</h3>
-              <p class="text-gray-600">Traditional mortgages, FHA, VA loans, and specialized programs available</p>
-            </div>
+            <PhotoThumbCard
+              heading="Price Range"
+              description="$300,000 - $500,000 for quality 55+ communities with essential amenities"
+            />
+            <PhotoThumbCard
+              heading="Value Features"
+              description="Clubhouses, pools, fitness centers, and social activities included"
+            />
+            <PhotoThumbCard
+              heading="Financing Options"
+              description="Traditional mortgages, FHA, VA loans, and specialized programs available"
+            />
           </div>
         </div>
       </section>
@@ -215,49 +224,14 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Featured Affordable 55+ Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Affordable 55+ Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Las Vegas's most affordable active adult communities offering quality amenities at budget-friendly prices.
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Starting at $464,990 - New construction with Lennar Everything's Included® features</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• 8,000 sq ft clubhouse</li>
-                <li>• Resort-style pool & spa</li>
-                <li>• Pickleball & bocce courts</li>
-                <li>• Gated community</li>
-              </ul>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-green-600 hover:text-green-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Del Webb Communities</h3>
-              <p class="text-gray-600 mb-4">Various price points - Established communities with proven amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Golf course communities</li>
-                <li>• Fitness centers</li>
-                <li>• Social clubs</li>
-                <li>• Maintenance-free living</li>
-              </ul>
-              <a href="/del-webb-las-vegas" class="text-green-600 hover:text-green-800 font-semibold">View Del Webb Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Resale</h3>
-              <p class="text-gray-600 mb-4">$350,000+ - Established community with mature amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Mature landscaping</li>
-                <li>• Established amenities</li>
-                <li>• Active social scene</li>
-                <li>• Proven track record</li>
-              </ul>
-              <a href="/sun-city-resale-homes" class="text-green-600 hover:text-green-800 font-semibold">View Sun City Resale →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="affordable" />
         </div>
       </section>
 
@@ -265,6 +239,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Tips for Finding Affordable 55+ Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Tips for Finding Affordable 55+ Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Expert advice for finding quality 55+ communities that fit your budget without compromising on lifestyle.
@@ -333,13 +308,13 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-green-600 to-green-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Affordable 55+ Community?</h2>
           <p class="text-lg text-green-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you find the perfect affordable 55+ community in Las Vegas that fits your budget and lifestyle.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-100 transition-colors shadow-lg inline-block text-center">
               Start Your Search
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-800 transition-colors shadow-lg inline-block text-center">

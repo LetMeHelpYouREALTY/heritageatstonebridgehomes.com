@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { CfImage } from "~/components/media/CfImage";
 
 interface HomeCard {
   name: string;
@@ -9,8 +10,8 @@ interface HomeCard {
   garage: string;
   description: string;
   features: string[];
-  floorPlan: string;
-  image: string;
+  floorPlanId: string;
+  imageId: string;
 }
 
 const homeCards: HomeCard[] = [
@@ -28,10 +29,8 @@ const homeCards: HomeCard[] = [
       "Hardwood Floors",
       "Energy Efficient",
     ],
-    floorPlan:
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    floorPlanId: "luxury-kitchen",
+    imageId: "cromwell-home",
   },
   {
     name: "The Stonebridge",
@@ -42,10 +41,8 @@ const homeCards: HomeCard[] = [
     garage: "3-Car Garage",
     description: "Spacious luxury design with premium amenities",
     features: ["Quartz Countertops", "Smart Home Features", "Custom Cabinetry", "Solar Ready"],
-    floorPlan:
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    floorPlanId: "great-room",
+    imageId: "stirling-home",
   },
   {
     name: "The Signature",
@@ -56,10 +53,8 @@ const homeCards: HomeCard[] = [
     garage: "3-Car Garage",
     description: "Premium custom features and luxury finishes",
     features: ["Marble Countertops", "Wine Cellar", "Home Theater", "Smart Security"],
-    floorPlan:
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+    floorPlanId: "luxury-kitchen",
+    imageId: "evander-home",
   },
 ];
 
@@ -73,9 +68,10 @@ export const LuxuryHomeCards = component$(() => {
         >
           {/* Image Section */}
           <div class="relative h-64 overflow-hidden">
-            <img
-              src={home.image}
+            <CfImage
+              id={home.imageId}
               alt={home.name}
+              variant="card"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -89,9 +85,10 @@ export const LuxuryHomeCards = component$(() => {
             <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
               <div class="bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
                 <div class="text-xs font-medium text-gray-700 mb-1">Floor Plan</div>
-                <img
-                  src={home.floorPlan}
-                  alt={`${home.name} Floor Plan`}
+                <CfImage
+                  id={home.floorPlanId}
+                  alt={`${home.name} kitchen and interior`}
+                  variant="thumbnail"
                   class="w-16 h-12 object-cover rounded"
                 />
               </div>
@@ -190,7 +187,7 @@ export const LuxuryHomeCards = component$(() => {
 
             {/* CTA Button */}
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl group-hover:shadow-2xl inline-block text-center"

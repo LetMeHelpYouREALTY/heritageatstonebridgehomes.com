@@ -2,6 +2,11 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { CfImage } from "~/components/media/CfImage";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Homes for Sale in Stonebridge, Summerlin, Las Vegas NV | Dr. Jan Duffy",
@@ -30,7 +35,7 @@ export const head: DocumentHead = {
     },
     {
       property: "og:image",
-      content: "https://heritagestonebridge.com/images/stonebridge-homes-hero.webp",
+      content: "https://heritagestonebridge.com/images/stonebridge-homes-hero.jpg",
     },
     {
       name: "twitter:card",
@@ -78,7 +83,7 @@ export default component$(() => {
         description:
           "Discover luxury homes for sale in Stonebridge, Summerlin, Las Vegas NV. Gated community with resort amenities, mountain views, and active adult living.",
         url: "https://heritagestonebridge.com/homes-for-sale-stonebridge-summerlin",
-        image: "https://heritagestonebridge.com/images/stonebridge-homes-hero.webp",
+        image: "https://heritagestonebridge.com/images/stonebridge-homes-hero.jpg",
         mainEntity: {
           "@type": "ItemList",
           itemListElement: [
@@ -134,8 +139,8 @@ export default component$(() => {
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: "36.1699",
-          longitude: "-115.1398",
+          latitude: "36.1716",
+          longitude: "-115.3384",
         },
         areaServed: [
           {
@@ -188,9 +193,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Homes for Sale in Stonebridge, Summerlin, Las Vegas NV
           </h1>
@@ -199,7 +205,7 @@ export default component$(() => {
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
@@ -216,10 +222,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Community Overview */}
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Stonebridge, Summerlin?" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Stonebridge, Summerlin?
             </h2>
@@ -230,46 +239,18 @@ export default component$(() => {
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Gated Security */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">🔒</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Gated Security</h3>
-                <p class="text-gray-600">
-                  24/7 gated access with professional security ensuring privacy and peace of mind
-                  for all residents.
-                </p>
-              </div>
-            </div>
-
-            {/* Resort Amenities */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">🏊</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Resort Amenities</h3>
-                <p class="text-gray-600">
-                  8,000 sq ft clubhouse, resort-style pool & heated lap pool, fitness center, pickleball & bocce courts, walking trails, and RV parking for active living.
-                </p>
-              </div>
-            </div>
-
-            {/* Prime Location */}
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span class="text-2xl">📍</span>
-                </div>
-                <h3 class="text-xl font-semibold mb-3">Prime Location</h3>
-                <p class="text-gray-600">
-                  Minutes from Red Rock Canyon, Downtown Summerlin, and world-class shopping and
-                  dining.
-                </p>
-              </div>
-            </div>
+            <PhotoThumbCard
+              heading="Gated Security"
+              description="Guard-gated access at Crossbridge Dr with 24/7 entry control for residents and guests."
+            />
+            <PhotoThumbCard
+              heading="Resort Amenities"
+              description="8,000 sq ft clubhouse, resort pool, fitness center, pickleball, bocce, and trails."
+            />
+            <PhotoThumbCard
+              heading="Prime Location"
+              description="Minutes from Red Rock Canyon and Downtown Summerlin shopping and dining."
+            />
           </div>
         </div>
       </section>
@@ -278,6 +259,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Featured Stonebridge Homes" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Featured Stonebridge Homes
             </h2>
@@ -290,14 +272,17 @@ export default component$(() => {
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Property 1 */}
             <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-              <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <h3 class="text-2xl font-bold mb-2">Cromwell Collection</h3>
-                  <p class="text-blue-100">1,232 - 1,456 sq ft</p>
-                </div>
-              </div>
+              <CfImage
+                id="cromwell-home"
+                alt="Cromwell collection single-story home at Heritage at Stonebridge, 1,232 to 1,456 square feet"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
-                <h4 class="text-xl font-semibold mb-3">Luxury Single-Story Living</h4>
+                <h3 class="text-2xl font-bold mb-1">Cromwell Collection</h3>
+                <p class="text-gray-500 mb-3">1,232 - 1,456 sq ft</p>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• 2-3 Bedrooms, 2-2.5 Bathrooms</li>
                   <li>• Open concept living spaces</li>
@@ -306,7 +291,7 @@ export default component$(() => {
                 </ul>
                 <div class="text-2xl font-bold text-blue-600 mb-4">Starting from $464,990</div>
                 <a
-                  href="http://drjanduffy.realscout.com/onboarding"
+                  href="https://drjanduffy.realscout.com/onboarding"
                   target="_blank"
                   rel="noopener"
                   class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-block"
@@ -318,23 +303,27 @@ export default component$(() => {
 
             {/* Property 2 */}
             <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-              <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <h3 class="text-2xl font-bold mb-2">Stirling Collection</h3>
-                  <p class="text-green-100">1,456 - 2,100 sq ft</p>
-                </div>
-              </div>
+              <CfImage
+                id="stirling-home"
+                alt="Stirling collection single-story home at Heritage at Stonebridge, 1,747 to 2,236 square feet"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
-                <h4 class="text-xl font-semibold mb-3">Spacious Family Homes</h4>
+                <h3 class="text-2xl font-bold mb-1">Stirling Collection</h3>
+                <p class="text-gray-500 mb-3">1,747 - 2,236 sq ft</p>
+                <h4 class="text-xl font-semibold mb-3">Spacious single-story homes</h4>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• 3-4 Bedrooms, 2.5-3 Bathrooms</li>
                   <li>• Great rooms with fireplaces</li>
-                  <li>• Master suites with walk-in closets</li>
+                  <li>• Primary suites with walk-in closets</li>
                   <li>• Covered patios</li>
                 </ul>
                 <div class="text-2xl font-bold text-green-600 mb-4">Starting from $675,990</div>
                 <a
-                  href="http://drjanduffy.realscout.com/onboarding"
+                  href="https://drjanduffy.realscout.com/onboarding"
                   target="_blank"
                   rel="noopener"
                   class="w-full bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center inline-block"
@@ -346,13 +335,17 @@ export default component$(() => {
 
             {/* Property 3 */}
             <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-              <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <h3 class="text-2xl font-bold mb-2">Evander Collection</h3>
-                  <p class="text-purple-100">2,100 - 2,873 sq ft</p>
-                </div>
-              </div>
+              <CfImage
+                id="evander-home"
+                alt="Evander collection luxury single-story home at Heritage at Stonebridge, 2,515 to 2,873 square feet"
+                width={640}
+                height={360}
+                variant="card"
+                class="w-full h-48 object-cover"
+              />
               <div class="p-6">
+                <h3 class="text-2xl font-bold mb-1">Evander Collection</h3>
+                <p class="text-gray-500 mb-3">2,515 - 2,873 sq ft</p>
                 <h4 class="text-xl font-semibold mb-3">Estate-Style Living</h4>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• 4-5 Bedrooms, 3-4 Bathrooms</li>
@@ -362,7 +355,7 @@ export default component$(() => {
                 </ul>
                 <div class="text-2xl font-bold text-purple-600 mb-4">Starting from $861,990</div>
                 <a
-                  href="http://drjanduffy.realscout.com/onboarding"
+                  href="https://drjanduffy.realscout.com/onboarding"
                   target="_blank"
                   rel="noopener"
                   class="w-full bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center inline-block"
@@ -380,6 +373,7 @@ export default component$(() => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
+              <HeadingPhoto heading="Prime Summerlin Location" />
               <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Prime Summerlin Location
               </h2>
@@ -413,30 +407,30 @@ export default component$(() => {
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-2xl font-bold text-gray-900 mb-6">Community Amenities</h3>
               <div class="grid grid-cols-2 gap-4">
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🏊</span>
-                  <p class="font-semibold">Swimming Pools</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🏓</span>
-                  <p class="font-semibold">Pickleball Courts</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">💪</span>
-                  <p class="font-semibold">Fitness Center</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🏠</span>
-                  <p class="font-semibold">Clubhouse</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🚶</span>
-                  <p class="font-semibold">Walking Trails</p>
-                </div>
-                <div class="text-center p-4 bg-blue-50 rounded-lg">
-                  <span class="text-2xl mb-2 block">🌳</span>
-                  <p class="font-semibold">Parks & Gardens</p>
-                </div>
+                <PhotoThumbCard
+              heading="Swimming Pools"
+              description="Swimming Pools"
+            />
+                <PhotoThumbCard
+              heading="Pickleball Courts"
+              description="Pickleball Courts"
+            />
+                <PhotoThumbCard
+              heading="Fitness Center"
+              description="Fitness Center"
+            />
+                <PhotoThumbCard
+              heading="Clubhouse"
+              description="Clubhouse"
+            />
+                <PhotoThumbCard
+              heading="Walking Trails"
+              description="Walking Trails"
+            />
+                <PhotoThumbCard
+              heading="Parks & Gardens"
+              description="Parks & Gardens"
+            />
               </div>
             </div>
           </div>
@@ -447,6 +441,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Stonebridge Market Insights" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Stonebridge Market Insights
             </h2>
@@ -477,6 +472,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Frequently Asked Questions" />
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -551,7 +547,7 @@ export default component$(() => {
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               target="_blank"
               rel="noopener"
               class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
@@ -581,6 +577,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Stonebridge Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Stonebridge Listings</h2>
             <p class="text-lg text-gray-600">Explore available homes in Heritage at Stonebridge community</p>
           </div>

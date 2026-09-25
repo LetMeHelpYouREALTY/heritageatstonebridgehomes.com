@@ -3,6 +3,10 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { HeadingRichHtml } from "~/components/media/HeadingRichHtml";
 
 export const head: DocumentHead = {
   title: "Golf Course Homes Las Vegas | Luxury Golf Living - Dr. Jan Duffy",
@@ -159,9 +163,10 @@ Format as JSON with sections: golf_home_definition, property_types, golf_ameniti
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-green-900 via-emerald-800 to-teal-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-green-900 via-emerald-800 to-teal-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Golf Course Homes
           </h1>
@@ -185,6 +190,8 @@ Format as JSON with sections: golf_home_definition, property_types, golf_ameniti
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* AI Golf Content */}
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
@@ -194,7 +201,7 @@ Format as JSON with sections: golf_home_definition, property_types, golf_ameniti
               <p class="text-gray-600">Generating golf course home insights...</p>
             </div>
           ) : (
-            <div dangerouslySetInnerHTML={golfContent.value}></div>
+            <HeadingRichHtml html={golfContent.value} />
           )}
         </div>
       </section>
@@ -234,6 +241,7 @@ Format as JSON with sections: golf_home_definition, property_types, golf_ameniti
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Golf Course Home Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Golf Course Home Listings</h2>
             <p class="text-lg text-gray-600">Explore available properties on Las Vegas's premier golf courses</p>
           </div>

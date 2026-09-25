@@ -2,6 +2,11 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Henderson Active Adult Communities | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -73,7 +78,7 @@ export default component$(() => {
         "@type": "Service",
         "@id": "https://heritagestonebridge.com/henderson-active-adult-communities#service",
         "name": "Henderson Active Adult Communities",
-        "description": "Expert real estate services specializing in active adult communities in Henderson Las Vegas, providing comprehensive guidance for 55+ living in family-friendly neighborhoods.",
+        "description": "Expert real estate services specializing in active adult communities in Henderson Las Vegas, providing comprehensive guidance for 55+ living in Henderson neighborhoods with parks and recreation.",
         "provider": {
           "@type": "RealEstateAgent",
           "name": "Dr. Jan Duffy",
@@ -88,7 +93,7 @@ export default component$(() => {
         "offers": {
           "@type": "Offer",
           "priceRange": "$400,000-$3,000,000",
-          "description": "Henderson active adult communities with family-friendly amenities"
+          "description": "Henderson active adult communities with parks, golf, and recreation amenities"
         }
       });
 
@@ -112,7 +117,7 @@ export default component$(() => {
             "name": "Why choose Henderson for active adult living?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Henderson offers family-friendly neighborhoods, excellent schools, beautiful parks, Lake Mead access, strong community values, and convenient access to Las Vegas amenities while maintaining a suburban feel."
+              "text": "Henderson offers parks, recreation centers, Lake Mead access, and a short drive to the Las Vegas valley, with a suburban street layout and 55+ housing options."
             }
           },
           {
@@ -164,17 +169,18 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Henderson Active Adult Communities
           </h1>
           <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Discover premier 55+ communities in Henderson with family-friendly neighborhoods, golf courses, and Lake Mead access
+            Discover premier 55+ communities in Henderson with parks, golf courses, and Lake Mead access
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Explore Henderson Communities
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">
@@ -184,10 +190,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Henderson Advantage */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Henderson is Ideal for Active Adult Living" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Henderson is Ideal for Active Adult Living</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults discover why Henderson offers the perfect blend of suburban charm and urban convenience.
@@ -195,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Family-Friendly Environment</h3>
-              <p class="text-gray-600">Safe neighborhoods with excellent schools, parks, and strong community values</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Lake Mead Access</h3>
-              <p class="text-gray-600">Direct access to Lake Mead National Recreation Area for water sports and outdoor recreation</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Convenient Location</h3>
-              <p class="text-gray-600">20 minutes to Las Vegas Strip and McCarran Airport with suburban tranquility</p>
-            </div>
+            <PhotoThumbCard
+              heading="Parks, trails, and recreation centers"
+              description="Residential streets with parks, recreation centers, and a short drive to Lake Mead"
+            />
+            <PhotoThumbCard
+              heading="Lake Mead Access"
+              description="Direct access to Lake Mead National Recreation Area for water sports and outdoor recreation"
+            />
+            <PhotoThumbCard
+              heading="Convenient Location"
+              description="20 minutes to Las Vegas Strip and McCarran Airport with suburban tranquility"
+            />
           </div>
         </div>
       </section>
@@ -215,103 +224,14 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier Active Adult Communities in Henderson" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier Active Adult Communities in Henderson</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Henderson's finest active adult communities, each offering unique amenities and lifestyle options for discerning 55+ buyers.
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Anthem</h3>
-              <p class="text-gray-600 mb-4">Premier 55+ community with golf courses, recreation centers, and vibrant social scene</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Multiple golf courses</li>
-                <li>• Recreation centers and pools</li>
-                <li>• Extensive social clubs</li>
-                <li>• Mature landscaping</li>
-                <li>• Established community</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/sun-city-anthem" class="text-blue-600 hover:text-blue-800 font-semibold">View Sun City Anthem →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">MacDonald Ranch</h3>
-              <p class="text-gray-600 mb-4">Luxury golf course community with custom homes and exclusive amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Golf course access</li>
-                <li>• Private amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive location</li>
-                <li>• High-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$700,000 - $2,500,000+</div>
-              <a href="/macdonald-ranch-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View MacDonald Ranch →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Seven Hills</h3>
-              <p class="text-gray-600 mb-4">Gated luxury community with custom estates and stunning mountain views</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Gated community</li>
-                <li>• Custom estates</li>
-                <li>• Mountain views</li>
-                <li>• Private amenities</li>
-                <li>• Exclusive location</li>
-                <li>• Luxury finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/seven-hills-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Seven Hills →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Green Valley</h3>
-              <p class="text-gray-600 mb-4">Established community with mature trees, parks, and excellent schools</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Mature landscaping</li>
-                <li>• Parks and trails</li>
-                <li>• Excellent schools</li>
-                <li>• Established community</li>
-                <li>• Convenient location</li>
-                <li>• Strong resale market</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$400,000 - $1,200,000</div>
-              <a href="/green-valley-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Green Valley →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Inspirada</h3>
-              <p class="text-gray-600 mb-4">Modern master-planned community with contemporary homes and amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Modern design</li>
-                <li>• Contemporary amenities</li>
-                <li>• Parks and trails</li>
-                <li>• Community events</li>
-                <li>• New construction</li>
-                <li>• Energy-efficient homes</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$500,000 - $1,500,000</div>
-              <a href="/inspirada-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Inspirada →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Anthem</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with golf courses, parks, and resort amenities</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Golf courses</li>
-                <li>• Parks and trails</li>
-                <li>• Resort amenities</li>
-                <li>• Community events</li>
-                <li>• Family-friendly</li>
-                <li>• Established community</li>
-              </ul>
-              <div class="text-lg font-bold text-blue-600 mb-4">$600,000 - $2,000,000</div>
-              <a href="/anthem-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Anthem →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="henderson" />
         </div>
       </section>
 
@@ -319,6 +239,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Henderson Active Adult Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Henderson Active Adult Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience the perfect blend of suburban charm, outdoor recreation, and urban convenience in Henderson's premier active adult communities.
@@ -353,15 +274,15 @@ export default component$(() => {
               <ul class="space-y-3 text-gray-700 mb-6">
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
-                  Family-friendly neighborhoods with strong values
+                  Parks, golf, and Lake Mead recreation nearby
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
-                  Excellent schools and healthcare facilities
+                  Nearby medical offices and recreation centers
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
-                  Safe, well-maintained communities
+                  Well-maintained streets, parks, and recreation centers
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
@@ -387,13 +308,13 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-blue-600 to-blue-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Perfect Henderson Active Adult Community?</h2>
           <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
             As Las Vegas's premier 55+ community specialist, I'll help you discover the ideal Henderson community that matches your lifestyle, budget, and preferences.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
               Start Your Search
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg inline-block text-center">

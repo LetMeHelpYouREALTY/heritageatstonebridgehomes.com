@@ -2,6 +2,11 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PremierCommunityGrid } from "~/components/media/PremierCommunityGrid";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Luxury Retirement Communities in Las Vegas | Premium Active Adult Living - Dr. Jan Duffy",
@@ -164,9 +169,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-gold-900 via-gold-800 to-gold-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-gold-900 via-gold-800 to-gold-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Luxury Retirement Communities in Las Vegas
           </h1>
@@ -174,7 +180,7 @@ export default component$(() => {
             Experience the pinnacle of active adult living with premium amenities, concierge services, and unparalleled luxury
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-gold-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-gold-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-100 transition-colors shadow-lg inline-block text-center">
               Explore Luxury Communities
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gold-800 transition-colors shadow-lg inline-block text-center">
@@ -184,10 +190,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Luxury Features */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="What Defines Luxury Retirement Living?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">What Defines Luxury Retirement Living?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Luxury retirement communities offer the highest level of amenities, services, and lifestyle options for discerning active adults.
@@ -195,18 +204,18 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Concierge Services</h3>
-              <p class="text-gray-600">Personalized assistance with reservations, travel planning, event coordination, and daily conveniences</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Premium Amenities</h3>
-              <p class="text-gray-600">Private golf courses, spa facilities, gourmet dining, wine cellars, theaters, and exclusive social spaces</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Custom Homes</h3>
-              <p class="text-gray-600">Architectural excellence, high-end finishes, smart home technology, and personalized design options</p>
-            </div>
+            <PhotoThumbCard
+              heading="Concierge Services"
+              description="Personalized assistance with reservations, travel planning, event coordination, and daily conveniences"
+            />
+            <PhotoThumbCard
+              heading="Premium Amenities"
+              description="Private golf courses, spa facilities, gourmet dining, wine cellars, theaters, and exclusive social spaces"
+            />
+            <PhotoThumbCard
+              heading="Custom Homes"
+              description="Architectural excellence, high-end finishes, smart home technology, and personalized design options"
+            />
           </div>
         </div>
       </section>
@@ -215,103 +224,14 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Premier Luxury Retirement Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Premier Luxury Retirement Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Discover Las Vegas's most exclusive active adult communities offering unparalleled luxury and service.
             </p>
           </div>
           
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">The Ridges</h3>
-              <p class="text-gray-600 mb-4">Ultra-luxury community with custom estates, exclusive golf course access, and mountain views.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Exclusive golf course</li>
-                <li>• Private concierge services</li>
-                <li>• Mountain views</li>
-                <li>• Elite social scene</li>
-                <li>• Highest-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$1,000,000 - $5,000,000+</div>
-              <a href="/the-ridges-summerlin" class="text-gold-600 hover:text-gold-800 font-semibold">View The Ridges Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Siena</h3>
-              <p class="text-gray-600 mb-4">Tuscan-inspired luxury community with resort amenities and sophisticated design.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Tuscan-inspired architecture</li>
-                <li>• Resort-style amenities</li>
-                <li>• Wine cellar & tasting room</li>
-                <li>• Gourmet dining</li>
-                <li>• Spa & wellness center</li>
-                <li>• Private social clubs</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$600,000 - $2,000,000+</div>
-              <a href="/siena-summerlin-homes" class="text-gold-600 hover:text-gold-800 font-semibold">View Siena Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Red Rock Country Club</h3>
-              <p class="text-gray-600 mb-4">Exclusive golf course community with luxury homes and private country club membership.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Private golf course</li>
-                <li>• Country club membership</li>
-                <li>• Luxury amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive events</li>
-                <li>• Concierge services</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/red-rock-country-club" class="text-gold-600 hover:text-gold-800 font-semibold">View Country Club Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Heritage at Stonebridge</h3>
-              <p class="text-gray-600 mb-4">Luxury new construction with Everything's Included® features and modern amenities.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• New construction luxury</li>
-                <li>• Everything's Included®</li>
-                <li>• Smart home technology</li>
-                <li>• Resort-style amenities</li>
-                <li>• Red Rock Canyon views</li>
-                <li>• Gated community</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$464,990 - $1,200,000+</div>
-              <a href="/homes-for-sale-stonebridge-summerlin" class="text-gold-600 hover:text-gold-800 font-semibold">View Stonebridge Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">MacDonald Ranch</h3>
-              <p class="text-gray-600 mb-4">Henderson's premier luxury community with custom homes and golf course access.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Custom luxury homes</li>
-                <li>• Golf course access</li>
-                <li>• Private amenities</li>
-                <li>• Mountain views</li>
-                <li>• Exclusive location</li>
-                <li>• High-end finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$700,000 - $2,500,000+</div>
-              <a href="/macdonald-ranch-henderson" class="text-gold-600 hover:text-gold-800 font-semibold">View MacDonald Ranch Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Seven Hills</h3>
-              <p class="text-gray-600 mb-4">Gated luxury community with custom estates and stunning mountain views.</p>
-              <ul class="space-y-2 text-gray-600 mb-4">
-                <li>• Gated community</li>
-                <li>• Custom estates</li>
-                <li>• Mountain views</li>
-                <li>• Private amenities</li>
-                <li>• Exclusive location</li>
-                <li>• Luxury finishes</li>
-              </ul>
-              <div class="text-lg font-bold text-gold-600 mb-4">$800,000 - $3,000,000+</div>
-              <a href="/seven-hills-henderson" class="text-gold-600 hover:text-gold-800 font-semibold">View Seven Hills Homes →</a>
-            </div>
-          </div>
+          <PremierCommunityGrid variant="luxury" />
         </div>
       </section>
 
@@ -319,6 +239,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Luxury Lifestyle Services" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Luxury Lifestyle Services</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Experience the highest level of service and convenience with personalized amenities designed for discerning residents.
@@ -387,13 +308,13 @@ export default component$(() => {
 
       {/* Call to Action */}
       <section class="bg-gradient-to-br from-gold-600 to-gold-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold text-white mb-4">Ready to Experience Luxury Retirement Living?</h2>
           <p class="text-lg text-gold-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you discover Las Vegas's most exclusive luxury retirement communities with premium amenities and concierge services.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-gold-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-gold-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-100 transition-colors shadow-lg inline-block text-center">
               Start Your Search
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gold-800 transition-colors shadow-lg inline-block text-center">

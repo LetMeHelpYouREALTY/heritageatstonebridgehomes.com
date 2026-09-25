@@ -2,6 +2,10 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { LocationHeroImage } from "~/components/media/LocationHeroImage";
+import { PagePhotoRail } from "~/components/media/PagePhotoRail";
+import { HeadingPhoto } from "~/components/media/HeadingPhoto";
+import { PhotoThumbCard } from "~/components/media/PhotoThumbCard";
 
 export const head: DocumentHead = {
   title: "Northwest Las Vegas Real Estate | Dr. Jan Duffy - Growing Communities",
@@ -24,7 +28,7 @@ export const head: DocumentHead = {
     },
     {
       name: "audience",
-      content: "families, luxury-home-buyers",
+      content: "homebuyers, luxury-home-buyers, 55-plus-communities",
     },
     {
       name: "location",
@@ -66,9 +70,10 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-20">
+      <section class="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-20">
+        <LocationHeroImage />
         <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Northwest Las Vegas Real Estate
           </h1>
@@ -76,7 +81,7 @@ export default component$(() => {
             Discover the growing Northwest Las Vegas area with new construction, modern amenities, and convenient access to the Strip
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
               Schedule Northwest Tour
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-800 transition-colors shadow-lg inline-block text-center">
@@ -86,10 +91,13 @@ export default component$(() => {
         </div>
       </section>
 
+      <PagePhotoRail />
+
       {/* Northwest Las Vegas Overview */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Northwest Las Vegas?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Northwest Las Vegas?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Northwest Las Vegas is one of the fastest-growing areas in the valley, offering new construction homes, modern amenities, and excellent value for money with convenient access to the Strip.
@@ -97,37 +105,25 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏗️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">New Construction</h3>
-              <p class="text-gray-600">Modern homes with the latest features, designs, and energy-efficient systems</p>
-            </div>
+            <PhotoThumbCard
+              heading="New Construction"
+              description="Modern homes with the latest features, designs, and energy-efficient systems"
+            />
             
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🚗</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Convenient Access</h3>
-              <p class="text-gray-600">Easy access to the Las Vegas Strip, downtown, and major highways</p>
-            </div>
+            <PhotoThumbCard
+              heading="Convenient Access"
+              description="Easy access to the Las Vegas Strip, downtown, and major highways"
+            />
             
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">💰</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Great Value</h3>
-              <p class="text-gray-600">More home for your money compared to established areas</p>
-            </div>
+            <PhotoThumbCard
+              heading="Great Value"
+              description="More home for your money compared to established areas"
+            />
             
-            <div class="text-center">
-              <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">📈</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Growth Potential</h3>
-              <p class="text-gray-600">Rapidly developing area with increasing property values</p>
-            </div>
+            <PhotoThumbCard
+              heading="Growth Potential"
+              description="Rapidly developing area with increasing property values"
+            />
           </div>
         </div>
       </section>
@@ -136,6 +132,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="The Northwest Las Vegas Lifestyle" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Northwest Las Vegas Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Northwest Las Vegas offers the perfect combination of new construction, modern amenities, and convenient access to everything Las Vegas has to offer.
@@ -173,7 +170,7 @@ export default component$(() => {
                 <li class="flex items-start">
                   <span class="text-purple-500 mr-3 mt-1">✓</span>
                   <div>
-                    <strong>Family-Friendly:</strong> New schools, parks, and recreational facilities designed for modern living
+                    <strong>Parks and recreation:</strong> New parks, trails, and recreation centers
                   </div>
                 </li>
               </ul>
@@ -198,8 +195,8 @@ export default component$(() => {
                   <span>15-25 minutes</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="font-semibold">Schools:</span>
-                  <span>New & modern facilities</span>
+                  <span class="font-semibold">Medical offices:</span>
+                  <span>Valley Health and MountainView nearby</span>
                 </div>
                 <div class="flex justify-between">
                   <span class="font-semibold">Parks:</span>
@@ -215,6 +212,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Northwest Las Vegas Communities" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Northwest Las Vegas Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore Northwest Las Vegas's diverse neighborhoods, from master-planned communities to new construction developments.
@@ -222,41 +220,42 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Skye Canyon</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with outdoor recreation, parks, and modern amenities.</p>
-              <a href="/skye-canyon-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Skye Canyon Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Centennial Hills</h3>
-              <p class="text-gray-600 mb-4">Established community with parks, schools, and convenient shopping.</p>
-              <a href="/centennial-hills-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Centennial Hills Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Aliante</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with golf course, parks, and family amenities.</p>
-              <a href="/aliante-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Aliante Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Tule Springs</h3>
-              <p class="text-gray-600 mb-4">New development with modern homes and community amenities.</p>
-              <a href="/tule-springs-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Tule Springs Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Desert Shores</h3>
-              <p class="text-gray-600 mb-4">Waterfront community with lakes, parks, and recreational facilities.</p>
-              <a href="/desert-shores-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Desert Shores Homes →</a>
-            </div>
-            
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">North Las Vegas</h3>
-              <p class="text-gray-600 mb-4">Growing area with new construction and affordable housing options.</p>
-              <a href="/north-las-vegas-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View North Las Vegas Homes →</a>
-            </div>
+            <PhotoThumbCard
+              heading="Skye Canyon"
+              description="Master-planned parks, trails, and new construction in northwest Las Vegas."
+              href="/northwest-las-vegas"
+              linkLabel="View Skye Canyon Homes →"
+            />
+            <PhotoThumbCard
+              heading="Centennial Hills"
+              description="Established streets, parks, and shopping along the 215 Beltway."
+              href="/northwest-las-vegas"
+              linkLabel="View Centennial Hills Homes →"
+            />
+            <PhotoThumbCard
+              heading="Aliante"
+              description="Golf-course neighborhood with parks and recreation amenities."
+              href="/northwest-las-vegas"
+              linkLabel="View Aliante Homes →"
+            />
+            <PhotoThumbCard
+              heading="Tule Springs"
+              description="New-construction homes and community amenities in the far northwest."
+              href="/northwest-las-vegas"
+              linkLabel="View Tule Springs Homes →"
+            />
+            <PhotoThumbCard
+              heading="Desert Shores"
+              description="Lakes, paths, and recreation around a waterfront neighborhood."
+              href="/northwest-las-vegas"
+              linkLabel="View Desert Shores Homes →"
+            />
+            <PhotoThumbCard
+              heading="North Las Vegas"
+              description="New construction and a range of price points in North Las Vegas."
+              href="/northwest-las-vegas"
+              linkLabel="View North Las Vegas Homes →"
+            />
           </div>
         </div>
       </section>
@@ -265,6 +264,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="New Construction in Northwest Las Vegas" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">New Construction in Northwest Las Vegas</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               Northwest Las Vegas is home to numerous new construction developments offering modern homes with the latest features and designs.
@@ -331,6 +331,7 @@ export default component$(() => {
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
+            <HeadingPhoto heading="Current Northwest Las Vegas Listings" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Northwest Las Vegas Listings</h2>
             <p class="text-lg text-gray-600">Explore available homes in Northwest Las Vegas's growing communities</p>
           </div>
@@ -349,6 +350,7 @@ export default component$(() => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
+            <HeadingPhoto heading="Why Choose Dr. Jan Duffy for Northwest Las Vegas Real Estate?" />
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Dr. Jan Duffy for Northwest Las Vegas Real Estate?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
               With comprehensive knowledge of Northwest Las Vegas's growing communities and new construction developments, Dr. Jan Duffy provides expert guidance for your home purchase.
@@ -356,42 +358,33 @@ export default component$(() => {
           </div>
           
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏆</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Northwest Specialist</h3>
-              <p class="text-gray-600">Deep expertise in Northwest Las Vegas communities and new construction developments.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Northwest Specialist"
+              description="Deep expertise in Northwest Las Vegas communities and new construction developments."
+            />
             
-            <div class="text-center">
-              <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🏗️</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">New Construction Expert</h3>
-              <p class="text-gray-600">Specialized knowledge of new construction processes and builder relationships.</p>
-            </div>
+            <PhotoThumbCard
+              heading="New Construction Expert"
+              description="Specialized knowledge of new construction processes and builder relationships."
+            />
             
-            <div class="text-center">
-              <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl">🤝</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Personalized Service</h3>
-              <p class="text-gray-600">Dedicated support throughout your Northwest Las Vegas home buying journey.</p>
-            </div>
+            <PhotoThumbCard
+              heading="Personalized Service"
+              description="Dedicated support throughout your Northwest Las Vegas home buying journey."
+            />
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section class="bg-gradient-to-br from-purple-600 to-purple-800 py-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-4">Ready to Find Your Northwest Las Vegas Dream Home?</h2>
           <p class="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
             Let Dr. Jan Duffy help you discover the perfect home in Northwest Las Vegas's growing communities.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
+            <a href="https://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-purple-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-100 transition-colors shadow-lg inline-block text-center">
               Schedule Northwest Tour
             </a>
             <a href="tel:702-789-6561" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-800 transition-colors shadow-lg inline-block text-center">
