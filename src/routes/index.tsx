@@ -1,348 +1,46 @@
-import { component$, useTask$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutHeroWidget } from "~/components/real-estate/RealScoutHeroWidget";
-import { openingHoursSpecification } from "~/config/business";
+import { business } from "~/config/business";
+import {
+  DEFAULT_OG_IMAGE,
+  breadcrumbJsonLd,
+  community,
+  faqJsonLd,
+} from "~/config/community";
+
+const homeFaqs = [
+  {
+    question: "Where is Heritage at Stonebridge?",
+    answer:
+      "Heritage at Stonebridge is a guard-gated 55+ Lennar community in Summerlin West, Las Vegas, ZIP 89138. Dr. Jan Duffy helps buyers and sellers with tours and MLS listings tied to this neighborhood.",
+  },
+  {
+    question: "How many homes are in the community?",
+    answer: `The community site lists ${community.homes} single-story Lennar homes with a staffed gate and an on-site clubhouse.`,
+  },
+  {
+    question: "What is life like inside the gates?",
+    answer:
+      "Residents use a staffed gatehouse, not a shared code. The clubhouse area includes pools, fitness, pickleball, bocce, and walking paths within the neighborhood.",
+  },
+  {
+    question: "How do I start with Dr. Jan Duffy?",
+    answer: `Call or text ${business.telephoneDisplay}. Dr. Jan Duffy (Nevada license ${business.license}) works with buyers and sellers inside Heritage at Stonebridge. Office hours: ${business.hoursDisplay}.`,
+  },
+] as const;
+
+const homeFaqScript = faqJsonLd(homeFaqs);
+const homeBreadcrumbScript = breadcrumbJsonLd([
+  { name: "Home", item: "https://heritagestonebridge.com/" },
+]);
 
 export default component$(() => {
-  // Inject JSON-LD structured data
-  useTask$(() => {
-    if (typeof document !== 'undefined') {
-      // Primary Organization Schema - September 2025 Google "Perspective" Compliant
-      const organizationSchema = document.createElement('script');
-      organizationSchema.type = 'application/ld+json';
-      organizationSchema.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        "@id": "https://heritagestonebridge.com/#organization",
-        "name": "Heritage Stonebridge | Homes By Dr. Jan Duffy",
-        "alternateName": [
-          "Heritage at Stonebridge", 
-          "Heritage Stonebridge",
-          "Homes By Dr. Jan Duffy",
-          "Dr. Jan Duffy Real Estate", 
-          "Stonebridge Real Estate"
-        ],
-        "description": "Your local guide to Heritage at Stonebridge — Lennar's guard-gated 55+ community in Summerlin West (89138). Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices Nevada Properties (NV License S.0197614.LLC), helps buyers and sellers with resale and new-build homes, HOA questions, and fair comparisons to Sun City Summerlin and other Summerlin active-adult neighborhoods.",
-        "url": "https://heritagestonebridge.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://heritagestonebridge.com/images/heritage-stonebridge-logo.jpg",
-          "width": 600,
-          "height": 300
-        },
-        "image": {
-          "@type": "ImageObject", 
-          "url": "https://heritagestonebridge.com/images/dr-jan-duffy-headshot.jpg",
-          "width": 400,
-          "height": 400
-        },
-        "telephone": "+1-702-789-6561",
-        "email": "DrDuffySells@HeritageStonebridge.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Crossbridge Dr",
-          "addressLocality": "Las Vegas",
-          "addressRegion": "NV",
-          "postalCode": "89138",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "36.1716",
-          "longitude": "-115.3384"
-        },
-        "openingHoursSpecification": openingHoursSpecification,
-        "areaServed": [
-          {
-            "@type": "PostalCode",
-            "name": "89138",
-            "addressLocality": "Las Vegas",
-            "addressRegion": "NV"
-          },
-          {
-            "@type": "Place",
-            "name": "Summerlin West",
-            "containedInPlace": {
-              "@type": "City",
-              "name": "Las Vegas"
-            }
-          },
-          {
-            "@type": "City",
-            "name": "Las Vegas",
-            "containedInPlace": {
-              "@type": "State",
-              "name": "Nevada"
-            }
-          },
-          {
-            "@type": "City",
-            "name": "Summerlin", 
-            "containedInPlace": {
-              "@type": "State",
-              "name": "Nevada"
-            }
-          }
-        ],
-        "serviceType": [
-          "Luxury Home Sales",
-          "New Construction Homes", 
-          "Investment Properties",
-          "Heritage Community Specialist",
-          "Stonebridge Expert",
-          "Red Rock Canyon Properties",
-          "55+ Community Specialist",
-          "Active Adult Living"
-        ],
-        "knowsAbout": [
-          "Stonebridge Community",
-          "Heritage Homes",
-          "Red Rock Canyon Real Estate",
-          "Summerlin Properties",
-          "Las Vegas Luxury Market",
-          "Nevada Real Estate Law",
-          "55+ Communities",
-          "Active Adult Living",
-          "Gated Communities",
-          "Investment Analysis"
-        ],
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "Professional License",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Nevada Real Estate Division"
-          },
-          "identifier": "S.0197614.LLC"
-        },
-        "sameAs": [
-          "https://www.facebook.com/DrJanDuffyRealEstate",
-          "https://www.linkedin.com/in/drjanduffy",
-          "https://www.instagram.com/drjanduffylasvegas"
-        ],
-        "makesOffer": {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Real Estate Services",
-            "description": "Comprehensive real estate services including buying, selling, and investment consultation"
-          },
-          "areaServed": {
-            "@type": "State",
-            "name": "Nevada"
-          }
-        }
-      });
-
-      // Person Schema for Dr. Jan Duffy - Advanced Expertise Signals
-      const personSchema = document.createElement('script');
-      personSchema.type = 'application/ld+json';
-      personSchema.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://heritagestonebridge.com/about#person",
-        "name": "Dr. Jan Duffy",
-        "honorificPrefix": "Dr.",
-        "givenName": "Jan",
-        "familyName": "Duffy",
-        "jobTitle": "Real Estate Agent",
-        "description": "Licensed Nevada real estate professional with doctorate degree and 500+ successful transactions. Expert in Las Vegas luxury market, investment properties, and first-time homebuyer programs.",
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://heritagestonebridge.com/images/dr-jan-duffy-professional.jpg",
-          "width": 400,
-          "height": 400
-        },
-        "telephone": "+1-702-789-6561",
-        "email": "DrDuffySells@HeritageStonebridge.com",
-        "url": "https://heritagestonebridge.com/about",
-        "worksFor": {
-          "@type": "RealEstateAgent",
-          "@id": "https://heritagestonebridge.com/#organization"
-        },
-        "hasOccupation": {
-          "@type": "Occupation",
-          "name": "Real Estate Agent",
-          "occupationLocation": {
-            "@type": "State",
-            "name": "Nevada"
-          },
-          "skills": [
-            "Real Estate Sales",
-            "Market Analysis", 
-            "Investment Consulting",
-            "Luxury Home Marketing",
-            "Client Relations",
-            "55+ Community Specialist",
-            "Active Adult Living Expert"
-          ]
-        },
-        "knowsAbout": [
-          "Las Vegas Real Estate",
-          "Nevada Property Law",
-          "Investment Analysis",
-          "Market Trends",
-          "Luxury Properties",
-          "Stonebridge Community",
-          "Red Rock Canyon Properties"
-        ],
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Doctorate Degree",
-            "educationalLevel": "Doctoral"
-          },
-          {
-            "@type": "EducationalOccupationalCredential", 
-            "credentialCategory": "Real Estate License",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Nevada Real Estate Division"
-            },
-            "identifier": "S.0197614.LLC"
-          }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Las Vegas",
-          "addressRegion": "NV", 
-          "addressCountry": "US"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/drjanduffy",
-          "https://www.facebook.com/DrJanDuffyRealEstate"
-        ]
-      });
-
-      // FAQ Schema for Homepage
-      const faqSchema = document.createElement('script');
-      faqSchema.type = 'application/ld+json';
-      faqSchema.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What makes Heritage at Stonebridge special?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Heritage at Stonebridge is a premier 55+ active adult community in Summerlin, Las Vegas, featuring luxury homes, resort-style amenities, and stunning mountain views of Red Rock Canyon. The gated community offers resort-style amenities including clubhouse, swimming pools, fitness center, pickleball courts, and walking trails."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What types of homes are available in Heritage at Stonebridge?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Heritage at Stonebridge offers three distinct home collections: Cromwell (1,232-1,456 sq ft), Stirling (1,456-2,100 sq ft), and Evander (2,100-2,873 sq ft). All homes feature single-story living with luxury finishes and resort-style amenities."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How close is Heritage at Stonebridge to Red Rock Canyon?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Heritage at Stonebridge is located just 12 miles from Red Rock Canyon National Conservation Area, making it easy to enjoy hiking, rock climbing, and scenic drives in this natural wonder."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the HOA fee for Heritage at Stonebridge homes?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The HOA fee for Heritage at Stonebridge homes is approximately $410 per month, which includes maintenance of common areas, security, and access to all community amenities."
-            }
-          }
-        ]
-      });
-
-      // Breadcrumb Schema
-      const breadcrumbSchema = document.createElement('script');
-      breadcrumbSchema.type = 'application/ld+json';
-      breadcrumbSchema.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://heritagestonebridge.com"
-          }
-        ]
-      });
-
-      const residentialComplexScript = document.createElement('script');
-      residentialComplexScript.type = 'application/ld+json';
-      residentialComplexScript.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "ResidentialComplex",
-        "name": "Heritage at Stonebridge",
-        "description": "Luxury 55+ active adult community in Summerlin, Las Vegas featuring resort-style amenities and stunning mountain views.",
-        "url": "https://heritagestonebridge.com",
-        "image": "https://heritagestonebridge.com/images/heritage-stonebridge.jpg",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Crossbridge Dr",
-          "addressLocality": "Las Vegas",
-          "addressRegion": "NV",
-          "postalCode": "89138",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "36.1699",
-          "longitude": "-115.1398"
-        },
-        "amenityFeature": [
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Resort-Style Pool",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification", 
-            "name": "Golf Course Access",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "24/7 Security",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Gated Community",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Mountain Views",
-            "value": true
-          }
-        ],
-        "numberOfUnits": "500+",
-        "developer": {
-          "@type": "Organization",
-          "name": "Heritage at Stonebridge Development"
-        },
-        "propertyType": "55+ Active Adult Community",
-        "ageRestriction": "55+",
-        "hasMap": "https://www.google.com/maps/place/Heritage+at+Stonebridge"
-      });
-
-      // Inject all schemas
-      document.head.appendChild(organizationSchema);
-      document.head.appendChild(personSchema);
-      document.head.appendChild(faqSchema);
-      document.head.appendChild(breadcrumbSchema);
-      document.head.appendChild(residentialComplexScript);
-    }
-  });
-
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={homeFaqScript} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={homeBreadcrumbScript} />
       {/* Hero Section */}
       <section class="relative bg-hsb-cream py-16 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 py-8 relative z-10">
@@ -453,6 +151,25 @@ export default component$(() => {
         </div>
       </section>
 
+      <section class="bg-hsb-sand py-16">
+        <div class="max-w-5xl mx-auto px-4">
+          <h2 class="text-3xl font-display text-hsb-dark text-center mb-4">
+            Heritage at Stonebridge questions
+          </h2>
+          <p class="text-center text-hsb-text mb-10 max-w-2xl mx-auto">
+            Straight answers about buying, selling, and living in this Summerlin West 55+ community.
+          </p>
+          <div class="space-y-6">
+            {homeFaqs.map((item) => (
+              <article key={item.question} class="rounded-2xl bg-white p-6 shadow-sm">
+                <h3 class="font-display text-2xl text-hsb-dark">{item.question}</h3>
+                <p class="mt-2 text-hsb-text">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section class="bg-hsb-dark py-16">
         <div class="max-w-7xl mx-auto px-4 text-center">
@@ -499,12 +216,12 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Heritage at Stonebridge - Luxury 55+ Communities in Summerlin, Las Vegas | Dr. Jan Duffy",
+  title: "Heritage at Stonebridge | 55+ Summerlin, NV",
   meta: [
     {
       name: "description",
       content:
-        "Discover luxury 55+ active adult communities near Red Rock Canyon in Summerlin, Las Vegas. Heritage at Stonebridge offers gated living, resort amenities & stunning mountain views. Dr. Jan Duffy, your 55+ specialist - Call (702) 789-6561",
+        "421 guard-gated Lennar homes in Summerlin West (89138). Clubhouse pools, fitness, and pickleball. Dr. Jan Duffy, NV license S.0197614.LLC. Call (702) 789-6561.",
     },
     // Enhanced Meta Tags for AI & Search Engine Understanding
     {
@@ -544,12 +261,24 @@ export const head: DocumentHead = {
     // Open Graph for social sharing
     {
       property: "og:title",
-      content: "Las Vegas 55+ Communities Red Rock Canyon | Heritage at Stonebridge",
+      content: "Heritage at Stonebridge | 55+ Summerlin, NV",
     },
     {
       property: "og:description",
       content:
-        "Discover luxury 55+ active adult communities near Red Rock Canyon. Heritage at Stonebridge offers gated living, resort amenities & mountain views in Summerlin.",
+        "421 guard-gated Lennar homes in Summerlin West (89138). Clubhouse pools, fitness, and pickleball. Dr. Jan Duffy. Call (702) 789-6561.",
+    },
+    {
+      property: "og:image",
+      content: DEFAULT_OG_IMAGE,
+    },
+    {
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      property: "og:image:height",
+      content: "630",
     },
     {
       property: "og:type",
@@ -589,13 +318,17 @@ export const head: DocumentHead = {
       content: "@heritage_stonebridge",
     },
     {
+      name: "twitter:image",
+      content: DEFAULT_OG_IMAGE,
+    },
+    {
       name: "twitter:title",
-      content: "Las Vegas 55+ Communities Red Rock Canyon | Heritage at Stonebridge",
+      content: "Heritage at Stonebridge | 55+ Summerlin, NV",
     },
     {
       name: "twitter:description",
       content:
-        "Discover luxury 55+ active adult communities near Red Rock Canyon. Heritage at Stonebridge offers gated living, resort amenities & mountain views in Summerlin.",
+        "421 guard-gated Lennar homes in Summerlin West (89138). Clubhouse pools, fitness, and pickleball. Dr. Jan Duffy. Call (702) 789-6561.",
     },
     {
       name: "author",

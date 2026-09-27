@@ -40,6 +40,25 @@ export function faqJsonLd(questions: ReadonlyArray<{ question: string; answer: s
   });
 }
 
+export function breadcrumbJsonLd(
+  items: ReadonlyArray<{ name: string; item: string }>,
+) {
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((entry, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: entry.name,
+      item: entry.item,
+    })),
+  });
+}
+
+/** Default social preview image (1200×630 hero). */
+export const DEFAULT_OG_IMAGE =
+  "https://heritagestonebridge.com/images/heritage-stonebridge-hero.webp";
+
 export const communityAmenities = [
   {
     title: "Heated pools",
