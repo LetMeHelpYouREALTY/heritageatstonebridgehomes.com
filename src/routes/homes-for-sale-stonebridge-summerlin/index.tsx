@@ -1,5 +1,6 @@
 import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { AmenityMapSection } from "~/components/amenities/AmenityMapSection";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 import { schemaOpeningHours } from "~/config/business";
@@ -274,6 +275,11 @@ export default component$(() => {
           </div>
         </div>
       </section>
+
+      <AmenityMapSection
+        title="What's near Stonebridge listings"
+        lede="See healthcare, golf, parks, and grocery around Heritage at Stonebridge before you schedule a gate tour."
+      />
 
       {/* Featured Properties */}
       <section class="py-16 bg-white">

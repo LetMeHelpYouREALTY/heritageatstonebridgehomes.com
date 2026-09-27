@@ -1,5 +1,6 @@
 import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { AmenityMapSection } from "~/components/amenities/AmenityMapSection";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutHeroWidget } from "~/components/real-estate/RealScoutHeroWidget";
 import { openingHoursSpecification } from "~/config/business";
@@ -424,6 +425,11 @@ export default component$(() => {
           </div>
         </div>
       </section>
+
+      <AmenityMapSection
+        title="What's Nearby Heritage at Stonebridge"
+        lede="Healthcare, golf, parks, and grocery around Summerlin West — centered on the clubhouse at 930 Silverfir Ct."
+      />
 
       {/* Why Choose Heritage Section */}
       <section class="py-16 bg-white">
