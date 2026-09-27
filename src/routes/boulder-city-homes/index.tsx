@@ -167,7 +167,7 @@ export default component$(() => {
                 <li class="flex items-start">
                   <span class="text-teal-500 mr-3 mt-1">✓</span>
                   <div>
-                    <strong>No Gaming:</strong> Unique in Nevada - no casinos, creating a family-friendly environment
+                    <strong>No Gaming:</strong> Boulder City does not allow casinos.
                   </div>
                 </li>
                 <li class="flex items-start">

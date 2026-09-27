@@ -161,7 +161,7 @@ export default component$(() => {
                 <li class="flex items-start">
                   <span class="text-green-500 mr-3 mt-1">✓</span>
                   <div>
-                    <strong>Top-Rated Schools:</strong> Excellent public and private schools serving families
+                    <strong>Downtown Summerlin:</strong> Shopping, dining, and services at Downtown Summerlin
                   </div>
                 </li>
                 <li class="flex items-start">
@@ -254,7 +254,7 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">The Arbors</h3>
-              <p class="text-gray-600 mb-4">Family-friendly community with parks, trails, and excellent schools.</p>
+              <p class="text-gray-600 mb-4">Parks, trails, and a wide range of home sizes.</p>
               <a href="/the-arbors-summerlin" class="text-green-600 hover:text-green-800 font-semibold">View Arbors Homes →</a>
             </div>
           </div>

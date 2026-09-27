@@ -248,7 +248,7 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Resale</h3>
-              <p class="text-gray-600 mb-4">$350,000+ - Established community with mature amenities</p>
+              <p class="text-gray-600 mb-4">$350,000+ — resale homes with mature amenities</p>
               <ul class="space-y-2 text-gray-600 mb-4">
                 <li>• Mature landscaping</li>
                 <li>• Established amenities</li>

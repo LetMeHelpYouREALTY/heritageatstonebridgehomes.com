@@ -112,7 +112,7 @@ export default component$(() => {
             "name": "Why choose Summerlin for 55+ living?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Summerlin offers master-planned community amenities, championship golf courses, Red Rock Canyon access, world-class healthcare, Downtown Summerlin shopping, and a safe, well-maintained environment perfect for active adults."
+              "text": "Summerlin offers master-planned community amenities, championship golf courses, Red Rock Canyon access, world-class healthcare, Downtown Summerlin shopping, and maintained parks, paths, and common areas."
             }
           },
           {
@@ -245,7 +245,7 @@ export default component$(() => {
                 <li>• Recreation centers and pools</li>
                 <li>• Extensive social clubs</li>
                 <li>• Mature landscaping</li>
-                <li>• Established community</li>
+                <li>• Resale homes</li>
                 <li>• Strong resale market</li>
               </ul>
               <div class="text-lg font-bold text-green-600 mb-4">$500,000 - $1,500,000</div>
@@ -299,13 +299,13 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">The Arbors</h3>
-              <p class="text-gray-600 mb-4">Family-friendly community with parks, trails, and excellent schools</p>
+              <p class="text-gray-600 mb-4">Parks, trails, and a wide range of home sizes</p>
               <ul class="space-y-2 text-gray-600 mb-4">
                 <li>• Parks and trails</li>
-                <li>• Excellent schools</li>
-                <li>• Family amenities</li>
+                <li>• Walking paths</li>
+                <li>• Clubhouse access</li>
                 <li>• Community events</li>
-                <li>• Safe environment</li>
+                <li>• Maintained common areas</li>
                 <li>• Convenient location</li>
               </ul>
               <div class="text-lg font-bold text-green-600 mb-4">$400,000 - $1,200,000</div>

@@ -2,6 +2,7 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { schemaOpeningHours } from "~/config/business";
 
 export const head: DocumentHead = {
   title: "Homes for Sale in Stonebridge, Summerlin, Las Vegas NV | Dr. Jan Duffy",
@@ -157,7 +158,7 @@ export default component$(() => {
           "Luxury Home Sales",
           "Gated Community Properties",
         ],
-        openingHours: "Mo-Fr 09:00-18:00, Sa 10:00-16:30",
+        openingHours: schemaOpeningHours,
         sameAs: [
           "https://www.facebook.com/DrJanDuffyRealEstate",
           "https://www.linkedin.com/in/drjanduffy",
@@ -325,7 +326,7 @@ export default component$(() => {
                 </div>
               </div>
               <div class="p-6">
-                <h4 class="text-xl font-semibold mb-3">Spacious Family Homes</h4>
+                <h4 class="text-xl font-semibold mb-3">Spacious floor plans</h4>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• 3-4 Bedrooms, 2.5-3 Bathrooms</li>
                   <li>• Great rooms with fireplaces</li>

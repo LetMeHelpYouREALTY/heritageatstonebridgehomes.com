@@ -42,7 +42,7 @@ export const SocialProof = component$(() => {
         </div>
         <h3 class="text-2xl font-bold text-gray-900 mb-2">What Our Residents Say</h3>
         <p class="text-gray-600">
-          Join over 200 happy families who call Heritage at Stonebridge home
+          See why residents choose Heritage at Stonebridge
         </p>
       </div>
 
@@ -84,7 +84,7 @@ export const SocialProof = component$(() => {
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div class="bg-white rounded-lg p-4 shadow-md">
           <div class="text-2xl font-bold text-blue-600 mb-1">200+</div>
-          <div class="text-sm text-gray-600">Happy Families</div>
+          <div class="text-sm text-gray-600">Residents</div>
         </div>
         <div class="bg-white rounded-lg p-4 shadow-md">
           <div class="text-2xl font-bold text-blue-600 mb-1">4.9★</div>

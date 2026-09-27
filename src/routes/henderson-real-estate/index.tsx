@@ -4,11 +4,11 @@ import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyW
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
 
 export const head: DocumentHead = {
-  title: "Henderson Real Estate | Dr. Jan Duffy - Family-Friendly Communities",
+  title: "Henderson Real Estate | Dr. Jan Duffy - Parks, Golf, and Lake Mead",
   meta: [
     {
       name: "description",
-      content: "Discover Henderson real estate with Dr. Jan Duffy. Family-friendly community with excellent schools, parks, and diverse housing options. Call 702-789-6561.",
+      content: "Discover Henderson real estate with Dr. Jan Duffy. Parks, Lake Mead access, golf, and a wide range of housing. Call 702-789-6561.",
     },
     {
       name: "robots",
@@ -24,7 +24,7 @@ export const head: DocumentHead = {
     },
     {
       name: "audience",
-      content: "families, luxury-home-buyers",
+      content: "home-buyers, luxury-home-buyers",
     },
     {
       name: "location",
@@ -32,11 +32,11 @@ export const head: DocumentHead = {
     },
     {
       property: "og:title",
-      content: "Henderson Real Estate | Dr. Jan Duffy - Family-Friendly Communities",
+      content: "Henderson Real Estate | Dr. Jan Duffy - Parks, Golf, and Lake Mead",
     },
     {
       property: "og:description",
-      content: "Discover Henderson real estate in family-friendly community with excellent schools and diverse housing options.",
+      content: "Discover Henderson real estate with parks, Lake Mead access, and a wide range of housing options.",
     },
     {
       property: "og:type",
@@ -52,11 +52,11 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:title",
-      content: "Henderson Real Estate | Dr. Jan Duffy - Family-Friendly Communities",
+      content: "Henderson Real Estate | Dr. Jan Duffy - Parks, Golf, and Lake Mead",
     },
     {
       name: "twitter:description",
-      content: "Discover Henderson real estate in family-friendly community with excellent schools and diverse housing options.",
+      content: "Discover Henderson real estate with parks, Lake Mead access, and a wide range of housing options.",
     },
   ],
 };
@@ -73,7 +73,7 @@ export default component$(() => {
             Henderson Real Estate
           </h1>
           <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Discover family-friendly living in Henderson, Nevada's second-largest city with excellent schools, parks, and diverse housing options
+            Henderson is Nevada's second-largest city, with parks, Lake Mead access, and a wide range of housing
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
@@ -92,7 +92,7 @@ export default component$(() => {
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Henderson?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-              Henderson offers the perfect blend of suburban charm and urban convenience, with excellent schools, beautiful parks, and diverse housing options for every lifestyle.
+              Henderson combines parks and trails with shopping at Galleria at Sunset and The District, plus a wide range of housing.
             </p>
           </div>
           
@@ -101,8 +101,8 @@ export default component$(() => {
               <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span class="text-2xl">🎓</span>
               </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Excellent Schools</h3>
-              <p class="text-gray-600">Top-rated public and private schools with strong academic programs</p>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Lake Mead</h3>
+              <p class="text-gray-600">Lake Mead National Recreation Area and Sloan Canyon are a short drive from Henderson</p>
             </div>
             
             <div class="text-center">
@@ -138,7 +138,7 @@ export default component$(() => {
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">The Henderson Lifestyle</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-              Henderson offers the perfect blend of suburban charm, excellent schools, and convenient access to Las Vegas amenities, making it ideal for families and active adults.
+              Henderson offers parks, golf, and access to Las Vegas amenities, including 55+ communities such as Sun City Anthem.
             </p>
           </div>
           
@@ -149,7 +149,7 @@ export default component$(() => {
                 <li class="flex items-start">
                   <span class="text-blue-500 mr-3 mt-1">✓</span>
                   <div>
-                    <strong>Family-Friendly:</strong> Top-rated schools and safe neighborhoods perfect for families
+                    <strong>Outdoor access:</strong> Lake Mead, Sloan Canyon, and city parks and trails
                   </div>
                 </li>
                 <li class="flex items-start">
@@ -217,14 +217,14 @@ export default component$(() => {
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Henderson Communities</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore Henderson's diverse neighborhoods, from master-planned communities to established areas with unique character and amenities.
+              Explore Henderson neighborhoods, from master-planned communities to areas with mature trees, parks, and their own amenities.
             </p>
           </div>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Green Valley</h3>
-              <p class="text-gray-600 mb-4">Established community with mature trees, parks, and excellent schools.</p>
+              <p class="text-gray-600 mb-4">Mature trees, parks, and trails in Green Valley.</p>
               <a href="/green-valley-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Green Valley Homes →</a>
             </div>
             
@@ -388,7 +388,7 @@ export default component$(() => {
         <div class="max-w-7xl mx-auto px-4 text-center">
           <h2 class="text-3xl font-bold mb-4">Ready to Find Your Henderson Dream Home?</h2>
           <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let Dr. Jan Duffy help you discover the perfect home in Henderson's family-friendly community.
+            Let Dr. Jan Duffy help you compare Henderson homes, from Green Valley to Sun City Anthem.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">

@@ -222,7 +222,7 @@ export default component$(() => {
                   </a>
                 </h3>
                 <p class="text-gray-600 mb-4">
-                  In-depth analysis of Henderson's real estate market, including price trends, inventory levels, and best neighborhoods for families and retirees.
+                  In-depth analysis of Henderson's real estate market, including price trends, inventory levels, and 55+ communities such as Sun City Anthem.
                 </p>
                 <div class="flex items-center justify-between">
                   <span class="text-sm text-gray-500">Dr. Jan Duffy</span>

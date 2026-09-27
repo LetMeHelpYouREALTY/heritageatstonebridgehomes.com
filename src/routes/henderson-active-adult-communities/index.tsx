@@ -73,7 +73,7 @@ export default component$(() => {
         "@type": "Service",
         "@id": "https://heritagestonebridge.com/henderson-active-adult-communities#service",
         "name": "Henderson Active Adult Communities",
-        "description": "Expert real estate services specializing in active adult communities in Henderson Las Vegas, providing comprehensive guidance for 55+ living in family-friendly neighborhoods.",
+        "description": "Expert real estate services specializing in active adult communities in Henderson, including Sun City Anthem, MacDonald Ranch, and Seven Hills.",
         "provider": {
           "@type": "RealEstateAgent",
           "name": "Dr. Jan Duffy",
@@ -88,7 +88,7 @@ export default component$(() => {
         "offers": {
           "@type": "Offer",
           "priceRange": "$400,000-$3,000,000",
-          "description": "Henderson active adult communities with family-friendly amenities"
+          "description": "Henderson active adult communities with golf, parks, and clubhouses"
         }
       });
 
@@ -104,7 +104,7 @@ export default component$(() => {
             "name": "What are the best active adult communities in Henderson?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The best active adult communities in Henderson include Sun City Anthem (premier 55+), MacDonald Ranch (luxury golf course), Seven Hills (gated luxury), Green Valley (established), and Inspirada (modern master-planned)."
+              "text": "Active adult communities in Henderson include Sun City Anthem (55+), MacDonald Ranch (golf course), Seven Hills (gated custom homes), Green Valley (parks and trails), and Inspirada (master-planned)."
             }
           },
           {
@@ -112,7 +112,7 @@ export default component$(() => {
             "name": "Why choose Henderson for active adult living?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Henderson offers family-friendly neighborhoods, excellent schools, beautiful parks, Lake Mead access, strong community values, and convenient access to Las Vegas amenities while maintaining a suburban feel."
+              "text": "Henderson offers parks, Lake Mead access, golf communities, and a short drive to Las Vegas amenities."
             }
           },
           {
@@ -171,7 +171,7 @@ export default component$(() => {
             Henderson Active Adult Communities
           </h1>
           <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Discover premier 55+ communities in Henderson with family-friendly neighborhoods, golf courses, and Lake Mead access
+            Discover 55+ communities in Henderson with golf courses, parks, and Lake Mead access
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="http://drjanduffy.realscout.com/onboarding" target="_blank" rel="noopener" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center">
@@ -196,8 +196,8 @@ export default component$(() => {
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Family-Friendly Environment</h3>
-              <p class="text-gray-600">Safe neighborhoods with excellent schools, parks, and strong community values</p>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Parks and Trails</h3>
+              <p class="text-gray-600">City parks, trails, and golf communities across Henderson</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-center">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Lake Mead Access</h3>
@@ -230,7 +230,7 @@ export default component$(() => {
                 <li>• Recreation centers and pools</li>
                 <li>• Extensive social clubs</li>
                 <li>• Mature landscaping</li>
-                <li>• Established community</li>
+                <li>• Resale homes</li>
                 <li>• Strong resale market</li>
               </ul>
               <div class="text-lg font-bold text-blue-600 mb-4">$500,000 - $1,500,000</div>
@@ -269,12 +269,12 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Green Valley</h3>
-              <p class="text-gray-600 mb-4">Established community with mature trees, parks, and excellent schools</p>
+              <p class="text-gray-600 mb-4">Mature trees, parks, and trails in Green Valley</p>
               <ul class="space-y-2 text-gray-600 mb-4">
                 <li>• Mature landscaping</li>
                 <li>• Parks and trails</li>
-                <li>• Excellent schools</li>
-                <li>• Established community</li>
+                <li>• Walking paths</li>
+                <li>• Resale homes</li>
                 <li>• Convenient location</li>
                 <li>• Strong resale market</li>
               </ul>
@@ -305,8 +305,8 @@ export default component$(() => {
                 <li>• Parks and trails</li>
                 <li>• Resort amenities</li>
                 <li>• Community events</li>
-                <li>• Family-friendly</li>
-                <li>• Established community</li>
+                <li>• Clubhouse access</li>
+                <li>• Resale homes</li>
               </ul>
               <div class="text-lg font-bold text-blue-600 mb-4">$600,000 - $2,000,000</div>
               <a href="/anthem-henderson" class="text-blue-600 hover:text-blue-800 font-semibold">View Anthem →</a>
@@ -353,15 +353,15 @@ export default component$(() => {
               <ul class="space-y-3 text-gray-700 mb-6">
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
-                  Family-friendly neighborhoods with strong values
+                  Golf, clubhouses, and 55+ communities such as Sun City Anthem
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
-                  Excellent schools and healthcare facilities
+                  St. Rose Dominican and Henderson Hospital nearby
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
-                  Safe, well-maintained communities
+                  Well-maintained streets, parks, and common areas
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-green-600 rounded-full mr-3"></span>

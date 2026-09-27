@@ -40,6 +40,24 @@ export const Footer = component$(() => {
                 <span class="mr-2">🕒</span>
                 <span>{business.hoursDisplay}</span>
               </p>
+              <p class="flex flex-wrap gap-x-3 gap-y-1">
+                <a
+                  href={business.mapsUrl}
+                  class="hover:text-blue-400 underline-offset-2 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Directions
+                </a>
+                <a
+                  href={business.reviewsUrl}
+                  class="hover:text-blue-400 underline-offset-2 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Google Reviews
+                </a>
+              </p>
             </div>
           </div>
 

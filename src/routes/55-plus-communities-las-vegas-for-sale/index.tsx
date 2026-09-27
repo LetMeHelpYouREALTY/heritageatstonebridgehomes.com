@@ -239,13 +239,13 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Summerlin</h3>
-              <p class="text-gray-600 mb-4">Established community with resale homes and mature amenities</p>
+              <p class="text-gray-600 mb-4">Resale homes and mature amenities</p>
               <ul class="space-y-2 text-gray-600 mb-4">
                 <li>• Multiple golf courses</li>
                 <li>• Recreation centers</li>
                 <li>• Active social scene</li>
                 <li>• Mature landscaping</li>
-                <li>• Established community</li>
+                <li>• Resale homes</li>
                 <li>• Strong resale market</li>
               </ul>
               <div class="text-lg font-bold text-indigo-600 mb-4">Resale Homes Available</div>

@@ -24,7 +24,7 @@ export const head: DocumentHead = {
     },
     {
       name: "audience",
-      content: "families, luxury-home-buyers",
+      content: "home-buyers, luxury-home-buyers",
     },
     {
       name: "location",
@@ -118,7 +118,7 @@ export default component$(() => {
                 <span class="text-2xl">💰</span>
               </div>
               <h3 class="text-xl font-bold text-gray-900 mb-3">Great Value</h3>
-              <p class="text-gray-600">More home for your money compared to established areas</p>
+              <p class="text-gray-600">More square footage for the price than many Summerlin resales</p>
             </div>
             
             <div class="text-center">
@@ -155,7 +155,7 @@ export default component$(() => {
                 <li class="flex items-start">
                   <span class="text-purple-500 mr-3 mt-1">✓</span>
                   <div>
-                    <strong>Great Value:</strong> More home for your money compared to established areas like Summerlin
+                    <strong>Square footage:</strong> More square footage for the price than many Summerlin resales
                   </div>
                 </li>
                 <li class="flex items-start">
@@ -173,7 +173,7 @@ export default component$(() => {
                 <li class="flex items-start">
                   <span class="text-purple-500 mr-3 mt-1">✓</span>
                   <div>
-                    <strong>Family-Friendly:</strong> New schools, parks, and recreational facilities designed for modern living
+                    <strong>Parks and recreation:</strong> Parks and recreational facilities across Northwest Las Vegas
                   </div>
                 </li>
               </ul>
@@ -230,13 +230,13 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Centennial Hills</h3>
-              <p class="text-gray-600 mb-4">Established community with parks, schools, and convenient shopping.</p>
+              <p class="text-gray-600 mb-4">Parks, shopping, and resale homes in Centennial Hills.</p>
               <a href="/centennial-hills-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Centennial Hills Homes →</a>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Aliante</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with golf course, parks, and family amenities.</p>
+              <p class="text-gray-600 mb-4">Master-planned community with a golf course, parks, and a clubhouse.</p>
               <a href="/aliante-homes" class="text-purple-600 hover:text-purple-800 font-semibold">View Aliante Homes →</a>
             </div>
             

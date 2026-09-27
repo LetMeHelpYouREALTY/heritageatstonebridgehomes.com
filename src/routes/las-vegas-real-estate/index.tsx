@@ -2,6 +2,7 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
+import { openingHoursSpecification } from "~/config/business";
 
 export const head: DocumentHead = {
   title: "Las Vegas Real Estate | Dr. Jan Duffy - 55+ Communities Specialist",
@@ -95,20 +96,7 @@ export default component$(() => {
           "latitude": "36.1699",
           "longitude": "-115.1398"
         },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification", 
-            "dayOfWeek": "Saturday",
-            "opens": "10:00",
-            "closes": "16:30"
-          }
-        ],
+        "openingHoursSpecification": openingHoursSpecification,
         "priceRange": "$$",
         "serviceArea": {
           "@type": "GeoCircle",
@@ -312,7 +300,7 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Henderson</h3>
-              <p class="text-gray-600 mb-4">Family-friendly community with excellent schools, parks, and diverse housing options.</p>
+              <p class="text-gray-600 mb-4">Parks and a wide range of housing options in Henderson.</p>
               <a href="/henderson-real-estate" class="text-blue-600 hover:text-blue-800 font-semibold">Explore Henderson Homes →</a>
             </div>
             

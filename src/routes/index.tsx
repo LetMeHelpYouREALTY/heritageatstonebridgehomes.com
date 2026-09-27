@@ -2,6 +2,7 @@ import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutHeroWidget } from "~/components/real-estate/RealScoutHeroWidget";
+import { openingHoursSpecification } from "~/config/business";
 
 export default component$(() => {
   // Inject JSON-LD structured data
@@ -51,36 +52,7 @@ export default component$(() => {
           "latitude": "36.1716",
           "longitude": "-115.3384"
         },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "10:00",
-            "closes": "16:30"
-          }
-        ],
-        "specialOpeningHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "validFrom": "2026-07-03",
-            "validThrough": "2026-07-03",
-            "opens": "00:00",
-            "closes": "00:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "validFrom": "2026-07-04",
-            "validThrough": "2026-07-04",
-            "opens": "00:00",
-            "closes": "00:00"
-          }
-        ],
+        "openingHoursSpecification": openingHoursSpecification,
         "areaServed": [
           {
             "@type": "PostalCode",

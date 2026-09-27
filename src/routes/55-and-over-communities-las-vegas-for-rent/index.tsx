@@ -224,13 +224,13 @@ export default component$(() => {
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Sun City Summerlin</h3>
-              <p class="text-gray-600 mb-4">Established community with occasional rental homes available from owners</p>
+              <p class="text-gray-600 mb-4">Occasional rental homes available from owners</p>
               <ul class="space-y-2 text-gray-600 mb-4">
                 <li>• Multiple golf courses</li>
                 <li>• Recreation centers</li>
                 <li>• Active social scene</li>
                 <li>• Mature landscaping</li>
-                <li>• Established community</li>
+                <li>• Resale homes</li>
                 <li>• Owner rentals available</li>
               </ul>
               <div class="text-lg font-bold text-teal-600 mb-4">$2,500 - $4,500/month</div>

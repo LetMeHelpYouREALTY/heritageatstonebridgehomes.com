@@ -2,8 +2,9 @@
  * Google Business Profile NAP — single source of truth.
  * Keep visible text and LocalBusiness JSON-LD in exact lockstep with GBP.
  *
- * Friday hours in the GBP paste showed 9:00 AM–6:00 AM. That overnight window
- * is treated as the 6:00 PM close that matches Monday–Thursday.
+ * Verified 2026-09-27 via the Business Information API for
+ * "Heritage Stonebridge | Homes By Dr. Jan Duffy" (place ChIJOdHQ97m_yIARlY1CLNq9RSY).
+ * Regular hours are 8:00 AM–8:00 PM all seven days. No special hours were returned.
  */
 export const GBP_BUSINESS_NAME = "Heritage Stonebridge | Homes By Dr. Jan Duffy";
 
@@ -26,7 +27,8 @@ export const business = {
   smsHref: "sms:+17027896561",
   email: "DrDuffySells@HeritageStonebridge.com",
   website: "https://www.heritagestonebridge.com/",
-  canonicalUrl: "https://heritagestonebridge.com",
+  canonicalUrl: "https://www.heritagestonebridge.com",
+  placeId: "ChIJOdHQ97m_yIARlY1CLNq9RSY",
   license: "S.0197614.LLC",
   broker: "Berkshire Hathaway HomeServices Nevada Properties",
   streetAddress: "Crossbridge Dr",
@@ -39,52 +41,31 @@ export const business = {
     latitude: "36.1716",
     longitude: "-115.3384",
   },
-  hoursDisplay: "Mon-Fri: 9:00 AM–6:00 PM | Sat: 10:00 AM–4:30 PM | Sun: Closed",
+  hoursDisplay: "Open daily, 8:00 AM–8:00 PM",
   hoursLines: [
-    "Monday: 9:00 AM–6:00 PM",
-    "Tuesday: 9:00 AM–6:00 PM",
-    "Wednesday: 9:00 AM–6:00 PM",
-    "Thursday: 9:00 AM–6:00 PM",
-    "Friday: 9:00 AM–6:00 PM",
-    "Saturday: 10:00 AM–4:30 PM",
-    "Sunday: Closed",
+    "Monday: 8:00 AM–8:00 PM",
+    "Tuesday: 8:00 AM–8:00 PM",
+    "Wednesday: 8:00 AM–8:00 PM",
+    "Thursday: 8:00 AM–8:00 PM",
+    "Friday: 8:00 AM–8:00 PM",
+    "Saturday: 8:00 AM–8:00 PM",
+    "Sunday: 8:00 AM–8:00 PM",
   ],
-  mapsUrl: "https://maps.google.com/?q=Crossbridge+Dr,+Las+Vegas,+NV+89138",
+  mapsUrl: "https://maps.google.com/maps?cid=2757819091577376149",
   mapsEmbedUrl:
-    "https://maps.google.com/maps?q=Crossbridge+Dr,+Las+Vegas,+NV+89138&output=embed",
-  reviewsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Heritage+Stonebridge+Homes+By+Dr.+Jan+Duffy+Las+Vegas+NV+89138",
+    "https://maps.google.com/maps?q=place_id:ChIJOdHQ97m_yIARlY1CLNq9RSY&output=embed",
+  reviewsUrl: "https://search.google.com/local/reviews?placeid=ChIJOdHQ97m_yIARlY1CLNq9RSY",
 } as const;
+
+/** Schema.org openingHours string. Matches the seven GBP regular-hour periods. */
+export const schemaOpeningHours = "Mo-Su 08:00-20:00";
 
 export const openingHoursSpecification = [
   {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "18:00",
-  },
-  {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: "Saturday",
-    opens: "10:00",
-    closes: "16:30",
-  },
-] as const;
-
-export const specialOpeningHoursSpecification = [
-  {
-    "@type": "OpeningHoursSpecification",
-    validFrom: "2026-07-03",
-    validThrough: "2026-07-03",
-    opens: "00:00",
-    closes: "00:00",
-  },
-  {
-    "@type": "OpeningHoursSpecification",
-    validFrom: "2026-07-04",
-    validThrough: "2026-07-04",
-    opens: "00:00",
-    closes: "00:00",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    opens: "08:00",
+    closes: "20:00",
   },
 ] as const;
 
@@ -134,7 +115,7 @@ export const localBusinessJsonLd = {
   name: business.name,
   alternateName: [...business.alternateName],
   description: business.description,
-  url: business.canonicalUrl,
+  url: business.website,
   telephone: business.telephone,
   email: business.email,
   image: "https://heritagestonebridge.com/images/dr-jan-duffy-headshot.jpg",
@@ -146,8 +127,8 @@ export const localBusinessJsonLd = {
     longitude: business.geo.longitude,
   },
   hasMap: business.mapsUrl,
+  openingHours: schemaOpeningHours,
   openingHoursSpecification,
-  specialOpeningHoursSpecification,
   areaServed,
   priceRange: "$$",
   amenityFeature: [

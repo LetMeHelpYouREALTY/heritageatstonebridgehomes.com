@@ -242,7 +242,7 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Mountain's Edge</h3>
-              <p class="text-gray-600 mb-4">Master-planned community with mountain views and family-friendly amenities.</p>
+              <p class="text-gray-600 mb-4">Master-planned community with mountain views, parks, and resort amenities.</p>
               <a href="/mountains-edge-homes" class="text-red-600 hover:text-red-800 font-semibold">View Mountain's Edge Homes →</a>
             </div>
             

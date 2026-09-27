@@ -169,11 +169,11 @@ export default component$(() => {
             <div class="bg-white rounded-lg shadow-lg p-6">
               <div class="flex items-center mb-4">
                 <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <span class="text-blue-600 text-xl">👨‍👩‍👧‍👦</span>
+                  <span class="text-blue-600 text-xl">🏙️</span>
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gray-900">Henderson</h3>
-                  <div class="text-sm text-gray-500">Family-Friendly City</div>
+                  <div class="text-sm text-gray-500">Nevada's second-largest city</div>
                 </div>
               </div>
               <div class="space-y-3 mb-6">
@@ -195,7 +195,7 @@ export default component$(() => {
                 </div>
               </div>
               <div class="text-sm text-gray-600">
-                <strong>Key Insight:</strong> Henderson's excellent schools and family amenities continue to attract buyers, with Sun City Anthem leading 55+ community growth.
+                <strong>Key Insight:</strong> Henderson buyers are comparing parks, Lake Mead access, and Sun City Anthem's 55+ inventory.
               </div>
             </div>
 
@@ -321,7 +321,7 @@ export default component$(() => {
               </div>
               <ul class="space-y-2 text-gray-600">
                 <li>• Northwest Las Vegas new construction</li>
-                <li>• Henderson family communities</li>
+                <li>• Henderson 55+ communities</li>
                 <li>• Red Rock Canyon luxury properties</li>
                 <li>• 55+ community developments</li>
               </ul>

@@ -1,11 +1,7 @@
 import { component$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
-import {
-  business,
-  openingHoursSpecification,
-  specialOpeningHoursSpecification,
-} from "~/config/business";
+import { business, openingHoursSpecification } from "~/config/business";
 
 export const head: DocumentHead = {
   title: "Contact Dr. Jan Duffy - Las Vegas Real Estate Expert | Heritage at Stonebridge",
@@ -99,7 +95,6 @@ export default component$(() => {
           "longitude": "-115.3384"
         },
         "openingHoursSpecification": openingHoursSpecification,
-        "specialOpeningHoursSpecification": specialOpeningHoursSpecification,
         "priceRange": "$$",
         "serviceArea": {
           "@type": "GeoCircle",
@@ -233,7 +228,7 @@ export default component$(() => {
             "name": "What are Dr. Jan Duffy's business hours?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Dr. Jan Duffy's business hours are Monday–Friday 9:00 AM–6:00 PM, Saturday 10:00 AM–4:30 PM, and Sunday closed. Independence Day observed (July 3, 2026) and Independence Day (July 4, 2026) are closed."
+              "text": `Dr. Jan Duffy's business hours are ${business.hoursDisplay}.`
             }
           },
           {
@@ -360,9 +355,9 @@ export default component$(() => {
               <h3 class="text-xl font-semibold text-gray-900 mb-2">Hours</h3>
               <p class="text-gray-600 mb-4">Business hours</p>
               <div class="text-orange-600 font-semibold text-sm">
-                <p>Mon-Fri: 9:00 AM–6:00 PM</p>
-                <p>Sat: 10:00 AM–4:30 PM</p>
-                <p>Sun: Closed</p>
+                {business.hoursLines.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
               </div>
             </div>
           </div>
@@ -530,7 +525,7 @@ export default component$(() => {
               <br />
               <strong>Office:</strong> Crossbridge Dr, Las Vegas, NV 89138
               <br />
-              <strong>Hours:</strong> Mon-Fri 9:00 AM–6:00 PM | Sat 10:00 AM–4:30 PM | Sun Closed
+              <strong>Hours:</strong> {business.hoursDisplay}
             </p>
           </div>
         </div>

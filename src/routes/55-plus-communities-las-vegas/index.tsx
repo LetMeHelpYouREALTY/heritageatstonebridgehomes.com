@@ -245,7 +245,7 @@ export default component$(() => {
                 <li>• Recreation centers</li>
                 <li>• Active social scene</li>
                 <li>• Mature landscaping</li>
-                <li>• Established community</li>
+                <li>• Resale homes</li>
                 <li>• Strong resale market</li>
               </ul>
               <div class="text-lg font-bold text-emerald-600 mb-4">$500,000 - $1,500,000</div>
