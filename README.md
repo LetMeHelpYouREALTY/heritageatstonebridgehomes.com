@@ -1,111 +1,160 @@
-# Heritage at Stonebridge - Las Vegas 55+ Communities Website ⚡️
+# Heritage at Stonebridge Homes
 
-**Last Deployment:** 2025-01-17T21:30:00Z
+Real estate landing page for Summerlin's premier gated community. Built with Next.js 14, Tailwind CSS, and TypeScript.
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+**Agent:** Dr. Jan Duffy | **Brokerage:** Berkshire Hathaway HomeServices Nevada Properties
 
----
+## About
+
+Heritage at Stonebridge Homes showcases luxury real estate in Heritage at Stonebridge, a premium gated community in Summerlin, Las Vegas. The site supports lead capture, community information, and contact for buyers and sellers.
+
+## Features
+
+Developer experience first:
+
+- [Next.js](https://nextjs.org) for static site generation
+- [Tailwind CSS](https://tailwindcss.com)
+- PostCSS for processing Tailwind CSS, integrated with `styled-jsx`
+- Type checking with [TypeScript](https://www.typescriptlang.org)
+- Strict Mode for TypeScript and React 18
+- Linter with [ESLint](https://eslint.org) (Next.js Core Web Vitals)
+- Code formatter with [Prettier](https://prettier.io)
+- [Husky](https://husky.run) for Git hooks
+- Lint-staged for running linters on staged files
+- VSCode configuration: Debug, Settings, Tasks, extensions for PostCSS, ESLint, Prettier, TypeScript
+- SEO metadata, JSON-LD and Open Graph with [Next SEO](https://github.com/garmeeh/next-seo)
+- [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) (run with `ANALYZE=true npm run build`)
+- One-click deployment with Netlify or manual deploy to any host
+
+Heritage-specific:
+
+- LocalBusiness / RealEstateAgent JSON-LD schema
+- FAQ schema (FAQPage) for Heritage at Stonebridge questions
+- Lead capture form and API route (`/api/leads/submit`)
+- Google Business Profile: NAP, Call, Directions, Reviews links
+- `robots.txt` and `sitemap.xml`
+- Security headers (X-Content-Type-Options, X-Frame-Options, X-XSS-Protection, Referrer-Policy)
+
+Built-in from Next.js:
+
+- Minify HTML & CSS
+- Live reload
+- Cache busting
+
+## Included Components
+
+- Navbar
+- Hero
+- Community highlights
+- Vertical features
+- Lead capture form and map (Call, Directions, Reviews)
+- FAQ section
+- CTA banner
+- Footer
+
+## Philosophy
+
+- Minimal code
+- SEO-friendly
+- Production-ready
 
 ## Project Structure
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
-
-Inside your project, you'll see the following directory structure:
-
 ```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
-
-- `src/routes`: Provides the directory based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
-
-- `src/components`: Recommended directory for components.
-
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
-
-## Add Integrations and deployment
-
-Use the `pnpm qwik add` command to add additional integrations. Some examples of integrations include: Cloudflare, Netlify or Express server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
-
-```shell
-pnpm qwik add # or `yarn qwik add`
-```
-
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). During development, the `dev` command will server-side render (SSR) the output.
-
-```shell
-npm start # or `yarn start`
+.
+├── README.md
+├── next.config.js
+├── public
+│   ├── assets/images
+│   ├── robots.txt
+│   └── sitemap.xml
+├── src
+│   ├── background
+│   ├── button
+│   ├── components      # FAQSection, LeadCaptureForm, MapEmbed, CommunityHighlights
+│   ├── cta
+│   ├── feature
+│   ├── footer
+│   ├── hero
+│   ├── layout
+│   ├── navigation
+│   ├── pages
+│   │   └── api/leads    # Lead submission endpoint
+│   ├── styles
+│   ├── templates
+│   └── utils
+├── tailwind.config.js
+└── tsconfig.json
 ```
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+## Requirements
 
-## Preview
+- Node.js and npm
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to locally preview a production build, and it should not be used as a production server.
+## Getting Started
 
-```shell
-pnpm preview # or `yarn preview`
+```bash
+cd heritageatstonebridgehomes
+npm install
+npm run dev
 ```
 
-## Production
+Open http://localhost:3000. Next.js may take a moment to compile on first run.
 
-The production build will generate client and server modules by running both client and server build commands. Additionally, the build command will use Typescript to run a type check on the source code.
+## Customization
 
-```shell
-pnpm build # or `yarn build`
+Key files:
+
+- `public/apple-touch-icon.png`, `public/favicon.ico`, `public/favicon-16x16.png`, `public/favicon-32x32.png` — favicon ([generate at favicon.io](https://favicon.io/favicon-converter/))
+- `src/styles/global.css` — global CSS (Tailwind)
+- `src/utils/AppConfig.ts` — site config and NAP (phone, address, GBP URLs)
+- `src/pages/index.tsx` — entry page (uses Base template)
+- `src/templates/Base.tsx` — Base layout and component blocks
+- `src/templates/*` — section blocks (Hero, Footer, Banner, etc.)
+- `src/*` — atomic components used by templates
+
+Layer:
+
+- Entry: `index.tsx` in `src/pages`
+- Base template: `Base.tsx` in `src/templates`
+- Component blocks: `src/templates/*`
+- Atomic components: `src/*`
+
+**Important:** NAP (Name, Address, Phone) in AppConfig must exactly match your Google Business Profile. Verify monthly.
+
+## Deploy to production
+
+Run locally in production mode:
+
+```bash
+npm run build
+npm run start
 ```
 
-## Vercel Edge
+HTML and CSS are minified; unused Tailwind CSS is removed.
 
-This starter site is configured to deploy to [Vercel Edge Functions](https://vercel.com/docs/concepts/functions/edge-functions), which means it will be rendered at an edge location near to your users.
+Optimized production build (clean + build):
 
-## Installation
-
-The adaptor will add a new `vite.config.ts` within the `adapters/` directory, and a new entry file will be created, such as:
-
-```
-└── adapters/
-    └── vercel-edge/
-        └── vite.config.ts
-└── src/
-    └── entry.vercel-edge.tsx
+```bash
+npm run build-prod
 ```
 
-Additionally, within the `package.json`, the `build.server` script will be updated with the Vercel Edge build.
+Output is in the `.next` folder (or `out` if using static export). Deploy with any hosting service.
 
-## Production build
+### Netlify
 
-To build the application for production, use the `build` command, this command will automatically run `pnpm build.server` and `pnpm build.client`:
+`netlify.toml` is configured. Clone the repo on your GitHub account and connect to Netlify for one-click deploy.
 
-```shell
-pnpm build
-```
+### Vercel
 
-[Read the full guide here](https://github.com/BuilderIO/qwik/blob/main/starters/adapters/vercel-edge/README.md)
+Import the project in [Vercel](https://vercel.com) and deploy.
 
-## Dev deploy
+## VSCode (optional)
 
-To deploy the application for development:
+Install suggested extensions from `.vscode/extension.json`. Settings and Debug configuration are included for PostCSS, ESLint, Prettier, and TypeScript. For project-wide type checking, run a build with **Cmd + Shift + B** (Mac).
 
-```shell
-pnpm deploy
-```
+## License
 
-Notice that you might need a [Vercel account](https://docs.Vercel.com/get-started/) in order to complete this step!
+MIT License. See [LICENSE](LICENSE).
 
-## Production deploy
-
-The project is ready to be deployed to Vercel. However, you will need to create a git repository and push the code to it.
-
-You can [deploy your site to Vercel](https://vercel.com/docs/concepts/deployments/overview) either via a Git provider integration or through the Vercel CLI.
+Based on [Next-JS-Landing-Page-Starter-Template](https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template).

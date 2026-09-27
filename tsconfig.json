@@ -1,46 +1,46 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "target": "ES2020",
-    "module": "ES2020",
-    "lib": ["es2020", "DOM", "WebWorker", "DOM.Iterable"],
-    "jsx": "react-jsx",
-    "jsxImportSource": "@builder.io/qwik",
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "outDir": "tmp",
-    "noEmit": true,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "types": ["node", "vite/client"],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+
+    "target": "es5",
+    "outDir": "out",
+    "declaration": true,
+    "sourceMap": true,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "jsx": "preserve",
+    "noEmit": true,
+    "isolatedModules": true,
+    "incremental": true,
+
+    "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
       "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/routes/*": ["./src/routes/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/config/*": ["./src/config/*"]
+      "@/public/*": ["./public/*"]
     }
   },
-  "include": [
-    "src",
-    "vite.config.ts",
-    "vercel.json"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "tmp",
-    "coverage",
-    "lighthouse-report.html"
-  ]
+  "exclude": ["./out/**/*", "./node_modules/**/*"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
