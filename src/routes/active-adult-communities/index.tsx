@@ -1,5 +1,6 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { AmenityMapSection } from "~/components/amenities/AmenityMapSection";
 import { generateAIContent } from "~/lib/ai-content-generator";
 import { RealScoutStickyWidget } from "~/components/real-estate/RealScoutStickyWidget";
 import { RealScoutOfficeListingsWidget } from "~/components/real-estate/RealScoutOfficeListingsWidget";
@@ -172,6 +173,11 @@ Format as JSON with sections: community_overview, lifestyle_amenities, social_ac
           </div>
         </div>
       </section>
+
+      <AmenityMapSection
+        title="Life near Heritage at Stonebridge"
+        lede="Healthcare-first filters for 55+ buyers exploring Summerlin West — map centered on the Heritage clubhouse."
+      />
 
       {/* AI Community Content */}
       <section class="py-16 bg-gray-50">

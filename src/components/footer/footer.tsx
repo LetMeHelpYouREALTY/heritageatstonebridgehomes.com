@@ -317,6 +317,11 @@ export const Footer = component$(() => {
                 </a>
               </li>
               <li>
+                <a href="/nearby-amenities" class="hover:text-hsb-accent-light">
+                  Nearby Amenities Map
+                </a>
+              </li>
+              <li>
                 <a href="/sell-heritage-at-stonebridge" class="hover:text-hsb-accent-light">
                   Sell in Heritage at Stonebridge
                 </a>

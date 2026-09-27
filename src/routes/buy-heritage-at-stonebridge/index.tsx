@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { AmenityMapSection } from "~/components/amenities/AmenityMapSection";
 import { AmenityGrid } from "~/components/community/AmenityGrid";
 import { CampaignHero } from "~/components/community/CampaignHero";
 import { ContactStrip } from "~/components/community/ContactStrip";
@@ -89,6 +90,11 @@ export default component$(() => {
           </div>
         </div>
       </section>
+
+      <AmenityMapSection
+        title="What's nearby before you buy"
+        lede="Filter healthcare, golf, parks, and grocery from the Heritage clubhouse — then open the full amenity guide."
+      />
 
       <section class="bg-white py-16">
         <div class="mx-auto max-w-5xl px-4">
