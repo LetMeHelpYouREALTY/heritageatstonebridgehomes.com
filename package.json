@@ -1,70 +1,56 @@
 {
-  "name": "heritage-stonebridge-website",
-  "description": "Heritage at Stonebridge - Luxury 55+ Active Adult Community Website",
+  "name": "next-js-boilerplate",
   "version": "1.0.0",
-  "engines": {
-    "node": "22.x",
-    "pnpm": ">=8.0.0"
-  },
-  "private": true,
   "scripts": {
-    "build": "qwik build --mode production --verbose",
-    "build.client": "vite build",
-    "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.server": "vite build -c adapters/static/vite.config.ts",
-    "build.types": "tsc --incremental --noEmit",
-    "build.analyze": "vite build --mode analyze",
-    "deploy": "vercel deploy",
-    "deploy.prod": "vercel deploy --prod",
-    "dev": "vite --mode ssr",
-    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
-    "lint": "echo 'Linting disabled for build'",
-    "lint.fix": "biome check --write src",
-    "format": "biome format --write src",
-    "preview": "qwik build preview && vite preview --open",
-    "start": "vite --open --mode ssr",
-    "qwik": "qwik",
-    "perf": "npm run build"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.2.4",
-    "@builder.io/qwik": "1.16.0",
-    "@builder.io/qwik-city": "1.16.0",
-    "@types/node": "^20.0.0",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.1",
-    "terser": "^5.24.0",
-    "typescript": "5.0.4",
-    "undici": "5.22.0",
-    "vercel": "^28.19.0",
-    "vite": "^5.0.0",
-    "vite-tsconfig-paths": "4.2.0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build-stats": "cross-env ANALYZE=true npm run build",
+    "build-prod": "run-s clean build",
+    "clean": "rimraf .next .swc out",
+    "lint": "next lint",
+    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
+    "check-types": "tsc --noEmit --pretty",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@builder.io/qwik": "1.16.0",
-    "@builder.io/qwik-city": "1.16.0",
-    "@cerebras/cerebras_cloud_sdk": "^1.50.0"
+    "classnames": "^2.5.1",
+    "next": "^14.1.0",
+    "next-seo": "^6.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-jsx-plugin-postcss": "^4.0.1"
   },
-  "keywords": [
-    "real-estate",
-    "55-plus-communities",
-    "active-adult",
-    "las-vegas",
-    "summerlin",
-    "heritage-stonebridge",
-    "luxury-homes",
-    "gated-community"
-  ],
-  "author": {
-    "name": "Dr. Jan Duffy",
-    "email": "DrDuffySells@HeritageStonebridge.com",
-    "url": "https://heritagestonebridge.com"
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.1.0",
+    "@types/node": "^20.11.10",
+    "@types/react": "^18.2.48",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "autoprefixer": "^10.4.17",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-next": "^14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-tailwindcss": "^3.14.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
   },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DrJanDuffy/hertage_stone_bridge_homes.com"
-  },
-  "homepage": "https://heritagestonebridge.com"
+  "license": "ISC"
 }
