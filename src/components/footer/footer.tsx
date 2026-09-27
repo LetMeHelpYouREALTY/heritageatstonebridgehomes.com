@@ -3,7 +3,7 @@ import { business } from "~/config/business";
 
 export const Footer = component$(() => {
   return (
-    <footer class="bg-gray-900 text-white">
+    <footer class="bg-hsb-dark text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
@@ -16,19 +16,19 @@ export const Footer = component$(() => {
             <div class="space-y-2">
               <p class="flex items-center">
                 <span class="mr-2">📞</span>
-                <a href={business.telephoneHref} class="hover:text-blue-400">
+                <a href={business.telephoneHref} class="hover:text-hsb-accent-light">
                   {business.telephoneDisplay}
                 </a>
               </p>
               <p class="flex items-center">
                 <span class="mr-2">💬</span>
-                <a href={business.smsHref} class="hover:text-blue-400">
+                <a href={business.smsHref} class="hover:text-hsb-accent-light">
                   Text {business.telephoneDisplay}
                 </a>
               </p>
               <p class="flex items-center">
                 <span class="mr-2">✉️</span>
-                <a href={`mailto:${business.email}`} class="hover:text-blue-400">
+                <a href={`mailto:${business.email}`} class="hover:text-hsb-accent-light">
                   {business.email}
                 </a>
               </p>
@@ -43,7 +43,7 @@ export const Footer = component$(() => {
               <p class="flex flex-wrap gap-x-3 gap-y-1">
                 <a
                   href={business.mapsUrl}
-                  class="hover:text-blue-400 underline-offset-2 hover:underline"
+                  class="hover:text-hsb-accent-light underline-offset-2 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -51,7 +51,7 @@ export const Footer = component$(() => {
                 </a>
                 <a
                   href={business.reviewsUrl}
-                  class="hover:text-blue-400 underline-offset-2 hover:underline"
+                  class="hover:text-hsb-accent-light underline-offset-2 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -68,7 +68,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/las-vegas-real-estate"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service-area"
                   data-topic="las-vegas-real-estate"
                   rel="related"
@@ -79,7 +79,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/summerlin-homes"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service-area"
                   data-topic="summerlin-homes"
                   rel="related"
@@ -90,7 +90,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/red-rock-canyon-communities"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service-area"
                   data-topic="red-rock-canyon"
                   rel="related"
@@ -101,7 +101,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/henderson-real-estate"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service-area"
                   data-topic="henderson-real-estate"
                   rel="related"
@@ -112,7 +112,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/northwest-las-vegas"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service-area"
                   data-topic="northwest-las-vegas"
                   rel="related"
@@ -123,7 +123,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/boulder-city-homes"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service-area"
                   data-topic="boulder-city-homes"
                   rel="related"
@@ -141,7 +141,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/55-plus-communities"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="property-type"
                   data-topic="55-plus-communities"
                   rel="related"
@@ -152,7 +152,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/active-adult-communities"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="property-type"
                   data-topic="active-adult-communities"
                   rel="related"
@@ -163,7 +163,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/luxury-homes"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="property-type"
                   data-topic="luxury-homes"
                   rel="related"
@@ -174,7 +174,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/gated-communities"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="property-type"
                   data-topic="gated-communities"
                   rel="related"
@@ -185,7 +185,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/golf-course-homes"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="property-type"
                   data-topic="golf-course-homes"
                   rel="related"
@@ -196,7 +196,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/mountain-view-homes"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="property-type"
                   data-topic="mountain-view-homes"
                   rel="related"
@@ -214,7 +214,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/affordable-55-plus-communities-las-vegas"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service"
                   data-topic="affordable-55-plus"
                   rel="related"
@@ -225,7 +225,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/new-55-plus-communities-las-vegas"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service"
                   data-topic="new-55-plus"
                   rel="related"
@@ -236,7 +236,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/best-55-plus-communities-las-vegas"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service"
                   data-topic="best-55-plus"
                   rel="related"
@@ -247,7 +247,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/luxury-retirement-communities-las-vegas"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service"
                   data-topic="luxury-retirement"
                   rel="related"
@@ -258,7 +258,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/55-plus-communities-las-vegas-for-sale"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service"
                   data-topic="55-plus-for-sale"
                   rel="related"
@@ -269,7 +269,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/55-and-over-communities-las-vegas-for-rent"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service"
                   data-topic="55-plus-for-rent"
                   rel="related"
@@ -280,7 +280,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/55-plus-communities-las-vegas"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service"
                   data-topic="55-plus-general"
                   rel="related"
@@ -291,7 +291,7 @@ export const Footer = component$(() => {
               <li>
                 <a
                   href="/55-and-over-communities-summerlin-las-vegas"
-                  class="hover:text-blue-400"
+                  class="hover:text-hsb-accent-light"
                   data-content-type="service"
                   data-topic="55-plus-summerlin"
                   rel="related"
@@ -307,62 +307,77 @@ export const Footer = component$(() => {
             <h3 class="text-xl font-bold mb-4">Resources</h3>
             <ul class="space-y-2 text-gray-300 mb-6">
               <li>
-                <a href="/about" class="hover:text-blue-400">
+                <a href="/about" class="hover:text-hsb-accent-light">
                   About
                 </a>
               </li>
               <li>
-                <a href="/contact" class="hover:text-blue-400">
+                <a href="/buy-heritage-at-stonebridge" class="hover:text-hsb-accent-light">
+                  Buy in Heritage at Stonebridge
+                </a>
+              </li>
+              <li>
+                <a href="/sell-heritage-at-stonebridge" class="hover:text-hsb-accent-light">
+                  Sell in Heritage at Stonebridge
+                </a>
+              </li>
+              <li>
+                <a href="/new-listing-heritage-at-stonebridge" class="hover:text-hsb-accent-light">
+                  New Listing
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="hover:text-hsb-accent-light">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="/blog" class="hover:text-blue-400">
+                <a href="/blog" class="hover:text-hsb-accent-light">
                   Real Estate Blog
                 </a>
               </li>
               <li>
-                <a href="/market-analysis" class="hover:text-blue-400">
+                <a href="/market-analysis" class="hover:text-hsb-accent-light">
                   Market Analysis
                 </a>
               </li>
               <li>
-                <a href="/neighborhood-insights" class="hover:text-blue-400">
+                <a href="/neighborhood-insights" class="hover:text-hsb-accent-light">
                   Neighborhood Insights
                 </a>
               </li>
               <li>
-                <a href="/luxury-living-guide" class="hover:text-blue-400">
+                <a href="/luxury-living-guide" class="hover:text-hsb-accent-light">
                   Luxury Living Guide
                 </a>
               </li>
               <li>
-                <a href="/community-comparison" class="hover:text-blue-400">
+                <a href="/community-comparison" class="hover:text-hsb-accent-light">
                   Community Comparison
                 </a>
               </li>
               <li>
-                <a href="/market-reports" class="hover:text-blue-400">
+                <a href="/market-reports" class="hover:text-hsb-accent-light">
                   Las Vegas Market Reports
                 </a>
               </li>
               <li>
-                <a href="/community-guides" class="hover:text-blue-400">
+                <a href="/community-guides" class="hover:text-hsb-accent-light">
                   Community Guides
                 </a>
               </li>
               <li>
-                <a href="/home-selling-guide" class="hover:text-blue-400">
+                <a href="/home-selling-guide" class="hover:text-hsb-accent-light">
                   Home Selling Guide
                 </a>
               </li>
               <li>
-                <a href="/first-time-buyers" class="hover:text-blue-400">
+                <a href="/first-time-buyers" class="hover:text-hsb-accent-light">
                   First Time Buyers
                 </a>
               </li>
               <li>
-                <a href="/testimonials" class="hover:text-blue-400">
+                <a href="/testimonials" class="hover:text-hsb-accent-light">
                   Client Testimonials
                 </a>
               </li>
@@ -374,21 +389,21 @@ export const Footer = component$(() => {
               <div class="flex space-x-4">
                 <a
                   href="https://www.facebook.com/DrJanDuffyRealEstate"
-                  class="text-gray-300 hover:text-blue-400"
+                  class="text-gray-300 hover:text-hsb-accent-light"
                   aria-label="Facebook"
                 >
                   📘
                 </a>
                 <a
                   href="https://www.linkedin.com/in/drjanduffy"
-                  class="text-gray-300 hover:text-blue-400"
+                  class="text-gray-300 hover:text-hsb-accent-light"
                   aria-label="LinkedIn"
                 >
                   💼
                 </a>
                 <a
                   href="https://www.instagram.com/drjanduffylasvegas"
-                  class="text-gray-300 hover:text-blue-400"
+                  class="text-gray-300 hover:text-hsb-accent-light"
                   aria-label="Instagram"
                 >
                   📷
@@ -410,13 +425,13 @@ export const Footer = component$(() => {
               </p>
             </div>
             <div class="flex space-x-6 text-sm">
-              <a href="/privacy-policy" class="text-gray-400 hover:text-blue-400">
+              <a href="/privacy-policy" class="text-gray-400 hover:text-hsb-accent-light">
                 Privacy Policy
               </a>
-              <a href="/terms-of-service" class="text-gray-400 hover:text-blue-400">
+              <a href="/terms-of-service" class="text-gray-400 hover:text-hsb-accent-light">
                 Terms of Service
               </a>
-              <a href="/sitemap" class="text-gray-400 hover:text-blue-400">
+              <a href="/sitemap" class="text-gray-400 hover:text-hsb-accent-light">
                 Sitemap
               </a>
             </div>

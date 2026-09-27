@@ -344,23 +344,20 @@ export default component$(() => {
   return (
     <>
       {/* Hero Section */}
-      <section class="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 py-16 overflow-hidden">
-        {/* Background Pattern */}
-        <div class="absolute inset-0 opacity-5">
-          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-100 to-transparent"></div>
-        </div>
+      <section class="relative bg-hsb-cream py-16 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 py-8 relative z-10">
           <div class="text-center mb-8">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 drop-shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.15em] text-hsb-accent mb-4">
+              Summerlin West · 89138
+            </p>
+            <h1 class="text-4xl md:text-6xl font-display text-hsb-dark mb-4">
               Heritage at Stonebridge
             </h1>
-            <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-8 font-medium">
-              Luxury 55+ Active Adult Living in the Heart of Summerlin, Las Vegas
+            <p class="text-xl md:text-2xl text-hsb-text max-w-3xl mx-auto mb-8 font-medium">
+              421 guard-gated 55+ homes in Summerlin West
             </p>
-            <p class="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
-              Experience resort-style amenities, stunning Red Rock Canyon views, and gated security in Las Vegas's premier active adult community. 
-              Heritage at Stonebridge offers three distinct home collections from Lennar, featuring modern single-story designs with prices starting from $464,990. Currently 15 homes available for sale. 
-              Dr. Jan Duffy specializes in helping you find the perfect 55+ home in Heritage at Stonebridge and surrounding Summerlin areas.
+            <p class="text-lg text-hsb-text max-w-4xl mx-auto mb-8">
+              Lennar built the houses. A staffed gate checks visitors. The clubhouse has pools, a fitness center, pickleball, and bocce. Dr. Jan Duffy helps buyers and sellers inside this community. Call (702) 789-6561.
             </p>
             <div class="text-center mb-8">
               <p class="text-base text-gray-500 max-w-3xl mx-auto">
@@ -371,19 +368,23 @@ export default component$(() => {
             </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
-                target="_blank"
-                rel="noopener"
-                class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center text-lg"
+                href="/buy-heritage-at-stonebridge"
+                class="bg-hsb-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-hsb-primary-dark transition-colors inline-block text-center text-lg"
               >
-                Schedule Private Tour
+                Buy in Heritage
               </a>
-              <button
-                type="button"
-                class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all transform hover:scale-105 text-lg shadow-md hover:shadow-lg"
+              <a
+                href="/sell-heritage-at-stonebridge"
+                class="border-2 border-hsb-primary text-hsb-primary px-8 py-4 rounded-full font-semibold hover:bg-hsb-primary hover:text-white transition-colors inline-block text-center text-lg"
               >
-                View Virtual Tour
-              </button>
+                Sell in Heritage
+              </a>
+              <a
+                href="/new-listing-heritage-at-stonebridge"
+                class="bg-hsb-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-hsb-accent-dark transition-colors inline-block text-center text-lg"
+              >
+                New listing
+              </a>
             </div>
           </div>
         </div>
@@ -445,36 +446,33 @@ export default component$(() => {
               <p class="text-gray-600">Stunning mountain backdrop with easy access to outdoor recreation</p>
             </div>
             <div class="text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Current Pricing</h3>
-              <p class="text-gray-600">Cromwell: $464,990-$512,990 | Stirling: $675,990-$736,990 | Evander: $861,990-$910,990</p>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Today's prices</h3>
+              <p class="text-gray-600">List prices change with the MLS. Call (702) 789-6561 for the homes on the market now.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section class="bg-gradient-to-br from-blue-600 to-blue-800 py-16">
+      <section class="bg-hsb-dark py-16">
         <div class="max-w-7xl mx-auto px-4 text-center">
-          <h2 class="text-3xl font-bold text-white mb-4">Ready to Experience Luxury Living?</h2>
-          <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-            Schedule a private tour of Heritage at Stonebridge and discover why this is the perfect
-            place for your next chapter.
+          <h2 class="text-3xl font-display text-white mb-4">Tour Heritage at Stonebridge</h2>
+          <p class="text-lg text-hsb-sand mb-8 max-w-2xl mx-auto">
+            421 homes. Staffed gate. Clubhouse at 930 Silverfir Court. Call (702) 789-6561.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
-              target="_blank"
-              rel="noopener"
-              class="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-100 transition-colors shadow-lg inline-block text-center"
+              href="/buy-heritage-at-stonebridge"
+              class="bg-hsb-accent text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-hsb-accent-dark transition-colors inline-block text-center"
             >
-              Schedule Private Tour
+              Buy a home
             </a>
-            <button
-              type="button"
-              class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors shadow-lg"
+            <a
+              href="tel:+17027896561"
+              class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-hsb-dark transition-colors inline-block text-center"
             >
               Call (702) 789-6561
-            </button>
+            </a>
           </div>
         </div>
       </section>
