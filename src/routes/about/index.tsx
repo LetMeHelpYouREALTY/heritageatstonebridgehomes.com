@@ -7,7 +7,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Meet Dr. Jan Duffy, licensed Nevada real estate professional with doctorate degree and 500+ successful transactions. Expert in Las Vegas luxury market, 55+ communities, and Heritage at Stonebridge.",
+      content: "Meet Dr. Jan Duffy, licensed Nevada real estate professional with a Ph.D. in Research and 500+ successful transactions. Expert in Las Vegas luxury market, 55+ communities, and Heritage at Stonebridge.",
     },
     {
       property: "og:title",
@@ -15,7 +15,7 @@ export const head: DocumentHead = {
     },
     {
       property: "og:description",
-      content: "Meet Dr. Jan Duffy, licensed Nevada real estate professional with doctorate degree and 500+ successful transactions. Expert in Las Vegas luxury market and 55+ communities.",
+      content: "Meet Dr. Jan Duffy, licensed Nevada real estate professional with a Ph.D. in Research and 500+ successful transactions. Expert in Las Vegas luxury market and 55+ communities.",
     },
     {
       property: "og:type",
@@ -39,7 +39,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:description",
-      content: "Meet Dr. Jan Duffy, licensed Nevada real estate professional with doctorate degree and 500+ successful transactions.",
+      content: "Meet Dr. Jan Duffy, licensed Nevada real estate professional with a Ph.D. in Research and 500+ successful transactions.",
     },
     {
       name: "robots",
@@ -288,7 +288,7 @@ export default component$(() => {
             About Dr. Jan Duffy
           </h1>
           <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Licensed Nevada Real Estate Professional with Doctorate Degree and 500+ Successful Transactions
+            Top 1% Las Vegas REALTOR® with a Ph.D. in Research and 500+ Successful Transactions
           </p>
           <p class="text-lg text-blue-200 max-w-4xl mx-auto mb-8">
             Expert in Las Vegas luxury market, Heritage at Stonebridge specialist, and 55+ community expert. 
@@ -307,7 +307,7 @@ export default component$(() => {
               </h2>
               <p class="text-lg text-gray-600 mb-6">
                 Dr. Jan Duffy brings a unique combination of advanced education, extensive experience, 
-                and specialized knowledge to every real estate transaction. With a doctorate degree 
+                and specialized knowledge to every real estate transaction. With a Ph.D. in Research 
                 and over 500 successful transactions, she provides unparalleled expertise in the 
                 Las Vegas luxury market.
               </p>
@@ -317,7 +317,7 @@ export default component$(() => {
                     <span class="text-blue-600 font-bold">✓</span>
                   </div>
                   <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Doctorate Degree</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Ph.D. in Research</h3>
                     <p class="text-gray-600">Advanced analytical skills and research-based approach to real estate</p>
                   </div>
                 </div>
