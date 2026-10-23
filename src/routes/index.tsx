@@ -27,7 +27,7 @@ const homeFaqs = [
   },
   {
     question: "How do I start with Dr. Jan Duffy?",
-    answer: `Call or text ${business.telephoneDisplay}. Dr. Jan Duffy (Nevada license ${business.license}) works with buyers and sellers inside Heritage at Stonebridge. Office hours: ${business.hoursDisplay}.`,
+    answer: `Call or text ${business.telephoneDisplay}. Dr. Jan Duffy, in real estate since 1983, works with buyers and sellers inside Heritage at Stonebridge. Office hours: ${business.hoursDisplay}.`,
   },
 ] as const;
 
@@ -221,7 +221,7 @@ export const head: DocumentHead = {
     {
       name: "description",
       content:
-        "421 guard-gated Lennar homes in Summerlin West (89138). Clubhouse pools, fitness, and pickleball. Dr. Jan Duffy, NV license S.0197614.LLC. Call (702) 789-6561.",
+        "421 guard-gated Lennar homes in Summerlin West (89138). Clubhouse pools, fitness, and pickleball. Dr. Jan Duffy, REALTOR® since 1983. Call (702) 789-6561.",
     },
     // Enhanced Meta Tags for AI & Search Engine Understanding
     {

@@ -358,7 +358,7 @@ export default component$(() => {
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Dr. Jan Duffy</h3>
                 <p class="text-lg text-gray-600 mb-4">Licensed Nevada Real Estate Professional</p>
                 <div class="space-y-2 text-sm text-gray-500">
-                  <p><strong>License:</strong> S.0197614.LLC</p>
+                  <p><strong>In real estate since 1983</strong></p>
                   <p><strong>Phone:</strong> (702) 789-6561</p>
                   <p><strong>Email:</strong> DrDuffySells@HeritageStonebridge.com</p>
                   <p><strong>Location:</strong> Las Vegas, Nevada</p>
@@ -531,8 +531,6 @@ export default component$(() => {
           </div>
           <div class="mt-8 text-center">
             <p class="text-blue-200 text-sm">
-              <strong>Nevada Real Estate License:</strong> S.0197614.LLC
-              <br />
               <strong>Office:</strong> Crossbridge Dr, Las Vegas, NV 89138
               <br />
               <strong>Specialties:</strong> Heritage at Stonebridge, 55+ Communities, Luxury Properties
