@@ -198,7 +198,7 @@ export const onGet: RequestHandler = async (requestEvent) => {
         <image:image>
             <image:loc>https://heritagestonebridge.com/images/henderson-community-guide.jpg</image:loc>
             <image:title>Henderson Real Estate Community Guide</image:title>
-            <image:caption>Master-planned communities and established neighborhoods in Henderson</image:caption>
+            <image:caption>Master-planned communities and older neighborhoods in Henderson</image:caption>
             <image:license>https://heritagestonebridge.com/license</image:license>
             <image:geo_location>Henderson, NV</image:geo_location>
         </image:image>

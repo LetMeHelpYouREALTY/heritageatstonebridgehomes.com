@@ -194,7 +194,7 @@ export default component$(() => {
                 </div>
               </div>
               <div class="p-6">
-                <h4 class="text-xl font-semibold mb-3">Established Communities</h4>
+                <h4 class="text-xl font-semibold mb-3">Older Communities</h4>
                 <ul class="space-y-2 text-gray-600 mb-4">
                   <li>• Mature landscaping</li>
                   <li>• Established amenities</li>
