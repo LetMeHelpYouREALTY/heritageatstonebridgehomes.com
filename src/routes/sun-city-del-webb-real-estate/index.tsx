@@ -184,20 +184,20 @@ export default component$(() => {
         </div>
       </section>
 
-      {/* Established Communities Advantage */}
+      {/* Communities Advantage */}
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Established Sun City & Del Webb Communities?</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-              As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults discover the benefits of established communities with proven amenities and strong resale markets.
+              As Las Vegas's leading 55+ community expert, I've helped hundreds of active adults discover the benefits of communities with proven amenities and strong resale markets.
             </p>
           </div>
           
           <div class="grid md:grid-cols-3 gap-8 mb-12">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Proven Track Record</h3>
-              <p class="text-gray-600">Established communities with mature amenities, strong resale markets, and proven appreciation</p>
+              <p class="text-gray-600">Older communities with mature amenities, strong resale markets, and proven appreciation</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-center">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Championship Golf</h3>
@@ -331,7 +331,7 @@ export default component$(() => {
               <ul class="space-y-3 text-gray-700 mb-6">
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
-                  Established, mature communities with proven track records
+                  Established, older communities with proven track records
                 </li>
                 <li class="flex items-center">
                   <span class="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>

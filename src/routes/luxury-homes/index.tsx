@@ -52,7 +52,7 @@ export default component$(() => {
 
   useVisibleTask$(async () => {
     try {
-      const systemPrompt = `You are a Las Vegas luxury real estate expert specializing in high-end properties, premium amenities, and exclusive communities. Generate comprehensive insights about luxury homes and their unique features.`;
+      const systemPrompt = `You are a Las Vegas luxury real estate expert specializing in high-end properties, premium amenities, and luxury communities. Generate comprehensive insights about luxury homes and their unique features.`;
       
       const userMessage = `Create detailed content about luxury homes in Las Vegas. Include:
 1. What defines luxury homes vs standard properties
@@ -235,7 +235,7 @@ Format as JSON with sections: luxury_definition, premium_amenities, high_end_fin
         <div class="max-w-7xl mx-auto px-4">
           <div class="text-center mb-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Current Luxury Home Listings</h2>
-            <p class="text-lg text-gray-600">Explore available luxury properties in Las Vegas's most exclusive communities</p>
+            <p class="text-lg text-gray-600">Explore available luxury properties in Las Vegas's most luxury communities</p>
           </div>
           <RealScoutOfficeListingsWidget
             agentEncodedId="QWdlbnQtMjI1MDUw"

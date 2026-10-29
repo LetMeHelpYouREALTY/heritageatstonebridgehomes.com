@@ -377,7 +377,7 @@ export default component$(() => {
                 <span class="text-2xl">🏆</span>
               </div>
               <h3 class="text-xl font-bold text-gray-900 mb-3">Luxury Home Specialist</h3>
-              <p class="text-gray-600">Experience with high-end properties and exclusive community requirements.</p>
+              <p class="text-gray-600">Experience with high-end properties and luxury community requirements.</p>
             </div>
           </div>
         </div>

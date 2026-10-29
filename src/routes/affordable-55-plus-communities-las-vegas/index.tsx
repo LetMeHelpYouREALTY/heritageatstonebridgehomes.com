@@ -236,7 +236,7 @@ export default component$(() => {
             
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Del Webb Communities</h3>
-              <p class="text-gray-600 mb-4">Various price points - Established communities with proven amenities</p>
+              <p class="text-gray-600 mb-4">Various price points - Older communities with proven amenities</p>
               <ul class="space-y-2 text-gray-600 mb-4">
                 <li>• Golf course communities</li>
                 <li>• Fitness centers</li>

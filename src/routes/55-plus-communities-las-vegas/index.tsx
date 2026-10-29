@@ -190,7 +190,7 @@ export default component$(() => {
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Las Vegas 55+ Community Landscape</h2>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-              Las Vegas offers a diverse selection of 55+ communities, from new construction developments to established communities with mature amenities.
+              Las Vegas offers a diverse selection of 55+ communities, from new construction developments to communities with mature amenities.
             </p>
           </div>
           
@@ -200,8 +200,8 @@ export default component$(() => {
               <p class="text-gray-600">Modern communities like Heritage at Stonebridge with contemporary amenities and smart home technology</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">Established Communities</h3>
-              <p class="text-gray-600">Mature communities like Sun City Summerlin with proven amenities and established social scenes</p>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Older Communities</h3>
+              <p class="text-gray-600">Older communities like Sun City Summerlin with proven amenities and established social scenes</p>
             </div>
             <div class="bg-white p-6 rounded-lg shadow-lg text-center">
               <h3 class="text-xl font-bold text-gray-900 mb-3">Luxury Options</h3>

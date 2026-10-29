@@ -9,7 +9,7 @@ export const head: DocumentHead = {
   meta: [
     {
       name: "description",
-      content: "Explore premier gated communities in Las Vegas offering security, privacy, and luxury amenities. Expert guidance for exclusive neighborhoods in Summerlin, Henderson, and Red Rock Canyon.",
+      content: "Explore premier gated communities in Las Vegas offering security, privacy, and luxury amenities. Expert guidance for luxury neighborhoods in Summerlin, Henderson, and Red Rock Canyon.",
     },
     {
       name: "robots",
@@ -52,7 +52,7 @@ export default component$(() => {
 
   useVisibleTask$(async () => {
     try {
-      const systemPrompt = `You are a Las Vegas real estate expert specializing in gated communities, security features, and exclusive neighborhoods. Generate comprehensive insights about gated community living, security benefits, and luxury amenities.`;
+      const systemPrompt = `You are a Las Vegas real estate expert specializing in gated communities, security features, and luxury neighborhoods. Generate comprehensive insights about gated community living, security benefits, and luxury amenities.`;
       
       const userMessage = `Create detailed content about gated communities in Las Vegas. Include:
 1. What defines a gated community and security features
