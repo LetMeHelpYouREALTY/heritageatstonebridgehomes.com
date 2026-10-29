@@ -288,7 +288,7 @@ export default component$(() => {
             About Dr. Jan Duffy
           </h1>
           <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Top 1% Las Vegas REALTOR® with a Ph.D. in Research and 500+ Successful Transactions
+            Las Vegas REALTOR® with a Ph.D. in Research and 500+ Successful Transactions
           </p>
           <p class="text-lg text-blue-200 max-w-4xl mx-auto mb-8">
             Expert in Las Vegas luxury market, Heritage at Stonebridge specialist, and 55+ community expert. 
@@ -358,7 +358,7 @@ export default component$(() => {
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Dr. Jan Duffy</h3>
                 <p class="text-lg text-gray-600 mb-4">Licensed Nevada Real Estate Professional</p>
                 <div class="space-y-2 text-sm text-gray-500">
-                  <p><strong>In real estate since 1983</strong></p>
+                  <p><strong>Licensed since 2008 · 35 years in Las Vegas</strong></p>
                   <p><strong>Phone:</strong> (702) 789-6561</p>
                   <p><strong>Email:</strong> DrDuffySells@HeritageStonebridge.com</p>
                   <p><strong>Location:</strong> Las Vegas, Nevada</p>
