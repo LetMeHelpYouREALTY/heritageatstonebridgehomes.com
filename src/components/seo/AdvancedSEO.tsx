@@ -195,7 +195,7 @@ export const AdvancedSEO = component$(() => {
         {
           name: "content-security-policy",
           content:
-            "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com;",
+            "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://widgetbe.com https://*.widgetbe.com; connect-src 'self' https://widgetbe.com https://*.widgetbe.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com;",
         },
       ];
 
