@@ -3,6 +3,30 @@
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist/client",
   "installCommand": "pnpm install --frozen-lockfile",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.heritageatstonebridgehomes.com"
+        }
+      ],
+      "destination": "https://heritagestonebridge.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "heritageatstonebridgehomes.com"
+        }
+      ],
+      "destination": "https://heritagestonebridge.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
